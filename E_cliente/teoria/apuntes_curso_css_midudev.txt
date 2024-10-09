@@ -1,6 +1,0 @@
-grid-template-columns/rows
-grid-auto-rows--> "quiero que las filas que se van a crear automaticamente (si no has especificado nada de grid-template-rows), que tengan X ancho
-función REPEAT --> en vez de poner 1fr 1fr 1fr lo que se puede hacer es repeat (3, 1f), por ejemplo.. además se puede combinar con valores normales, puedes tener: 25px repeat(3, 1fr) 25px. También puedes hacerlo con más valores, con un patrón --> repeat (3, 25px 50px)
-función minmax --> especificas el mínimo y máximo que va a tener la columna en caso de que hagas más o menos pequeña la pagina.. 
-grid-column/row-gap--> para meterle espacios a las columnas/filas.. si usas solo GAP se aplica el mismo tanto a las columnas como a las filas
-auto-fill --> 

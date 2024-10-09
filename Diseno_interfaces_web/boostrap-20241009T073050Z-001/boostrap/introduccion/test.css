@@ -7,7 +7,6 @@ body{
     align-items: center;
     flex-direction: column;
     font-family: 'BMWTypeNext Pro Regular', sans-serif;
-    
 }
 /* preguntar profe por qué no va */
 /* https://www.onlinewebfonts.com/download/ac95f91c55cc591ecf37a4d136ff8031 */
@@ -17,7 +16,6 @@ body{
     font-weight: normal;
     font-style: normal;
 }
-
 
 .bmw-logo-left{
     width: 10%;
@@ -33,6 +31,8 @@ header{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    height: 1000px;
+    margin-top:-200px; /*esto es para pegar el header arriba del todo */
 }
 .mainHeader{
     display:flex;
@@ -45,10 +45,7 @@ header{
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid white;
-    /* width: 89%;
-    margin-right: 5%; */
     width: 80%;
-
 }
 
 
@@ -57,7 +54,6 @@ header{
     justify-content: center;
     height: 20%;
     align-items: center;
-    background-color: grey;
 }
 .headerIconTop{
     margin-top:5px;
@@ -92,8 +88,10 @@ header{
     justify-content:center;
     height: 400px;
     flex-direction:column;
-    margin-left:20px;
+    margin-left:90px;
     color:white;
+    margin-top:100px;
+    margin-left:100px;
 
 }
 
@@ -112,11 +110,11 @@ header{
 
 .m5{
     margin-left: 10px;
-    font-size: 500%;
+    font-size: 900%;
 }
 
 .textTitle{
-    font-size: 300%;
+    font-size: 500%;
 }
 
 .formBottom{
@@ -153,4 +151,304 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.firstSection{
+    padding:30px;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.findBMW{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    margin-top:40px;
+}
+
+.findBMW-first{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.firstSectionTitle{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.findBMW-button{
+    background-color: transparent;
+    /* color: solid black; */
+    border: 1px solid black;
+    border-radius: 9px;
+    padding:15px;
+    width: 200px;
+    font-weight:bold;
+    margin:20px;
+}
+
+.findBMW-first > h6{
+    margin-top:20px;
+}
+
+.secondSection{
+    background-image: linear-gradient(to right, black, transparent), url(secondSection.webp);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    /* con lo de arriba se pone la foto entera */
+    width: 100%;
+    color:white;
+    padding:90px;
+    font-size: 120%;
+}
+
+.form-secondSection{
+    font-size:100%;
+    border-radius:0px;
+}
+
+.text-secondSection-light{
+    font-size:100%;
+}
+
+.firstBtn{
+    padding:10px;
+}
+
+.secondBtn{
+    background-color: transparent !important;
+    border: solid 1px white !important;
+}
+
+.thirdSection > p{
+    font-size: 12px;
+    color:grey;
+}
+
+.thirdSection-text{
+    margin-top:-10px;
+    margin-bottom:55px;
+}
+
+.fourSection{
+    background-image: url(girl.webp);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    /* con lo de arriba se pone la foto entera */
+    width: 100%;
+    color:white;
+    /* padding-right:30px; */
+    font-size: 120%;
+    height: 500px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
+}
+
+.second-fourSection-text{
+    margin:0px;
+}
+
+.containerFourSection{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin:0 0 30px 30px;
+    /* orden del margin --> orden de las agujas del sentido del reloj */
+}
+
+.sixSection {
+    position: relative;
+    background-image: url(sixSection.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    color: white;
+    font-size: 120%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
+    overflow: hidden;
+}
+
+/* Añadir capa con degradado */
+.sixSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%; /* Ancho aumentado al 40% */
+    height: 100%;
+    background: linear-gradient(to right, black, transparent);
+    z-index: 0; /* Mantener el degradado detrás del contenido */
+}
+
+/* Contenedor general */
+.containerSixSection {
+    position: relative;
+    z-index: 1; /* Elevar el contenido por encima del degradado */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Parte superior */
+.top-sixSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.imgTextSixSection {
+    display: flex;
+    margin-top: 10px;
+}
+
+.imgSixSection {
+    height: 25px;
+    width: 25px;
+    margin-right: 20px;
+}
+
+/* Parte inferior */
+.bottom-sixSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.bottom-sixSection h2 {
+    margin-bottom: 10px;
+}
+
+.bottom-sixSection p {
+    margin-bottom: 5px;
+}
+
+/* Botones */
+.form-sixSection {
+    margin-top: 20px;
+}
+
+.littleText-SixSection {
+    font-size: 12px;
+    color: lightgrey;
+}
+
+.subrayadoNegro{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.containerSevenSection{
+    display:flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+}
+
+.negrita{
+    font-weight: bold;
+}
+
+.footer__text {
+    margin-left: 15px;
+}
+
+.footer__start {
+    display: flex;
+    justify-content: flex-start;
+    padding: 3%;
+    padding-bottom: 1%;
+    align-items: center;
+}
+
+.footer__mainBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    list-style: none;
+}
+
+.footer__central {
+    background-color: rgba(209, 209, 209, 0.336);
+    padding-top: 115px;
+    padding-bottom: 60px;
+}
+
+.footer__list {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.listas {
+    justify-content: flex-start;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.finalA {
+    font-size: medium;
+    color: black; /* Cambiar el color del texto a negro */
+    text-decoration: none; /* Quitar el subrayado */
+}
+
+.finalA:hover {
+    text-decoration: underline; /* Opcional: agregar subrayado al pasar el ratón */
+}
+
+.footer__social {
+    margin: 50px;
+}
+
+.social {
+    width: 2%;
+}
+
+.finalFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.finalFooterLeft {
+    margin-left: 20px;
+}
+
+.finalFooterRight {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+
+.finalFooterRight ul {
+    display: flex;
+    padding: 0; 
+    margin: 0; 
+    list-style-type: none; 
+}
+
+.listFinalFooter {
+    margin: 0 15px; 
 }
