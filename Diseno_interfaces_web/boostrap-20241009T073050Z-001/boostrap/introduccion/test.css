@@ -6,7 +6,18 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: 'BMWTypeNext Pro Regular', sans-serif;
+    
 }
+/* preguntar profe por qué no va */
+/* https://www.onlinewebfonts.com/download/ac95f91c55cc591ecf37a4d136ff8031 */
+@font-face {
+    font-family: "BMWTypeNext Pro Regular";
+    src: url('fonts/BMWTypeNext Pro Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 .bmw-logo-left{
     width: 10%;
@@ -18,7 +29,7 @@ header{
     justify-content: center;
     align-self: center;
     flex-direction: column;
-    background-image: url(bmw-m5-in-dark.jpg);
+    background-image: url(videoframe_2052.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -37,7 +48,6 @@ header{
     /* width: 89%;
     margin-right: 5%; */
     width: 80%;
-    background-color: red;
 
 }
 
@@ -47,6 +57,7 @@ header{
     justify-content: center;
     height: 20%;
     align-items: center;
+    background-color: grey;
 }
 .headerIconTop{
     margin-top:5px;
@@ -78,10 +89,68 @@ header{
 
 .headerBottom{
     display:flex;
-    justify-content: left;
+    justify-content:center;
     height: 400px;
+    flex-direction:column;
+    margin-left:20px;
+    color:white;
+
 }
 
 .m-series{
+    display:flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin:5px;
+}
+
+.m-series-logo{
     width: 50px;
+    height: 50px;
+}
+
+.m5{
+    margin-left: 10px;
+    font-size: 500%;
+}
+
+.textTitle{
+    font-size: 300%;
+}
+
+.formBottom{
+    border-radius: 20px;
+}
+
+
+.transparent-btn{
+    background-color: transparent;
+    border: 1px solid black;
+    color: white;
+    height: 38px;
+    border-radius: 2px;
+}
+
+.smallTextTop{
+    font-size: 10px;
+    color:grey;
+    margin-top:10px;
+    margin-left:40px;
+}
+
+.containerFirst{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pleasureText{
+    height: 200px;
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
