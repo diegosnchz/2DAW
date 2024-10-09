@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teoria-medias.css">
+    <title>Medias Queries</title>
+</head>
+
+<body>
+    <h1>Medias Queries</h1>
+    <p>Son reglas CSS específicas que solo aplicarán a ciertos tamaños de pantalla concretos, ¡vamos a ver cómo
+        crearlas!</p>
+    <p class="mt">En primer lugar para que las medias queries te funcionen, debes indicar esta meta en el head de tu
+        HTML</p>
+    <div class="b-container">
+        <div class="container__info">
+            <p>
+                < meta name="viewport" content="width=device-width, initial-scale=1.0">
+            </p>
+        </div>
+    </div>
+    <div class="b-container">
+        <div class="container__info container__info--noColor">
+            <p>Esto le dirá al navegador que el ancho de la vista debe ser como máximo el ancho del dispositivo, de esta
+                manera
+                deberíamos evitar tener scroll horizontal en nuestra web</p>
+            <p>Una vez tengamos el meta indicado podremos crear nuestras primeras media queries:</p>
+        </div>
+    </div>
+
+    <div class="b-container">
+        <div class="container__info">
+            <p>
+                @media screen and (min-width: 480px) {
+            </p>
+            <p> /* Código CSS que solo aplica a pantallas con ancho > 480 */</p>
+            <p>
+                p {
+            </p>
+            <p>font-size: 25px;</p>
+            <p> }</p>
+            <p> }</p>
+        </div>
+    </div>
+
+    <div class="b-container">
+        <div class="container__info container__info--noColor">
+            <p>Podemos hacer combinaciones de reglas:</p>
+        </div>
+    </div>
+
+    <div class="b-container">
+        <div class="container__info">
+            <p>
+                @media all and (min-width: 800px) and (max-width: 1024px) {
+            </p>
+            <p> .columna {
+            </p>
+            <p>
+                width: 33%;
+            </p>
+            <p> }</p>
+            <p> }</p>
+        </div>
+    </div>
+
+    <div class="b-container">
+        <div class="container__info container__info--noColor">
+            <p>También podemos usar como selector la orientación de la pantalla, aunque probablemente esto</p>
+            <p>acabe generando demasiadas variaciones y nos acaba resultando un lío:</p>
+        </div>
+    </div>
+
+    <div class="b-container">
+        <div class="container__info">
+            <p>
+                @media only screen and (orientation: portrait) {
+            </p>
+            <p> .titulo {
+            </p>
+            <p>
+                margin: 10px 20px;
+            </p>
+            <p> }</p>
+            <p> }</p>
+        </div>
+    </div>
+
+    <h1>Media Queries: ejemplo mobile first</h1>
+
+    <div class="b-container">
+        <div class="container__info container__info--noColor">
+            <p>Como ya hemos mencionando anteriormente debes pensar primero en mobile, esto implica que las </p>
+            <p>reglas CSS que apliques deberán ser primero para pantallas pequeñas, y en caso de que tengamos</p>
+            <p>que aplicar alguna media querie, esta debe ser para pantallas grandes</p>
+        </div>
+    </div>
+
+    <div class="b-container">
+        <div class="container__info">
+            <p>/* Reglas por defecto (mobile) */</p>
+            <p>
+                p {
+            </p>
+            <p> font-size: 12px;
+            </p>
+            <p>
+                /* Resto de reglas en orden creciente */
+            </p>
+            <p> @media (min-width: 576px) {</p>
+            <p> p {</p>
+            <p> font-size: 14px</p>
+            <p>}</p>
+            <p>}</p>
+            <p>@media (min-width: 768px) {</p>
+            <p> p {</p>
+            <p>font-size: 16px;</p>
+            <p>}</p>
+            <p>}</p>
+            <p>@media (min-width: 992px) {</p>
+            <p> p {</p>
+            <p>font-size: 20px;</p>
+            <p>}</p>
+            <p>}</p>
+            <p>@media (min-width: 1200px) {</p>
+            <p> p {</p>
+            <p>font-size: 24px;</p>
+            <p> }</p>
+            <p>}</p>
+        </div>
+    </div>
+
+    <h2>Documentación adicional: </h2>
+    <a href="https://css-tricks.com/css-media-queries/">https://css-tricks.com/css-media-queries/</a>
+
+    <div class="b-container">
+        <div class="container__info container__info--noColor">
+            <p> No hay unos breakpoints estándar, en cada proyecto se usan uno, pero si quieres una referencia </p>
+            <p>puedes usar los mismos que usa Bootstrap en su librería:</p>
+            <img src="img/Screen-Shot-2017-06-12-at-4.17.31-AM.png" alt="">
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

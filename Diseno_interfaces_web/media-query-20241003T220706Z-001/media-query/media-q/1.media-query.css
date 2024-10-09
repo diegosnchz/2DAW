@@ -1,0 +1,10 @@
+/* Reglas por defecto mobile-first */
+p{
+    font-size: 5rem
+}
+
+@media screen and  (min-width: 480px) {
+    .text{
+        font-size: 1rem;
+    }
+}

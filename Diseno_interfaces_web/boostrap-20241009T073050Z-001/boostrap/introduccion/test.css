@@ -1,0 +1,87 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bmw-logo-left{
+    width: 10%;
+}
+
+header{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    background-image: url(bmw-m5-in-dark.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.mainHeader{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerTop{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid white;
+    /* width: 89%;
+    margin-right: 5%; */
+    width: 80%;
+    background-color: red;
+
+}
+
+
+.rightHeaderTop{
+    display:flex;
+    justify-content: center;
+    height: 20%;
+    align-items: center;
+}
+.headerIconTop{
+    margin-top:5px;
+    height: 30px;
+    width: 30px;
+}
+
+.leftHeaderTop{
+    display:flex;
+    width: 50%;
+    padding:20px;
+    margin-top:10px;
+}
+
+.headerTop{
+    margin:5px;
+    /* padding:20px; */
+}
+
+.bmw-logo-left{
+    padding-right: 35px;
+    width: 13%;
+}
+
+.nav-link{
+    color: #ffffff !important;
+    /* buscar que es important */
+}
+
+.headerBottom{
+    display:flex;
+    justify-content: left;
+    height: 400px;
+}
+
+.m-series{
+    width: 50px;
+}

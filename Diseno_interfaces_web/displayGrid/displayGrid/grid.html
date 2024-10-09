@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="grid.css">
+</head>
+
+<body>
+    <!-- Utilizamos display: grid, para estructurar cajas de manera flexible, afecta a los hijos, por lo tanto tenemos que ponerlo
+    en el contenedor padre. Es muy útil para el responsive (cambio de pantalla) -->
+
+    <!-- Le ponemos a la clase b-grid-container el display: grid, lo que hace que sus hijos se posicionen de manera flexible en base a las 
+        condiciones que nosotros le apliquemos -->
+    <!-- Una vez apliquemos display: grid, se no habilitan otras propiedades, que son grid-template-columns, grid-template-row y grid-gap,
+        entre otras  -->
+    <!-- grid-template-columns, podemos crear e indicar cuantas columnas queremos y de que tamaño. -->
+    <!-- grid-template-row, podemos crear e indicar cuantas filas queremos y de que tamaño. -->
+    <!-- grid-gap, con esta propiedad podemos aumentar el tamaño de espaciado entre las filas y columnas -->
+    <h1>Propiedades básicas</h1>
+    <section class="mover">
+        <div class="b-grid-container">
+            <div class="b-box"></div>
+            <div class="b-box"></div>
+            <div class="b-box"></div>
+            <div class="b-box"></div>
+            <div class="b-box"></div>
+            <div class="b-box"></div>
+            <div class="b-box"></div>
+            <div class="b-box"></div>
+            <div class="b-box"></div>
+            <div class="b-box"></div>
+            <div class="b-box"></div>
+            <div class="b-box"></div>
+            <div class="b-box"></div>
+            <div class="b-box"></div>
+            <div class="b-box"></div>
+        </div>
+    </section>
+   
+    <!-- Otra opción que tenemos para poner la medidas(tamaño) que no sea en pixeles, es con la fracción (fr), lo que va a intentar el grid
+        es ancharse lo máximo posible, en base a las fracciones que nosotros utilizemos, adaptando el tamaño de los hijos a la fracción que 
+        le correspone -->
+    <h1>Fracción</h1>
+    <div class="b-grid-fr-container">
+        <div class="b-box1"></div>
+        <div class="b-box1"></div>
+        <div class="b-box1"></div>
+        <div class="b-box1"></div>
+        <div class="b-box1"></div>
+        <div class="b-box1"></div>
+        <div class="b-box1"></div>
+        <div class="b-box1"></div>
+        <div class="b-box1"></div>
+        <div class="b-box1"></div>
+        <div class="b-box1"></div>
+        <div class="b-box1"></div>
+    </div>
+    <!-- Cuando nosotros utilizamos display grid, los hijos también habilitan una serie de propiedades, como grid-column-start, grid-column-end
+        grid-row-start, grid-row-end, estas propiedades se las ponemos al hijo -->
+    <!-- Con grid-column- indicamos en que columna queremos que comience y acabe el hijo -->
+    <!-- Con grid-row- indicamos en que fila queremos que comience y acabe el hijo -->
+    <h1>Fracción-2</h1>
+    <div class="b-grid-fr-container2">
+        <div class="b-box2 b-box2__size"> </div>
+        <div class="b-box2"></div>
+        <div class="b-box2"></div>
+        <div class="b-box2"></div>
+        <div class="b-box2"></div>
+        <div class="b-box2 box2__size3"></div>
+        <div class="b-box2 "></div>
+        <div class="b-box2"></div>
+        <div class="b-box2"></div>
+        <div class="b-box2"></div>
+        <div class="b-box2 b-box2__size2"></div>
+        <div class="b-box2"></div>
+    </div>
+
+    <!-- Podemos usar la función REPEAT para evitar poner 1fr 1fr 1fr, ya que con ella, podemos indicar cuantas filas o columnas
+        queremos, por ejemplo, en vez de poner 1fr 1fr 1fr 1fr, que serían cuatro columnas, podemos poner repeat(4, 1fr), con este indicamos
+        que queremos cuatro columnas(primer valor dentro del repeat), de un tamaño de 1fr(segundo valor) -->
+    <h1>Repeat</h1>
+    <div class="b-grid-repeat-container">
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+    </div>
+    <!-- También podemos usar la propiedad MINMAX, podemos decirle el mínimo de espacio que va a ocupar y el máximo que puede llegar a ocuapar
+        con esto, impedimos que el tamaño mínimo sea menos que la cantidad que ponemos, por ejemplo repeat(4, minmax(100px, 2fr)), este caso
+        le indicamos que los elementos, como mínimo van a ser de 100px y no pueden ser menos que esa medida -->
+    <h1>Minmax</h1>
+    <div class="b-grid-minmax-container">
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+    </div>
+    <!-- Podemos usar la propidad auto-fit, esta propiedad va a hacer que las filas o columnas se adapten de manera automática.
+        Por ejemplo repeat(auto-fit, minmax(100px, 2fr)), si tiene espacio para poner 4 columnas pondrá 4, si le quitamos espacio
+        reducirá el número de columnas que pondrá, del mismo modo que si le añadimos espacio, pondrá más columnas o filas-->
+    <h1>Repeat FIT</h1>
+    <div class="b-grid-auto-fit-container">
+        <div class="box5"></div>
+        <div class="box5"></div>
+        <div class="box5"></div>
+        <div class="box5"></div>
+        <div class="box5"></div>
+        <div class="box5"></div>
+        <div class="box5"></div>
+        <div class="box5"></div>
+        <div class="box5"></div>
+        <div class="box5"></div>
+        <div class="box5"></div>
+        <div class="box5"></div>
+        <div class="box5"></div>
+        <div class="box5"></div>
+    </div>
+
+    <!-- El otro auto que tenemos es el auto-fill, que hace algo similar que el auto-fit, pero si ya a superado el máximo o el mínimo, 
+        y sigue quedando espacio dejará ese espacio en blanco -->
+    <h1>Repeat FILL</h1>
+    <div class="b-grid-auto-fill-container">
+        <div class="box6"></div>
+        <div class="box6"></div>
+        <div class="box6"></div>
+        <div class="box6"></div>
+        <div class="box6"></div>
+
+    </div>
+</body>
+
+</html>

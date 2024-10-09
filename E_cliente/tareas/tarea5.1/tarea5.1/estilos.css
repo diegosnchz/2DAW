@@ -1,0 +1,47 @@
+font-family: 'Barlow Semi Condensed', sans-serif;
+
+
+.background1{
+    background-color: rgb(140, 61, 213);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.background1:hover{
+    background-color: rgb(86, 5, 161);
+}
+
+.background2{
+    background-color: hsl(219, 29%, 14%);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.background2:hover{
+    background-color: hsl(217, 70%, 36%);
+}
+
+.background3{
+    background-color: hsl(321, 87%, 55%);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.background3:hover{
+    background-color: hsl(321, 89%, 25%);
+}
+
+.background4{
+    background-color: hsl(261, 63%, 41%);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.background4:hover{
+    background-color: hsl(261, 94%, 52%);
+}
+
+.background5{
+    background-color: hsl(217, 94%, 42%);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.background5:hover{
+    background-color: hsl(194, 94%, 42%);
+}

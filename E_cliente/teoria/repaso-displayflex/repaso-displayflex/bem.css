@@ -1,0 +1,21 @@
+.b-gallery__precio{
+    font-size: 28px;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+.b-gallery__precio--color{
+    color: yellowgreen;
+}
+.b-gallery__item{
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    padding: 50px;
+}
+.b-gallery__item--tamaño{
+    width: 450px;
+    height: 450px;
+}
+.b-gallery__item--color{
+    background-color: blueviolet;
+}

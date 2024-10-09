@@ -1,0 +1,127 @@
+h1{
+    text-align: center;
+    font-size: 38px;
+}
+
+/* Propiedades básicas */
+.mover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.b-grid-container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px;
+    grid-gap: 10px;
+}
+.b-box{
+    background-color: rgb(0, 0, 255);
+}
+
+/* Fracción */
+.b-grid-fr-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 200px;
+    grid-gap: 10px;
+    background: rgb(162, 5, 81);
+    padding: 30px;
+}
+.b-box1{
+    background-color: rgb(245, 23, 130);
+}
+
+/* Fracción-2 */
+.b-grid-fr-container2{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 200px 100px;
+    grid-gap: 10px;
+    background: rgb(4, 238, 238);
+    padding: 30px;
+}
+.b-box2{
+    background-color: rgb(23, 93, 245);
+}
+.b-box2__size{
+    background-color: rgb(102, 147, 245);
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    display: grid;
+    grid-template-columns:  100px 100px;
+    grid-template-rows: 100px 100px;
+    width: 100%;
+    grid-gap: 10px;
+}
+.b-box2__size2{
+    background-color: rgb(15, 39, 90);
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+.box2__size3{
+    background-color: rgb(255, 136, 0);
+    grid-column-start: 5;
+    grid-column-end: 7;
+
+}
+/* REPEAT */
+.b-grid-repeat-container{
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 20px;
+    background-color: rgb(188, 33, 33);
+    padding: 20px;
+}
+.box3{
+    background-color: rgb(241, 171, 171);
+}
+/* MINMAX */
+.b-grid-minmax-container{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 2fr));
+    grid-template-rows: repeat(3, minmax(100px, 2fr));
+    grid-gap: 20px;
+    background-color: rgb(113, 91, 3);
+    padding: 20px;
+}
+.box4{
+    background-color: rgb(255, 211, 34);
+}
+/* REPEAT-FIT */
+.b-grid-auto-fit-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px,1fr));
+    grid-gap: 20px;
+    background-color: rgb(21, 113, 3);
+    padding: 20px;
+}
+.box5{
+    background-color: rgb(51, 240, 13);
+    min-height: 100px;
+    width: 100%;
+}
+
+/* REPEAT-FILL */
+.b-grid-auto-fill-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px,1fr));
+    grid-gap: 10px;
+    background-color: rgb(36, 3, 113);
+    padding: 20px;
+}
+.box6{
+    background-color: rgb(77, 6, 240);
+    min-height: 100px;
+    width: 100%;
+}

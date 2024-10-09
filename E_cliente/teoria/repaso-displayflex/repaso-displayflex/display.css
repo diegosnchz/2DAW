@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+}
+h1{
+    font-size: 48px
+}
+p{
+    font-size: 30px;
+}
+.caja{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 15px;
+}
+img{
+    margin-top: 15px;
+    width: 80%;
+}

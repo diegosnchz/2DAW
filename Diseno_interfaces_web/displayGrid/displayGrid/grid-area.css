@@ -1,0 +1,48 @@
+.container{
+    display: grid;
+    background-color: blueviolet;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    /* para utilizar el grid area, necesitamos activar el grid template areas, en el elemento padre, en este caso container, con esto establecemos el orden en 
+    el que queremos que se ajusten los hijos, a los que les tenemos que dar un valor con grid area */
+    grid-template-areas: 
+    /* en esta primera parte le estamos dicendo que el elemento a ocupe todo el ancho */
+    /* En el display area, las columnas que definos deben estar todas presentes, si no queremos que una aperezca, debemos poner un punto en su lugar, si no, el navegador al esperar
+    que este caso, sean tres columnas no podrá renderizar correctamente la página..Podemos poner un . en su lugar para cumplir con las reglas del gri template columns */
+    "a a a"
+    "b c d"
+    "e e e"
+    ;
+}
+.box1{
+    background-color: rgb(255, 81, 0);
+    /* Con grid area, le indicamos cual es el valor que le corresponde en el grid template areas del padre, en este caso el valor a */
+    grid-area: a;
+    height: 250px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.box2{
+    background-color: rgb(255, 238, 0);
+    grid-area: b;
+    height: auto;
+}
+.box3{
+    background-color: rgb(47, 0, 255);
+    /* display: none; */
+    grid-area: c;
+    height: auto;
+}
+
+.box4{
+    background-color: rgb(7, 59, 59);
+    grid-area: d;
+    height: auto;
+}
+
+.box5{
+    background-color: rgb(26, 141, 141);
+    grid-area: e;
+    height: auto;
+}

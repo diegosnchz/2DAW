@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+    <link rel="stylesheet" href="display-flex.css">
+</head>
+
+<body>
+    <h1>FLEXBOX</h1>
+    <p>El módulo Flexbox tiene como objetivo proporcionar una manera más eficiente de diseñar, alinear y distribuir el
+        espacio entre los elementos de un contenedor, incluso cuando su tamaño es desconocido o dinámico (de ahí la
+        palabra "flex").</p>
+    <p>La idea principal detrás del diseño flexible es otorgar al contenedor la capacidad de modificar el ancho/alto (y
+        el orden) de sus elementos para llenar mejor el espacio disponible (principalmente para adaptarse a todo tipo de
+        dispositivos de visualización y tamaños de pantalla).</p>
+    <p>Un contenedor flexible expande los elementos para llenar el espacio libre disponible o los reduce para evitar el
+        desbordamiento.</p>
+    <h1>Propiedades de padre</h1>
+    <h2>SIN DISPLAY</h2>
+    <div class="caja">
+        <div class="hijo">
+            <p>1</p>
+        </div>
+        <div class="hijo">
+            <p>2</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+    </div>
+    <h2>Con display</h2>
+    <p>Poniendo display flex al padre, todos su hijos directos, en este caso los div, no las p, se vuelven flexibles y
+        los podemos colocar </p>
+    <div class="caja1">
+        <div class="hijo">
+            <p>1</p>
+        </div>
+        <div class="hijo">
+            <p>2</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+    </div>
+    <h1>Justify-content</h1>
+    <p>Alineación de los hijos en horizontal</p>
+    <div class="caja-justify-content-end">
+        <!-- justify-content: end alienea los elementos al final -->
+        <div class="hijo">
+            <p>1</p>
+        </div>
+        <div class="hijo">
+            <p>2</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+    </div>
+    <div class="caja-justify-content-center">
+        <!-- justify-content: center alienea los elementos en el centro -->
+        <div class="hijo">
+            <p>1</p>
+        </div>
+        <div class="hijo">
+            <p>2</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+    </div>
+    <div class="caja-justify-content-between">
+        <!-- justify-content: between pone espacios, todo lo que pueda entre los elementos dentro del padre -->
+        <div class="hijo">
+            <p>1</p>
+        </div>
+        <div class="hijo">
+            <p>2</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+    </div>
+    <div class="caja-justify-content-evenly">
+        <!-- justify-content: evenly, aplica espacio entre los elementos, y también el mismo espacio al principio y al final -->
+        <div class="hijo">
+            <p>1</p>
+        </div>
+        <div class="hijo">
+            <p>2</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+    </div>
+    <div class="caja-justify-content-around">
+        <!-- justify-content: around, aplica espacio entre los elementos, es similar al anterior, pero pone menos espacio al principio y al final-->
+        <div class="hijo">
+            <p>1</p>
+        </div>
+        <div class="hijo">
+            <p>2</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+    </div>
+    <h1>Aling-items</h1>
+    <p>Alineación de los hijos en vertical</p>
+    <div class="caja-aling-items-center">
+        <!-- aling-items: center, alienea los hijos en el centro-->
+        <div class="hijo">
+            <p>1</p>
+        </div>
+        <div class="hijo">
+            <p>2</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+    </div>
+    <div class="caja-aling-items-end">
+        <!-- aling-items: end, alienea los hijos al final-->
+        <div class="hijo">
+            <p>1</p>
+        </div>
+        <div class="hijo">
+            <p>2</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+    </div>
+    <h1>Align-items && justify-content</h1>
+    <p>Podemos usar ambas a la vez, así podemos dar el centrado que queramos en ambos ejes al mismo tiempo</p>
+    <div class="caja-aling-justify-center">
+        <div class="hijo">
+            <p>1</p>
+        </div>
+        <div class="hijo">
+            <p>2</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+    </div>
+    <h1>Flex-direction</h1>
+    <p>Por defecto al activar display: flex, los hijos se ordenan en fila, de izquierda a derecha</p>
+    <div class="caja-direction-row-reverse">
+        <div class="hijo">
+            <p>1</p>
+        </div>
+        <div class="hijo">
+            <p>2</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+    </div>
+    <div class="caja-direction-column">
+        <div class="hijo">
+            <p>1</p>
+        </div>
+        <div class="hijo">
+            <p>2</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+    </div>
+    <div class="caja-direction-reverse">
+        <div class="hijo">
+            <p>1</p>
+        </div>
+        <div class="hijo">
+            <p>2</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+    </div>
+    <h1>Flex-Wrap</h1>
+    <p>Si ponemos display: flex, nos intenta alienear todos los elementos en una fila, sin dejar caer nada. <br>
+        En cambio, si utilizamos la propiedad flex-wrap:wrap, vamos a conseguir que los hijos ocupen todo el espacio que
+        deberían, se seguirán mostrando en fila, pero en el momento en el que no tengan más espacio, el elemento hijo da
+        un salto de línea</p>
+    <div class="caja-flex">
+        <div class="hijo">
+            <p>1</p>
+        </div>
+        
+        <div class="hijo">
+            <p>2</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+        <div class="hijo">
+            <p>4</p>
+        </div>
+        <div class="hijo">
+            <p>5</p>
+        </div>
+        <div class="hijo">
+            <p>6</p>
+        </div>
+        <div class="hijo">
+            <p>7</p>
+        </div>
+        <div class="hijo">
+            <p>8</p>
+        </div>
+        <div class="hijo">
+            <p>9</p>
+        </div>
+        <div class="hijo">
+            <p>10</p>
+        </div>
+        <div class="hijo">
+            <p>11</p>
+        </div>
+        <div class="hijo">
+            <p>12</p>
+        </div>
+        <div class="hijo">
+            <p>13</p>
+        </div>
+        <div class="hijo">
+            <p>14</p>
+        </div>
+        <div class="hijo">
+            <p>15</p>
+        </div>
+        <div class="hijo">
+            <p>16</p>
+        </div>
+        <div class="hijo">
+            <p>17</p>
+        </div>
+        <div class="hijo">
+            <p>18</p>
+        </div>
+        <div class="hijo">
+            <p>19</p>
+        </div>
+        <div class="hijo">
+            <p>20</p>
+        </div>
+
+    </div>
+
+    <div class="caja-flex-wrap">
+        <div class="hijo">
+            <p>1</p>
+        </div>
+        
+        <div class="hijo">
+            <p>2</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+        <div class="hijo">
+            <p>3</p>
+        </div>
+        <div class="hijo">
+            <p>4</p>
+        </div>
+        <div class="hijo">
+            <p>5</p>
+        </div>
+        <div class="hijo">
+            <p>6</p>
+        </div>
+        <div class="hijo">
+            <p>7</p>
+        </div>
+        <div class="hijo">
+            <p>8</p>
+        </div>
+        <div class="hijo">
+            <p>9</p>
+        </div>
+        <div class="hijo">
+            <p>10</p>
+        </div>
+        <div class="hijo">
+            <p>11</p>
+        </div>
+        <div class="hijo">
+            <p>12</p>
+        </div>
+        <div class="hijo">
+            <p>13</p>
+        </div>
+        <div class="hijo">
+            <p>14</p>
+        </div>
+        <div class="hijo">
+            <p>15</p>
+        </div>
+        <div class="hijo">
+            <p>16</p>
+        </div>
+        <div class="hijo">
+            <p>17</p>
+        </div>
+        <div class="hijo">
+            <p>18</p>
+        </div>
+        <div class="hijo">
+            <p>19</p>
+        </div>
+        <div class="hijo">
+            <p>20</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

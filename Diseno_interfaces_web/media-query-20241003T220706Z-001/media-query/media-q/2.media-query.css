@@ -1,0 +1,34 @@
+/* Reglas por defecto (mobile) */
+p{
+    font-size: 12px;
+}
+
+/* Resto de reglas en orden creciente */
+@media (min-width: 576px){
+    p {
+        font-size: 14px;
+        color: blue;
+    }
+
+}
+
+@media (min-width: 768px){
+    p {
+        font-size: 16px;
+        color: blueviolet;
+    }
+}
+
+@media (min-width: 992px) {
+    p {
+        font-size: 20px;
+        color: turquoise;
+    }
+}
+
+@media (min-width: 1200px) {
+    p {
+        font-size: 24px;
+        color: coral;
+    }
+}

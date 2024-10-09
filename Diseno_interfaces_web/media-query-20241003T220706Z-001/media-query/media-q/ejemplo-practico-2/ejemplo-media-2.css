@@ -1,0 +1,153 @@
+body {
+    background-color: antiquewhite;
+}
+
+.padre {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+.cardContainer__sedans {
+    background-color: hsl(31, 77%, 52%);
+    padding: 60px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.container__tittle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: hsl(0, 0%, 95%);
+}
+
+.container__text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+
+.button__sedans {
+    margin-top: 25px;
+    color: hsl(31, 77%, 52%);
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 35px;
+    border: transparent;
+    padding: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.button__sedans:hover {
+    color: hsl(0, 0%, 95%);
+    border: 1px solid hsl(0, 0%, 95%);
+    background-color: hsl(31, 77%, 52%);
+    position: fixed;
+}
+
+.cardContainer__suvs {
+    background-color: hsl(184, 100%, 22%);
+    padding: 60px;
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.button__suvs {
+    margin-top: 25px;
+    color: hsl(184, 100%, 22%);
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 35px;
+    border: transparent;
+    padding: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.button__suvs:hover {
+    color: hsl(0, 0%, 95%);
+    border: 1px solid hsl(0, 0%, 95%);
+    background-color: hsl(184, 100%, 22%);
+    position: fixed;
+}
+
+.cardContainer__luxury {
+    background-color: hsl(179, 100%, 13%);
+    padding: 60px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.button__luxury {
+    margin-top: 25px;
+    color: hsl(179, 100%, 13%);
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 35px;
+    border: transparent;
+    padding: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.button__luxury:hover {
+    color: hsl(0, 0%, 95%);
+    border: 1px solid hsl(0, 0%, 95%);
+    background-color: hsl(179, 100%, 13%);
+    position: fixed;
+}
+
+@media screen and (max-width: 480px) {
+    .padre {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 250px;
+        flex-direction: column;
+        width: 90% !important;
+    }
+
+    .cardContainer__sedans {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+        box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .cardContainer__suvs {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+    .cardContainer__luxury {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .cardContainer__img{
+        max-width: 100px;
+    }
+
+}

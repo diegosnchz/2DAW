@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0e5f8, #b3bdf3);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url('bg-bottom.svg'), url('bg-top.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: left bottom, right top;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    padding: 0;
+}
+
+.basicPlan, .professionalPlan, .masterPlan {
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 550px;
+    height: auto;
+}
+
+.basicPlan, .masterPlan {
+    height: 550px;
+    width: 480px;
+    background: linear-gradient(135deg, #e0b3ff, #e6ccff); 
+}
+
+.professionalPlan {
+    height: 670px;
+    width: 470px;
+    background: linear-gradient(135deg, #7a33cc, #9933ff); 
+}
+
+.basicPlan div, .masterPlan div {
+    border-bottom: 1px solid black;
+    width: 200px;
+    margin-bottom: 15px; 
+}
+
+.professionalPlan div {
+    border-bottom: 1px solid white;
+    width: 200px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.headerMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    color: #333;
+}
+
+input[type="button"] {
+    margin-top: 15px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.buttonBasicMaster, .buttonProfessional {
+    border-bottom: none;
+    width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+    }
+
+    .basicPlan, .professionalPlan, .masterPlan {
+        box-sizing: border-box;
+        width: 95%;
+        margin: 25px;
+        border: 2px solid black;
+        border-radius: 15px;
+    }
+}
+
+.learnMoreBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 200px;
+}
+
+.learnMoreBtn:hover {
+    background-color: #555;
+}
+
+.basicPlan, .professionalPlan, .masterPlan {
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 10px;
+    width: 300px;
+}
+
+.basicPlan:hover, .professionalPlan:hover, .masterPlan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.basicPlan *, .professionalPlan *, .masterPlan * {
+    transition: all 0.3s ease;
+}
+
+.basicPlan:hover *, .professionalPlan:hover *, .masterPlan:hover * {
+    transform: scale(1.02);
+}
+
+.basicPlan .learnMoreBtn, .masterPlan .learnMoreBtn {
+    background-color: #ff69b4;
+}
+
+.professionalPlan .learnMoreBtn {
+    background-color: #21026b;
+}
