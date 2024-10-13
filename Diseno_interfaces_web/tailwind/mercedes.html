@@ -4,36 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercedes-Benz</title>
+    <!-- ico -->
+    <link rel="icon" href="nav-logo.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header>
+        <!-- la class del header es para intentar poner el video pero no puedo xd -->
+    <header class=" bg-cover bg-center h-screen">
         <nav class="bg-black text-gray-500 flex justify-around items-center text-sm">
             <div class="flex justify-around items-center">
-                <ul class="flex space-x-4">
-                    <li><a href="">Modelos</a></li>
-                    <li><a href="">Comprar</a></li>
-                    <li><a href="">Servicios</a></li>
-                    <li><a href="">Marca</a></li>
+                <ul class="flex space-x-5">
+                    <li><a href="" class="hover:text-white">Modelos</a></li>
+                    <li><a href="" class="hover:text-white">Comprar</a></li>
+                    <li><a href="" class="hover:text-white">Servicios</a></li>
+                    <li><a href="" class="hover:text-white">Marca</a></li>
                 </ul>
             </div>
 
             <div class="logo">
-                <img src="nav-logo.svg" alt="logo-mercedes" class="h-50 w-50">
+                <img src="nav-logo.svg" alt="logo-mercedes" class="p-3 h-12.5 w-12.5">
             </div>
 
             <div>
                 <ul class="flex space-x-6"> 
-                    <li><a href="">Proveedor/...</a></li>
-                    <img src="" alt="lupa">
-                    <img src="" alt="star">
-                    <div>
-                        <img src="" alt="user">
-                        <a href="">Iniciar sesión</a>
+                    <li><a href="" class="hover:text-white">Proveedor/...</a></li>
+                    <img src="icons8-search.svg" alt="lupa" class="h-6 w-6 hover:text-white">
+                    <img src="icons8-star-100.png" alt="star" class="h-6 w-6 hover:text-white">
+                    <div class="flex space-x-5">
+                        <img src="icons8-user-96.png" alt="user" class="h-6 w-6 hover:text-white">
+                        <a href="" class="hover:text-white">Iniciar sesión</a>
                     </div>
                 </ul>
             </div>
         </nav>
+
+        <div class="container flex items-center h-1000 w-100% justify-start">
+            <div class="text flex justify-start flex-col">
+                <h1>El poder de elegir.</h1>
+                <h4>Eléctrico. Híbrido Enchufable. Combustión.</h4>
+                <input type="button" value="Descúbrelo" class="mt-1">
+            </div>
+        </div>
     </header>
 </body>
 </html>
