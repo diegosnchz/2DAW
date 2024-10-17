@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +7,15 @@
     <link rel="icon" href="nav-logo.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="mercedes.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
+    <!-- Encabezado -->
     <header class="bg-cover bg-center h-screen">
+        <!-- Barra de navegación -->
         <nav class="bg-black text-gray-500 flex justify-around items-center text-sm">
+            <!-- Menú izquierdo -->
             <div class="flex justify-around items-center">
                 <ul class="flex space-x-5">
                     <li><a href="" class="hover:text-white">Modelos</a></li>
@@ -24,9 +24,11 @@
                     <li><a href="" class="hover:text-white">Marca</a></li>
                 </ul>
             </div>
+            <!-- Logo central -->
             <div class="logo">
                 <img src="nav-logo.svg" alt="logo-mercedes" class="p-3 h-12.5 w-12.5">
             </div>
+            <!-- Menú derecho -->
             <div>
                 <ul class="flex space-x-6">
                     <li><a href="" class="hover:text-white">Proveedor/...</a></li>
@@ -39,29 +41,30 @@
                 </ul>
             </div>
         </nav>
+        
+        <!-- Contenido del encabezado -->
         <div class="container flex items-center max-w-full h-[700px] justify-start headerBg">
             <video autoplay muted loop src="video-header.mp4"></video>
             <div class="text flex justify-start flex-col ml-12">
                 <h1 class="text-4xl font-bold text-white">El poder de elegir.</h1>
                 <h4 class="text-xl text-gray-300 mt-2">Eléctrico. Híbrido Enchufable. Combustión.</h4>
-                <input type="button" value="Descúbrelo"
-                    class="mt-4 bg-blue-500 text-white px-4 py-2 rounded w-[120px] p-[40px]">
+                <input type="button" value="Descúbrelo" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded w-[120px] p-[40px]">
             </div>
         </div>
     </header>
 
+    <!-- Sección de recomendaciones -->
     <div class="entreHeaderFirstSection flex justify-start items-center m-5 text-xl">
         <p>Nuestras recomendaciones.</p>
     </div>
 
-        <!-- Tengo que tener dos divs, el principal para la imagen y luego otro solo para tenerlo abajo con el texto en blanco sobre el fondo en negro -->
-
+    <!-- Sección principal de contenido -->
     <div class="container">
+        <!-- Grid de recomendaciones -->
         <div class="firstSecion grid grid-rows-2 grid-cols-3 gap-4 m-[50px]">
-            <!-- GRID 1 -->
-            <div
-                class="relative border-2 flex justify-end flex-col col-span-2 bg-[url(claseA.avif)] bg-cover bg-center bg-no-repeat max-w-full h-[600px] text-white hover-scale">
-                <div class="absolute inset-0 "></div>
+            <!-- GRID 1: Clase A -->
+            <div class="relative border-2 flex justify-end flex-col col-span-2 bg-[url(claseA.avif)] bg-cover bg-center bg-no-repeat max-w-full h-[600px] text-white hover-scale">
+                <div class="absolute inset-0"></div>
                 <div class="relative p-6">
                     <p class="mt-6 ml-6 text-lg">Clase A con Mercedes-Benz</p>
                     <h2 class="ml-6 text-3xl font-bold">Clase A.</h2>
@@ -73,10 +76,9 @@
                 </div>
             </div>
 
-            <!-- GRID 2 -->
-            <div
-                class="relative border-2 flex justify-end flex-col col-span-1 bg-[url(Mercedes-Benz-GLC-300-side-profile.jpg)] bg-cover bg-center bg-no-repeat max-w-full h-[600px] text-white hover-scale">
-                <div class="absolute inset-0 "></div>
+            <!-- GRID 2: Híbridos enchufables -->
+            <div class="relative border-2 flex justify-end flex-col col-span-1 bg-[url(Mercedes-Benz-GLC-300-side-profile.jpg)] bg-cover bg-center bg-no-repeat max-w-full h-[600px] text-white hover-scale">
+                <div class="absolute inset-0"></div>
                 <div class="relative p-6">
                     <p class="mt-6 ml-6 text-lg">Encuentra el más adecuado para ti.</p>
                     <h2 class="ml-6 text-3xl font-bold">Híbridos enchufables.</h2>
@@ -86,10 +88,9 @@
                 </div>
             </div>
 
-            <!-- GRID 3 -->
-            <div
-                class="relative border-2 flex justify-end flex-col col-span-1 bg-[url(grid3.avif)] bg-cover bg-center bg-no-repeat max-w-full h-[600px] text-white hover-scale">
-                <div class="absolute inset-0 "></div>
+            <!-- GRID 3: Movilidad eléctrica -->
+            <div class="relative border-2 flex justify-end flex-col col-span-1 bg-[url(grid3.avif)] bg-cover bg-center bg-no-repeat max-w-full h-[600px] text-white hover-scale">
+                <div class="absolute inset-0"></div>
                 <div class="relative p-6">
                     <p class="mt-6 ml-6 text-lg">Pásate a la movilidad eléctrica</p>
                     <h2 class="ml-6 text-3xl font-bold">Descubre nuestra gama 100% eléctrica</h2>
@@ -99,10 +100,9 @@
                 </div>
             </div>
 
-            <!-- GRID 4 -->
-            <div
-                class="relative border-2 flex justify-end flex-col col-span-1 bg-[url(grid4.avif)] bg-cover bg-center bg-no-repeat max-w-full h-[600px] text-white hover-scale">
-                <div class="absolute inset-0 "></div>
+            <!-- GRID 4: Mercedes-Benz de ocasión -->
+            <div class="relative border-2 flex justify-end flex-col col-span-1 bg-[url(grid4.avif)] bg-cover bg-center bg-no-repeat max-w-full h-[600px] text-white hover-scale">
+                <div class="absolute inset-0"></div>
                 <div class="relative p-6">
                     <p class="mt-6 ml-6 text-lg">Encuentra ahora tu Mercedes-Benz de ocasión certificado.</p>
                     <div class="buttonClaseA flex p-[50px] gap-4">
@@ -111,10 +111,9 @@
                 </div>
             </div>
 
-            <!-- GRID 5 -->
-            <div
-                class="relative border-2 flex justify-end flex-col col-span-1 bg-[url(grid5.avif)] bg-cover bg-center bg-no-repeat max-w-full h-[600px] text-white hover-scale">
-                <div class="absolute inset-0 "></div>
+            <!-- GRID 5: Nueva Clase G -->
+            <div class="relative border-2 flex justify-end flex-col col-span-1 bg-[url(grid5.avif)] bg-cover bg-center bg-no-repeat max-w-full h-[600px] text-white hover-scale">
+                <div class="absolute inset-0"></div>
                 <div class="relative p-6">
                     <p class="mt-6 ml-6 text-lg">Descúbrelos</p>
                     <h2 class="ml-6 text-3xl font-bold">Nueva Clase G</h2>
@@ -126,280 +125,222 @@
             </div>
         </div>
 
+        <!-- Sección de modelos recientes -->
         <section class="section2 pl-[50px]">
             <div class="texto">
                 <p>La combinación perfecta de lujo, deportividad y potencia: Descubre nuestros modelos más recientes</p>
             </div>
             <div class="botonera flex gap-2 pt-[15px]">
-                <button type="button"
-                    class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none"><p class="font-bold">Descubre
-                        todos los modelos</p></button>
-                <button type="button"
-                    class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none"><p class="font-bold">Descubre
-                        los modelos eléctricos</p></button>
+                <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
+                    <p class="font-bold">Descubre todos los modelos</p>
+                </button>
+                <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
+                    <p class="font-bold">Descubre los modelos eléctricos</p>
+                </button>
             </div>
         </section>
 
-
-        <!-- BERLINA -->
-<section class="grid3 grid grid-rows-3 grid-cols-3 gap-x-4 m-[50px]">
-    <div class="berlina flex flex-col mt-[-140px]">
-        <div class="imagen flex justify-end ml-14 relative top-[70px] z-20">
-            <img src="https://media.oneweb.mercedes-benz.com/images/dynamic/europe/ES/223176/805_055/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyjtsd2sDcUfp8cXGEubYJ0l36xOB2NbcbApRiyI5ux4ZQC31SrkzNBUKm7j871hKVi%25E%25vqeUayLRsGWYaxUkhrH1zJln8w78foiZK6EM4FvRwTg9LYT6PDarDSeWHtItsd8cTcUfiXyXGE45mJ0lgCAOB2fQcbApETRI5uK5IQC3sMOkzNetDm7jCcmhKVfLe%25vqLvcyLRaGfYaxH08rH18BOn8wiz2oiCpBxySfD2MpgO2gVIZbMFwRPRYEY7fHizWKfAN59S%25B8O&imgt=P27&bkgnd=9&pov=BE030&uni=m&width=400&im=Crop,rect=(0,0,400,187),gravity=North"
-                alt="berlina-mercedes.jpg" class="w-[300px] h-[150px] mt-1">
-        </div>
-        <div class="relative h-20 w-full overflow-hidden rounded-md max-w-full h-[110px]">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#d3d3d3] to-white"></div>
-            <div class="sticky z-10 flex ml-[20px] h-full flex-col justify-end fixed">
-                <p class="text-xs">Descúbrelo</p>
-                <h4 class="text-2xl mb-[30px]">Berlina</h4>
-            </div>
-        </div>
-    </div>
-    <div class="berlina flex flex-col mt-[-140px]">
-        <div class="imagen flex justify-end ml-14 relative top-[70px] z-20">
-            <img src="https://media.oneweb.mercedes-benz.com/images/dynamic/europe/ES/223176/805_055/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyjtsd2sDcUfp8cXGEubYJ0l36xOB2NbcbApRiyI5ux4ZQC31SrkzNBUKm7j871hKVi%25E%25vqeUayLRsGWYaxUkhrH1zJln8w78foiZK6EM4FvRwTg9LYT6PDarDSeWHtItsd8cTcUfiXyXGE45mJ0lgCAOB2fQcbApETRI5uK5IQC3sMOkzNetDm7jCcmhKVfLe%25vqLvcyLRaGfYaxH08rH18BOn8wiz2oiCpBxySfD2MpgO2gVIZbMFwRPRYEY7fHizWKfAN59S%25B8O&imgt=P27&bkgnd=9&pov=BE030&uni=m&width=400&im=Crop,rect=(0,0,400,187),gravity=North"
-                alt="berlina-mercedes.jpg" class="w-[300px] h-[150px] mt-1">
-        </div>
-        <div class="relative h-20 w-full overflow-hidden rounded-md max-w-full h-[110px]">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#d3d3d3] to-white"></div>
-            <div class="sticky z-10 flex ml-[20px] h-full flex-col justify-end fixed">
-                <p class="text-xs">Descúbrelo</p>
-                <h4 class="text-2xl mb-[30px]">Berlina</h4>
-            </div>
-        </div>
-    </div>
-    <div class="berlina flex flex-col mt-[-140px]">
-        <div class="imagen flex justify-end ml-14 relative top-[70px] z-20">
-            <img src="https://media.oneweb.mercedes-benz.com/images/dynamic/europe/ES/223176/805_055/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyjtsd2sDcUfp8cXGEubYJ0l36xOB2NbcbApRiyI5ux4ZQC31SrkzNBUKm7j871hKVi%25E%25vqeUayLRsGWYaxUkhrH1zJln8w78foiZK6EM4FvRwTg9LYT6PDarDSeWHtItsd8cTcUfiXyXGE45mJ0lgCAOB2fQcbApETRI5uK5IQC3sMOkzNetDm7jCcmhKVfLe%25vqLvcyLRaGfYaxH08rH18BOn8wiz2oiCpBxySfD2MpgO2gVIZbMFwRPRYEY7fHizWKfAN59S%25B8O&imgt=P27&bkgnd=9&pov=BE030&uni=m&width=400&im=Crop,rect=(0,0,400,187),gravity=North"
-                alt="berlina-mercedes.jpg" class="w-[300px] h-[150px] mt-1">
-        </div>
-        <div class="relative h-20 w-full overflow-hidden rounded-md max-w-full h-[110px]">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#d3d3d3] to-white"></div>
-            <div class="sticky z-10 flex ml-[20px] h-full flex-col justify-end fixed">
-                <p class="text-xs">Descúbrelo</p>
-                <h4 class="text-2xl mb-[30px]">Berlina</h4>
-            </div>
-        </div>
-    </div>
-    <div class="berlina flex flex-col mt-[-130px]">
-        <div class="imagen flex justify-end ml-14 relative top-[70px] z-20">
-            <img src="https://media.oneweb.mercedes-benz.com/images/dynamic/europe/ES/223176/805_055/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyjtsd2sDcUfp8cXGEubYJ0l36xOB2NbcbApRiyI5ux4ZQC31SrkzNBUKm7j871hKVi%25E%25vqeUayLRsGWYaxUkhrH1zJln8w78foiZK6EM4FvRwTg9LYT6PDarDSeWHtItsd8cTcUfiXyXGE45mJ0lgCAOB2fQcbApETRI5uK5IQC3sMOkzNetDm7jCcmhKVfLe%25vqLvcyLRaGfYaxH08rH18BOn8wiz2oiCpBxySfD2MpgO2gVIZbMFwRPRYEY7fHizWKfAN59S%25B8O&imgt=P27&bkgnd=9&pov=BE030&uni=m&width=400&im=Crop,rect=(0,0,400,187),gravity=North"
-                alt="berlina-mercedes.jpg" class="w-[300px] h-[150px] mt-1">
-        </div>
-        <div class="relative h-20 w-full overflow-hidden rounded-md max-w-full h-[110px]">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#d3d3d3] to-white"></div>
-            <div class="sticky z-10 flex ml-[20px] h-full flex-col justify-end fixed">
-                <p class="text-xs">Descúbrelo</p>
-                <h4 class="text-2xl mb-[30px]">Berlina</h4>
-            </div>
-        </div>
-    </div>
-    <div class="berlina flex flex-col mt-[-130px]">
-        <div class="imagen flex justify-end ml-14 relative top-[70px] z-20">
-            <img src="https://media.oneweb.mercedes-benz.com/images/dynamic/europe/ES/223176/805_055/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyjtsd2sDcUfp8cXGEubYJ0l36xOB2NbcbApRiyI5ux4ZQC31SrkzNBUKm7j871hKVi%25E%25vqeUayLRsGWYaxUkhrH1zJln8w78foiZK6EM4FvRwTg9LYT6PDarDSeWHtItsd8cTcUfiXyXGE45mJ0lgCAOB2fQcbApETRI5uK5IQC3sMOkzNetDm7jCcmhKVfLe%25vqLvcyLRaGfYaxH08rH18BOn8wiz2oiCpBxySfD2MpgO2gVIZbMFwRPRYEY7fHizWKfAN59S%25B8O&imgt=P27&bkgnd=9&pov=BE030&uni=m&width=400&im=Crop,rect=(0,0,400,187),gravity=North"
-                alt="berlina-mercedes.jpg" class="w-[300px] h-[150px] mt-1">
-        </div>
-        <div class="relative h-20 w-full overflow-hidden rounded-md max-w-full h-[110px]">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#d3d3d3] to-white"></div>
-            <div class="sticky z-10 flex ml-[20px] h-full flex-col justify-end fixed">
-                <p class="text-xs">Descúbrelo</p>
-                <h4 class="text-2xl mb-[30px]">Berlina</h4>
-            </div>
-        </div>
-    </div>
-    <div class="berlina flex flex-col mt-[-130px]">
-        <div class="imagen flex justify-end ml-14 relative top-[70px] z-20">
-            <img src="https://media.oneweb.mercedes-benz.com/images/dynamic/europe/ES/223176/805_055/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyjtsd2sDcUfp8cXGEubYJ0l36xOB2NbcbApRiyI5ux4ZQC31SrkzNBUKm7j871hKVi%25E%25vqeUayLRsGWYaxUkhrH1zJln8w78foiZK6EM4FvRwTg9LYT6PDarDSeWHtItsd8cTcUfiXyXGE45mJ0lgCAOB2fQcbApETRI5uK5IQC3sMOkzNetDm7jCcmhKVfLe%25vqLvcyLRaGfYaxH08rH18BOn8wiz2oiCpBxySfD2MpgO2gVIZbMFwRPRYEY7fHizWKfAN59S%25B8O&imgt=P27&bkgnd=9&pov=BE030&uni=m&width=400&im=Crop,rect=(0,0,400,187),gravity=North"
-                alt="berlina-mercedes.jpg" class="w-[300px] h-[150px] mt-1">
-        </div>
-        <div class="relative h-20 w-full overflow-hidden rounded-md max-w-full h-[110px]">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#d3d3d3] to-white"></div>
-            <div class="sticky z-10 flex ml-[20px] h-full flex-col justify-end fixed">
-                <p class="text-xs">Descúbrelo</p>
-                <h4 class="text-2xl mb-[30px]">Berlina</h4>
-            </div>
-        </div>
-    </div>
-
-    <div class="berlina flex flex-col mt-[-130px]">
-        <div class="imagen flex justify-end ml-14 relative top-[70px] z-20">
-            <img src="https://media.oneweb.mercedes-benz.com/images/dynamic/europe/ES/223176/805_055/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyjtsd2sDcUfp8cXGEubYJ0l36xOB2NbcbApRiyI5ux4ZQC31SrkzNBUKm7j871hKVi%25E%25vqeUayLRsGWYaxUkhrH1zJln8w78foiZK6EM4FvRwTg9LYT6PDarDSeWHtItsd8cTcUfiXyXGE45mJ0lgCAOB2fQcbApETRI5uK5IQC3sMOkzNetDm7jCcmhKVfLe%25vqLvcyLRaGfYaxH08rH18BOn8wiz2oiCpBxySfD2MpgO2gVIZbMFwRPRYEY7fHizWKfAN59S%25B8O&imgt=P27&bkgnd=9&pov=BE030&uni=m&width=400&im=Crop,rect=(0,0,400,187),gravity=North"
-                alt="berlina-mercedes.jpg" class="w-[300px] h-[150px] mt-1">
-        </div>
-        <div class="relative h-20 w-full overflow-hidden rounded-md max-w-full h-[110px]">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#d3d3d3] to-white"></div>
-            <div class="sticky z-10 flex ml-[20px] h-full flex-col justify-end fixed">
-                <p class="text-xs">Descúbrelo</p>
-                <h4 class="text-2xl mb-[30px]">Berlina</h4>
-            </div>
-        </div>
-    </div>
-    </section>
-
-    <section class="secondSection ml-[50px]">
-        <div>
-            <p class="text-3xl mb-4">Nuestras ofertas.</p>
-        </div>
-
-        <div class="flex flex-rows ofertas gird grid-cols-3 grid-rows-1 gap-x-4">
-
-                <!-- GRID OFERTAS -->
-
-            <div class="oferta1 flex flex-col items-center text-sm border-slate-500 border-1">
-                <div class="flex flex-col">
-                    <img src="oferta1.avif" alt="" class="max-h-full max-w-full">
+        <!-- Grid de modelos -->
+        <section class="grid3 grid grid-rows-3 grid-cols-3 gap-x-4 m-[50px]">
+            <!-- Berlina 1 -->
+            <div class="berlina flex flex-col mt-[-140px]">
+                <div class="imagen flex justify-end ml-14 relative top-[70px] z-20">
+                    <img src="https://media.oneweb.mercedes-benz.com/images/dynamic/europe/ES/223176/805_055/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyjtsd2sDcUfp8cXGEubYJ0l36xOB2NbcbApRiyI5ux4ZQC31SrkzNBUKm7j871hKVi%25E%25vqeUayLRsGWYaxUkhrH1zJln8w78foiZK6EM4FvRwTg9LYT6PDarDSeWHtItsd8cTcUfiXyXGE45mJ0lgCAOB2fQcbApETRI5uK5IQC3sMOkzNetDm7jCcmhKVfLe%25vqLvcyLRaGfYaxH08rH18BOn8wiz2oiCpBxySfD2MpgO2gVIZbMFwRPRYEY7fHizWKfAN59S%25B8O&imgt=P27&bkgnd=9&pov=BE030&uni=m&width=400&im=Crop,rect=(0,0,400,187),gravity=North" alt="berlina-mercedes.jpg" class="w-[300px] h-[150px] mt-1">
                 </div>
-                <div>
-                    <p class="text-xl font-bold mt-4 ml-4">GLA 250 e</p>
-                    <p class="font-bold mt-4 ml-4">Híbrido Enchufable</p>
-                    <p class="font-bold ml-4">por 350€/mes</p>
-    <br>
-                    <p class="ml-2">Aportación inicial de 15.803,70 €</p>
-    <br>
-                    <ul>
-                        <li class="list-disc ml-[30px]">AMG Line Advanced Plus</li>
-                        <li class="list-disc ml-[30px]">Paquete Night</li>
-                        <li class="list-disc ml-[30px]">Cargador e instalación de regalo </li>
-                    </ul>
-    <br>
-                    <p class="font-bold ml-2 mr-2">Oferta sujeta a la contratación de Seguro Mercedes-Benz. No incluido en la cuota.[e]</p>
-    <br>
-                    <ul>
-                        <li class="list-disc ml-[30px]">Hasta 70 km de autonomía eléctrica en ciudad</li>
-                        <li class="list-disc ml-[30px]">Recárgalo en casa en 3 h y 15 min</li>
-                        <li class="list-disc ml-[30px]">Etiqueta 0. Sin impuesto de matriculación</li>
-                    </ul>
-                    <br>
-                    <div class="botton flex flex-col items-center gap-2">
-                        <button type="button" class="btn btn-primary btn-sm text-white w-[270px] p-2 rounded-none">Más información</button>
-                        <button type="button" class="btn btn-secondary btn-sm w-[270px] p-2 rounded-none text-black bg-white font-bold border-grey">También con motor térmico</button>
+                <div class="relative h-20 w-full overflow-hidden rounded-md max-w-full h-[110px]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#d3d3d3] to-white"></div>
+                    <div class="sticky z-10 flex ml-[20px] h-full flex-col justify-end fixed">
+                        <p class="text-xs">Descúbrelo</p>
+                        <h4 class="text-2xl mb-[30px]">Berlina</h4>
                     </div>
                 </div>
             </div>
 
-            <!-- OFERTA 2 -->
-
-            <div class="oferta1 flex flex-col items-center text-sm border-slate-500 border-1"">
-                <div class="flex flex-col">
-                    <img src="oferta1.avif" alt="" class="max-h-full max-w-full">
+            <div class="berlina flex flex-col mt-[-140px]">
+                <div class="imagen flex justify-end ml-14 relative top-[70px] z-20">
+                    <img src="https://media.oneweb.mercedes-benz.com/images/dynamic/europe/ES/223176/805_055/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyjtsd2sDcUfp8cXGEubYJ0l36xOB2NbcbApRiyI5ux4ZQC31SrkzNBUKm7j871hKVi%25E%25vqeUayLRsGWYaxUkhrH1zJln8w78foiZK6EM4FvRwTg9LYT6PDarDSeWHtItsd8cTcUfiXyXGE45mJ0lgCAOB2fQcbApETRI5uK5IQC3sMOkzNetDm7jCcmhKVfLe%25vqLvcyLRaGfYaxH08rH18BOn8wiz2oiCpBxySfD2MpgO2gVIZbMFwRPRYEY7fHizWKfAN59S%25B8O&imgt=P27&bkgnd=9&pov=BE030&uni=m&width=400&im=Crop,rect=(0,0,400,187),gravity=North" alt="berlina-mercedes.jpg" class="w-[300px] h-[150px] mt-1">
                 </div>
-                <div>
-                    <p class="text-xl font-bold mt-4 ml-4">GLA 250 e</p>
-                    <p class="font-bold mt-4 ml-4">Híbrido Enchufable</p>
-                    <p class="font-bold ml-4">por 350€/mes</p>
-    <br>
-                    <p class="ml-2">Aportación inicial de 15.803,70 €</p>
-    <br>
-                    <ul>
-                        <li class="list-disc ml-[30px]">AMG Line Advanced Plus</li>
-                        <li class="list-disc ml-[30px]">Paquete Night</li>
-                        <li class="list-disc ml-[30px]">Cargador e instalación de regalo </li>
-                    </ul>
-    <br>
-                    <p class="font-bold ml-2 mr-2">Oferta sujeta a la contratación de Seguro Mercedes-Benz. No incluido en la cuota.[e]</p>
-    <br>
-                    <ul>
-                        <li class="list-disc ml-[30px]">Hasta 70 km de autonomía eléctrica en ciudad</li>
-                        <li class="list-disc ml-[30px]">Recárgalo en casa en 3 h y 15 min</li>
-                        <li class="list-disc ml-[30px]">Etiqueta 0. Sin impuesto de matriculación</li>
-                    </ul>
-                    <br>
-                    <div class="botton flex flex-col items-center gap-2">
-                        <button type="button" class="btn btn-primary btn-sm text-white w-[270px] p-2 rounded-none">Más información</button>
-                        <button type="button" class="btn btn-secondary btn-sm w-[270px] p-2 rounded-none text-black bg-white font-bold border-grey">También con motor térmico</button>
+                <div class="relative h-20 w-full overflow-hidden rounded-md max-w-full h-[110px]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#d3d3d3] to-white"></div>
+                    <div class="sticky z-10 flex ml-[20px] h-full flex-col justify-end fixed">
+                        <p class="text-xs">Descúbrelo</p>
+                        <h4 class="text-2xl mb-[30px]">Berlina</h4>
                     </div>
                 </div>
             </div>
-
-            <!-- OFERTA 3 -->
-
-            <div class="oferta1 flex flex-col items-center text-sm border-slate-500 border-1"">
-                <div class="flex flex-col">
-                    <img src="oferta1.avif" alt="" class="max-h-full max-w-full">
+            <div class="berlina flex flex-col mt-[-140px]">
+                <div class="imagen flex justify-end ml-14 relative top-[70px] z-20">
+                    <img src="https://media.oneweb.mercedes-benz.com/images/dynamic/europe/ES/223176/805_055/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyjtsd2sDcUfp8cXGEubYJ0l36xOB2NbcbApRiyI5ux4ZQC31SrkzNBUKm7j871hKVi%25E%25vqeUayLRsGWYaxUkhrH1zJln8w78foiZK6EM4FvRwTg9LYT6PDarDSeWHtItsd8cTcUfiXyXGE45mJ0lgCAOB2fQcbApETRI5uK5IQC3sMOkzNetDm7jCcmhKVfLe%25vqLvcyLRaGfYaxH08rH18BOn8wiz2oiCpBxySfD2MpgO2gVIZbMFwRPRYEY7fHizWKfAN59S%25B8O&imgt=P27&bkgnd=9&pov=BE030&uni=m&width=400&im=Crop,rect=(0,0,400,187),gravity=North" alt="berlina-mercedes.jpg" class="w-[300px] h-[150px] mt-1">
                 </div>
-                <div>
-                    <p class="text-xl font-bold mt-4 ml-4">GLA 250 e</p>
-                    <p class="font-bold mt-4 ml-4">Híbrido Enchufable</p>
-                    <p class="font-bold ml-4">por 350€/mes</p>
-    <br>
-                    <p class="ml-2">Aportación inicial de 15.803,70 €</p>
-    <br>
-                    <ul>
-                        <li class="list-disc ml-[30px]">AMG Line Advanced Plus</li>
-                        <li class="list-disc ml-[30px]">Paquete Night</li>
-                        <li class="list-disc ml-[30px]">Cargador e instalación de regalo </li>
-                    </ul>
-    <br>
-                    <p class="font-bold ml-2 mr-2">Oferta sujeta a la contratación de Seguro Mercedes-Benz. No incluido en la cuota.[e]</p>
-    <br>
-                    <ul>
-                        <li class="list-disc ml-[30px]">Hasta 70 km de autonomía eléctrica en ciudad</li>
-                        <li class="list-disc ml-[30px]">Recárgalo en casa en 3 h y 15 min</li>
-                        <li class="list-disc ml-[30px]">Etiqueta 0. Sin impuesto de matriculación</li>
-                    </ul>
-                    <br>
-                    <div class="botton flex flex-col items-center gap-2">
-                        <button type="button" class="btn btn-primary btn-sm text-white w-[270px] p-2 rounded-none">Más información</button>
-                        <button type="button" class="btn btn-secondary btn-sm w-[270px] p-2 rounded-none text-black bg-white font-bold border-grey">También con motor térmico</button>
+                <div class="relative h-20 w-full overflow-hidden rounded-md max-w-full h-[110px]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#d3d3d3] to-white"></div>
+                    <div class="sticky z-10 flex ml-[20px] h-full flex-col justify-end fixed">
+                        <p class="text-xs">Descúbrelo</p>
+                        <h4 class="text-2xl mb-[30px]">Berlina</h4>
                     </div>
                 </div>
             </div>
+            <div class="berlina flex flex-col mt-[-140px]">
+                <div class="imagen flex justify-end ml-14 relative top-[70px] z-20">
+                    <img src="https://media.oneweb.mercedes-benz.com/images/dynamic/europe/ES/223176/805_055/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyjtsd2sDcUfp8cXGEubYJ0l36xOB2NbcbApRiyI5ux4ZQC31SrkzNBUKm7j871hKVi%25E%25vqeUayLRsGWYaxUkhrH1zJln8w78foiZK6EM4FvRwTg9LYT6PDarDSeWHtItsd8cTcUfiXyXGE45mJ0lgCAOB2fQcbApETRI5uK5IQC3sMOkzNetDm7jCcmhKVfLe%25vqLvcyLRaGfYaxH08rH18BOn8wiz2oiCpBxySfD2MpgO2gVIZbMFwRPRYEY7fHizWKfAN59S%25B8O&imgt=P27&bkgnd=9&pov=BE030&uni=m&width=400&im=Crop,rect=(0,0,400,187),gravity=North" alt="berlina-mercedes.jpg" class="w-[300px] h-[150px] mt-1">
+                </div>
+                <div class="relative h-20 w-full overflow-hidden rounded-md max-w-full h-[110px]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#d3d3d3] to-white"></div>
+                    <div class="sticky z-10 flex ml-[20px] h-full flex-col justify-end fixed">
+                        <p class="text-xs">Descúbrelo</p>
+                        <h4 class="text-2xl mb-[30px]">Berlina</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="berlina flex flex-col mt-[-140px]">
+                <div class="imagen flex justify-end ml-14 relative top-[70px] z-20">
+                    <img src="https://media.oneweb.mercedes-benz.com/images/dynamic/europe/ES/223176/805_055/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyjtsd2sDcUfp8cXGEubYJ0l36xOB2NbcbApRiyI5ux4ZQC31SrkzNBUKm7j871hKVi%25E%25vqeUayLRsGWYaxUkhrH1zJln8w78foiZK6EM4FvRwTg9LYT6PDarDSeWHtItsd8cTcUfiXyXGE45mJ0lgCAOB2fQcbApETRI5uK5IQC3sMOkzNetDm7jCcmhKVfLe%25vqLvcyLRaGfYaxH08rH18BOn8wiz2oiCpBxySfD2MpgO2gVIZbMFwRPRYEY7fHizWKfAN59S%25B8O&imgt=P27&bkgnd=9&pov=BE030&uni=m&width=400&im=Crop,rect=(0,0,400,187),gravity=North" alt="berlina-mercedes.jpg" class="w-[300px] h-[150px] mt-1">
+                </div>
+                <div class="relative h-20 w-full overflow-hidden rounded-md max-w-full h-[110px]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#d3d3d3] to-white"></div>
+                    <div class="sticky z-10 flex ml-[20px] h-full flex-col justify-end fixed">
+                        <p class="text-xs">Descúbrelo</p>
+                        <h4 class="text-2xl mb-[30px]">Berlina</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="berlina flex flex-col mt-[-140px]">
+                <div class="imagen flex justify-end ml-14 relative top-[70px] z-20">
+                    <img src="https://media.oneweb.mercedes-benz.com/images/dynamic/europe/ES/223176/805_055/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyjtsd2sDcUfp8cXGEubYJ0l36xOB2NbcbApRiyI5ux4ZQC31SrkzNBUKm7j871hKVi%25E%25vqeUayLRsGWYaxUkhrH1zJln8w78foiZK6EM4FvRwTg9LYT6PDarDSeWHtItsd8cTcUfiXyXGE45mJ0lgCAOB2fQcbApETRI5uK5IQC3sMOkzNetDm7jCcmhKVfLe%25vqLvcyLRaGfYaxH08rH18BOn8wiz2oiCpBxySfD2MpgO2gVIZbMFwRPRYEY7fHizWKfAN59S%25B8O&imgt=P27&bkgnd=9&pov=BE030&uni=m&width=400&im=Crop,rect=(0,0,400,187),gravity=North" alt="berlina-mercedes.jpg" class="w-[300px] h-[150px] mt-1">
+                </div>
+                <div class="relative h-20 w-full overflow-hidden rounded-md max-w-full h-[110px]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#d3d3d3] to-white"></div>
+                    <div class="sticky z-10 flex ml-[20px] h-full flex-col justify-end fixed">
+                        <p class="text-xs">Descúbrelo</p>
+                        <h4 class="text-2xl mb-[30px]">Berlina</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="berlina flex flex-col mt-[-140px]">
+                <div class="imagen flex justify-end ml-14 relative top-[70px] z-20">
+                    <img src="https://media.oneweb.mercedes-benz.com/images/dynamic/europe/ES/223176/805_055/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyjtsd2sDcUfp8cXGEubYJ0l36xOB2NbcbApRiyI5ux4ZQC31SrkzNBUKm7j871hKVi%25E%25vqeUayLRsGWYaxUkhrH1zJln8w78foiZK6EM4FvRwTg9LYT6PDarDSeWHtItsd8cTcUfiXyXGE45mJ0lgCAOB2fQcbApETRI5uK5IQC3sMOkzNetDm7jCcmhKVfLe%25vqLvcyLRaGfYaxH08rH18BOn8wiz2oiCpBxySfD2MpgO2gVIZbMFwRPRYEY7fHizWKfAN59S%25B8O&imgt=P27&bkgnd=9&pov=BE030&uni=m&width=400&im=Crop,rect=(0,0,400,187),gravity=North" alt="berlina-mercedes.jpg" class="w-[300px] h-[150px] mt-1">
+                </div>
+                <div class="relative h-20 w-full overflow-hidden rounded-md max-w-full h-[110px]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#d3d3d3] to-white"></div>
+                    <div class="sticky z-10 flex ml-[20px] h-full flex-col justify-end fixed">
+                        <p class="text-xs">Descúbrelo</p>
+                        <h4 class="text-2xl mb-[30px]">Berlina</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ml-12">
+            <div>
+                <p class="text-4xl mb-4 p-2">Servicios posventa y accesorios</p>
+            </div>
+        
+            <!-- CAROUSEL -->
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <!-- Primer slide con dos elementos -->
+                    <div class="carousel-item active">
+                        <div class="flex justify-center">
+                            <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
+                                <img src="images/carousel1.avif" class="d-block w-full h-[300px] object-cover rounded-t-lg" alt="...">
+                                <div class="p-4">
+                                    <p class="font-bold text-xl mb-2">Extras digitales para tu Mercedes-Benz</p>
+                                    <p class="mb-2">Adquiere de forma sencilla Extras Digitales adicionales y disfruta de tu Mercedes-Benz de una forma inédita.</p>
+                                    <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
+                                        <p>Descubre todos los modelos</p>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
+                                <img src="images/carousel2.avif" class="d-block w-full h-[300px] object-cover rounded-t-lg" alt="...">
+                                <div class="p-4">
+                                    <p class="font-bold text-xl mb-2">Título de la Carta 2</p>
+                                    <p class="mb-2">Descripción de la carta 2.</p>
+                                    <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
+                                        <p>Más información</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             
-
-            <!-- OFERTA 4 -->
-             
-            <div class="oferta1 flex flex-col items-center text-sm border-slate-500 border-1">
-                <div class="flex flex-col">
-                    <img src="oferta1.avif" alt="" class="max-h-full max-w-full">
-                </div>
-                <div>
-                    <p class="text-xl font-bold mt-4 ml-4">GLA 250 e</p>
-                    <p class="font-bold mt-4 ml-4">Híbrido Enchufable</p>
-                    <p class="font-bold ml-4">por 350€/mes</p>
-    <br>
-                    <p class="ml-2">Aportación inicial de 15.803,70 €</p>
-    <br>
-                    <ul>
-                        <li class="list-disc ml-[30px]">AMG Line Advanced Plus</li>
-                        <li class="list-disc ml-[30px]">Paquete Night</li>
-                        <li class="list-disc ml-[30px]">Cargador e instalación de regalo </li>
-                    </ul>
-    <br>
-                    <p class="font-bold ml-2 mr-2">Oferta sujeta a la contratación de Seguro Mercedes-Benz. No incluido en la cuota.[e]</p>
-    <br>
-                    <ul>
-                        <li class="list-disc ml-[30px]">Hasta 70 km de autonomía eléctrica en ciudad</li>
-                        <li class="list-disc ml-[30px]">Recárgalo en casa en 3 h y 15 min</li>
-                        <li class="list-disc ml-[30px]">Etiqueta 0. Sin impuesto de matriculación</li>
-                    </ul>
-                    <br>
-                    <div class="botton flex flex-col items-center gap-2">
-                        <button type="button" class="btn btn-primary btn-sm text-white w-[270px] p-2 rounded-none">Más información</button>
-                        <button type="button" class="btn btn-secondary btn-sm w-[270px] p-2 rounded-none text-black bg-white font-bold border-grey">También con motor térmico</button>
+                    <!-- Segundo slide con dos elementos -->
+                    <div class="carousel-item">
+                        <div class="flex justify-center">
+                            <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
+                                <img src="images/carousel3.avif" class="d-block w-full h-[300px] object-cover rounded-t-lg" alt="...">
+                                <div class="p-4">
+                                    <p class="font-bold text-xl mb-2">Título de la Carta 3</p>
+                                    <p class="mb-2">Descripción de la carta 3.</p>
+                                    <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
+                                        <p>Más información</p>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
+                                <img src="images/carousel4.avif" class="d-block w-full h-[300px] object-cover rounded-t-lg" alt="...">
+                                <div class="p-4">
+                                    <p class="font-bold text-xl mb-2">Título de la Carta 4</p>
+                                    <p class="mb-2">Descripción de la carta 4.</p>
+                                    <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
+                                        <p>Más información</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Tercer slide con dos elementos -->
+                    <div class="carousel-item">
+                        <div class="flex justify-center">
+                            <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
+                                <img src="images/carousel5.avif" class="d-block w-full h-[300px] object-cover rounded-t-lg" alt="...">
+                                <div class="p-4">
+                                    <p class="font-bold text-xl mb-2">Título de la Carta 5</p>
+                                    <p class="mb-2">Descripción de la carta 5.</p>
+                                    <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
+                                        <p>Más información</p>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
+                                <img src="images/carousel6.avif" class="d-block w-full h-[300px] object -cover rounded-t-lg" alt="...">
+                                <div class="p-4">
+                                    <p class="font-bold text-xl mb-2">Título de la Carta 6</p>
+                                    <p class="mb-2">Descripción de la carta 6.</p>
+                                    <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
+                                        <p>Más información</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            
+              
+            <!-- Controles del carrusel -->
+    <button class="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-full focus:outline-none" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        <span class="sr-only">Previous</span>
+    </button>
+    <button class="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-full focus:outline-none" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        <span class="sr-only">Next</span>
+    </button>
             </div>
 
             
-    </section>
-
-    
-    
-
-
-
-
-            
-
-
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/5hb7wq5X9z5F+5z5/5F+5z5F+5z5F+5z5F+5z5F" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-Z7vO3x3Bq8R6U3j7+q3C8q3C+q3C8q3C+q3C8q3C+q3C8q3C+q3C8q3C+q3C8q3C" crossorigin="anonymous"></script>
 </body>
-
 </html>
