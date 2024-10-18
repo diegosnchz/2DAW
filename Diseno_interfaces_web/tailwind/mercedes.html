@@ -235,8 +235,7 @@
                 <p class="text-4xl mb-4 p-2">Servicios posventa y accesorios</p>
             </div>
         
-            <!-- CAROUSEL -->
-            <div id="carouselExample" class="carousel slide">
+            <div id="carouselExample" class="carousel slide relative">
                 <div class="carousel-inner">
                     <!-- Primer slide con dos elementos -->
                     <div class="carousel-item active">
@@ -244,10 +243,10 @@
                             <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
                                 <img src="images/carousel1.avif" class="d-block w-full h-[300px] object-cover rounded-t-lg" alt="...">
                                 <div class="p-4">
-                                    <p class="font-bold text-xl mb-2">Extras digitales para tu Mercedes-Benz</p>
-                                    <p class="mb-2">Adquiere de forma sencilla Extras Digitales adicionales y disfruta de tu Mercedes-Benz de una forma inédita.</p>
+                                    <p class="font-bold text-xl mb-2">Título de la Carta 2</p>
+                                    <p class="mb-2">Descripción de la carta 2.</p>
                                     <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
-                                        <p>Descubre todos los modelos</p>
+                                        <p>Más información</p>
                                     </button>
                                 </div>
                             </div>
@@ -294,20 +293,10 @@
                     <div class="carousel-item">
                         <div class="flex justify-center">
                             <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
-                                <img src="images/carousel5.avif" class="d-block w-full h-[300px] object-cover rounded-t-lg" alt="...">
+                                <img src=" images/carousel5.avif" class="d-block w-full h-[300px] object-cover rounded-t-lg" alt="...">
                                 <div class="p-4">
                                     <p class="font-bold text-xl mb-2">Título de la Carta 5</p>
                                     <p class="mb-2">Descripción de la carta 5.</p>
-                                    <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
-                                        <p>Más información</p>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
-                                <img src="images/carousel6.avif" class="d-block w-full h-[300px] object -cover rounded-t-lg" alt="...">
-                                <div class="p-4">
-                                    <p class="font-bold text-xl mb-2">Título de la Carta 6</p>
-                                    <p class="mb-2">Descripción de la carta 6.</p>
                                     <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
                                         <p>Más información</p>
                                     </button>
@@ -317,20 +306,16 @@
                     </div>
                 </div>
             
-              
-            <!-- Controles del carrusel -->
-    <button class="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-full focus:outline-none" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
-        <span class="sr-only">Previous</span>
-    </button>
-    <button class="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-full focus:outline-none" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-        <span class="sr-only">Next</span>
-    </button>
+                <!-- Flechas de navegación -->
+                <button class="absolute top-1/2 -translate-y-1/2 left-4 z-10" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon inline-block w-8 h-8 bg-gray-500 rounded-full" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="absolute top-1/2 -translate-y-1/2 right-4 z-10" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon inline-block w-8 h-8 bg-black rounded-full" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
 
     <section>
         <div class="flex">
