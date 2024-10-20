@@ -19,3 +19,5 @@ typeof "hello"; //--> String
 //Si haces una concatenación del "hello" con un 2, éste pasa a ser un string --> "hello" + 3 == "hello3";
 //Si quieres poner "$" y luego sumar dos números te lo va a poner todo en un mismo String y no te va a sumar nada por lo que para ello: 
 //"$" + (20.34 + 2.32) --> PONEMOS PARENTESIS a los números para que hagan la operación
+
+// VARIABLES
