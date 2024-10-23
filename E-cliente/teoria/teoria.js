@@ -25,3 +25,6 @@ typeof "hello"; //--> String
 let variable1 = 2;
 variable1 = 3; //está reasignada
 // USAR SIEMPRE CONST, SALVO CUANDO SEPAMOS QUE VAMOS A CAMBIAR LA VARIABLE (ahí usamos LET)
+
+// CONDICIONALES
+// El == no es igual al === porque el == lo que hace es comparar pero poco ya que por ejemplo si tienes console.log(5 == '5.00'); te va a decir que si que está bien porque pasa el 5 de STRING a NUMBER.. pero con el estricto va a comparar el 5 (Number) con el 5 (String) y va a DETERMINAR QUE NO ES EL MISMO
