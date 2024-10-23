@@ -21,3 +21,7 @@ typeof "hello"; //--> String
 //"$" + (20.34 + 2.32) --> PONEMOS PARENTESIS a los números para que hagan la operación
 
 // VARIABLES
+//Si quieres sobreescribir una variable se hace sin poner let, var o const.. se pone y ya esta --> variable1 = "hello"; y yasta
+let variable1 = 2;
+variable1 = 3; //está reasignada
+// USAR SIEMPRE CONST, SALVO CUANDO SEPAMOS QUE VAMOS A CAMBIAR LA VARIABLE (ahí usamos LET)

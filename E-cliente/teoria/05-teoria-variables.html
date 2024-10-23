@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teoría de las variables</title>
+</head>
+<body>
+  
+</head>
+
+<body>
+  <p>Cart Quantity</p>
+  <div class="buttons">
+
+    <!-- //Hay que meterle al boton un ONCLICK para que cuando se presione haga lo que le metas dentro
+    //Y tienes que hacer las operaciones en el onclick y luego mostrarlo correctamente por pantalla
+    //Cuidado con el tema de las "" y las '' ya que puede ser confuso. -->
+    <input type="button" value="Show Quantity" onclick="console.log(`Cart quantity: ${product}`)">
+    <input type="button" value="Add to cart" onclick="product++; console.log('Cart product: ' + product)">
+    <input type="button" value="+2" onclick="product += 2; console.log('Cart product: ' + product)">
+    <input type="button" value="+3" onclick="product += 2; console.log('Cart product: ' + product)">
+    <input type="button" value="Reset Cart" onclick="product = product - product; console.log('Cart product: ' + product)">
+  </div>
+
+  <!-- USAR SIEMPRE CONST, SALVO CUANDO SEPAMOS QUE VAMOS A CAMBIAR LA VARIABLE (ahí usamos LET) -->
+
+  <script>
+    //valor inicial
+    let product = 0;
+  </script>
+</body>
+</html>
