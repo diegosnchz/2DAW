@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica DOM y Eventos</title>
+    <style>
+        .seccion {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .form-group {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Ejercicio 1 y 2 -->
+    <div class="seccion">
+        <h2>Ejercicio 1 y 2: Duplicar Texto</h2>
+        <p id="texto">Hola que tal estamos!</p>
+        <button onclick="duplicarTexto()">Duplicar</button>
+        <button onclick="eliminarTexto()">Eliminar</button>
+    </div>
+
+    <!-- Ejercicio 3 -->
+    <div class="seccion">
+        <h2>Ejercicio 3: Tabla</h2>
+        <table id="miTabla">
+            <tr><td>Fila 1</td></tr>
+        </table>
+        <button onclick="agregarFila()">Añadir Fila</button>
+        <button onclick="eliminarFila()">Eliminar Fila</button>
+        <button onclick="eliminarTodo()">Eliminar Todo</button>
+    </div>
+
+    <!-- Ejercicio 4 y 5 -->
+    <div class="seccion">
+        <h2>Ejercicio 4 y 5: Formulario</h2>
+        <form id="miFormulario" onsubmit="return validarFormulario(event)">
+            <div class="form-group">
+                <input type="text" placeholder="Campo 1" onclick="alert('Has hecho click en el campo 1')" />
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Campo 2" />
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Campo 3" />
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Campo 4" />
+            </div>
+            <button type="submit">Validar</button>
+        </form>
+    </div>
+
+    <!-- Ejercicio 6 -->
+    <div class="seccion">
+        <h2>Ejercicio 6: Semáforo</h2>
+        <p id="textoColor">Este texto cambiará de color</p>
+        <button onclick="cambiarColor('red')">Rojo</button>
+        <button onclick="cambiarColor('yellow')">Amarillo</button>
+        <button onclick="cambiarColor('green')">Verde</button>
+    </div>
+
+    <!-- Ejercicio 7, 8 y 9 -->
+    <div class="seccion">
+        <h2>Ejercicio 7, 8 y 9: Funciones de Cadena</h2>
+        <button onclick="buscarEnie()">Buscar ñ</button>
+        <button onclick="mostrarCaracteres()">Mostrar Caracteres</button>
+        <button onclick="separarVehiculos()">Separar Vehículos</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        // Ejercicios 1 y 2
+        function duplicarTexto() {
+            const texto = document.getElementById('texto');
+            const nuevoTexto = document.createElement('p');
+            nuevoTexto.textContent = texto.textContent;
+            texto.parentNode.appendChild(nuevoTexto);
+        }
+
+        function eliminarTexto() {
+            const textos = document.getElementsByTagName('p');
+            if (textos.length > 1) {
+                textos[textos.length - 1].remove();
+            }
+        }
+
+        // Ejercicio 3
+        function agregarFila() {
+            const tabla = document.getElementById('miTabla');
+            const fila = tabla.insertRow();
+            const celda = fila.insertCell();
+            celda.textContent = 'Fila ' + tabla.rows.length;
+        }
+
+        function eliminarFila() {
+            const tabla = document.getElementById('miTabla');
+            if (tabla.rows.length > 0) {
+                tabla.deleteRow(tabla.rows.length - 1);
+            }
+        }
+
+        function eliminarTodo() {
+            const tabla = document.getElementById('miTabla');
+            while (tabla.rows.length > 0) {
+                tabla.deleteRow(0);
+            }
+        }
+
+        // Ejercicio 5
+        function validarFormulario(event) {
+            event.preventDefault();
+            const inputs = document.getElementById('miFormulario').getElementsByTagName('input');
+            for (let input of inputs) {
+                if (input.value.trim() === '') {
+                    alert('Hay campos vacíos');
+                    return false;
+                }
+            }
+            alert('Formulario válido');
+            return true;
+        }
+
+        // Ejercicio 6
+        function cambiarColor(color) {
+            document.getElementById('textoColor').style.color = color;
+        }
+
+        // Ejercicio 7
+        function buscarEnie() {
+            const texto = prompt('Introduce un texto que contenga la letra ñ:');
+            if (texto) {
+                const posicion = texto.indexOf('ñ');
+                alert(posicion >= 0 ? `La ñ está en la posición ${posicion}` : 'No se encontró la ñ');
+            }
+        }
+
+        // Ejercicio 8
+        function mostrarCaracteres() {
+            const texto = prompt('Introduce un texto:');
+            if (texto) {
+                const resultado = document.getElementById('resultado');
+                resultado.innerHTML = '';
+                for (let i = 0; i < texto.length; i++) {
+                    resultado.innerHTML += `${texto[i]}<br>`;
+                }
+            }
+        }
+
+        // Ejercicio 9
+        function separarVehiculos() {
+            const vehiculos = prompt('Introduce tres vehículos separados por coma:');
+            if (vehiculos) {
+                const resultado = document.getElementById('resultado');
+                resultado.innerHTML = vehiculos.split(',').map(v => v.trim()).join('<br>');
+            }
+        }
+    </script>
+</body>
+</html>
