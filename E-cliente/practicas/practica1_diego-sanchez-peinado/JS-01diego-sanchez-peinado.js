@@ -1,99 +1,85 @@
+// Ejercicio 1: Crear un objeto complejo
+const avion = {
+    marca: "Boeing", // String
+    modelo: "747", // String
+    capacidadPasajeros: 660, // Number
+    precio: 300000000, // Number
+    esComercial: true, // Boolean
+    maximoValor: BigInt(9007199254740991), 
+    motor: {
+        tipo: "Turbofan", // String
+        potencia: 250000, // Number
+        esEficiente: true // Boolean
+    }
+};
 
-        // Apartado 1: Objeto principal con todos los tipos de datos
-        const ferrari = {
-            nombre: "Ferrari",
-            modelo: "489 Sypder",
-            anyo: 2024,
-            precio: 350000.50,  // Number con decimales
-            numSerial: BigInt("9007199254740991"),  // Valor máximo de BigInt
-            vendido: false,
-            // Apartado 2: Objeto interno
-            caracteristicas: {
-                puertas: 4,
-                marchas: 6,
-                asientos: "sport",
-                hibrido: false,
-                motor: {
-                    cilindros: 8,
-                    potencia: 670,
-                    tipo: "V8"
-                }
-            }
-        };
+// Ejercicio 2: Modificar el objeto y añadir un objeto interno
+avion.motor.peso = 4000; // Añadiendo un nuevo atributo al objeto interno
 
-        // Apartado 3: Función para pedir datos
-        function pedirDatos() {
-            let nombre = prompt("¿Cuál es el nombre del coche?");
-            let modelo = prompt("Escribe el modelo del coche");
-            let anyo = parseInt(prompt("¿De qué año es tu coche?"));
-            let precio = parseFloat(prompt("¿Cuál es el precio del coche?"));
-            let numSerial = prompt("¿Cuál es el número serial de tu coche?");
-            let vendido = prompt("¿Está tu coche vendido? (si/no)").toLowerCase() === 'si';
-            
-            return { nombre, modelo, anyo, precio, numSerial, vendido };
-        }
+// Ejercicio 3: Funciones para pedir valores
+function asignarValores() {
+    avion.marca = prompt("Introduce la marca del avión:");
+    avion.modelo = prompt("Introduce el modelo del avión:");
+    avion.capacidadPasajeros = parseInt(prompt("Introduce la capacidad de pasajeros:"));
+    avion.precio = parseFloat(prompt("Introduce el precio del avión:"));
+    avion.esComercial = confirm("¿Es comercial?");
+    avion.maximoValor = BigInt(prompt("Introduce el valor máximo (BigInt):"));
+    avion.motor.tipo = prompt("Introduce el tipo de motor:");
+    avion.motor.potencia = parseInt(prompt("Introduce la potencia del motor:"));
+    avion.motor.esEficiente = confirm("¿Es eficiente?");
+}
 
-        // Apartado 4: Constructor
-        function Ferrari(nombre, modelo, anyo, precio, numSerial, vendido) {
-            this.nombre = nombre;
-            this.modelo = modelo;
-            this.anyo = anyo;
-            this.precio = precio;
-            this.numSerial = numSerial;
-            this.vendido = vendido;
-            this.caracteristicas = {
-                puertas: 4,
-                marchas: 6,
-                asientos: "sport",
-                hibrido: false
-            };
-        }
+// Ejercicio 4: Función constructora
+function Avion(marca, modelo, capacidadPasajeros, precio, esComercial, maximoValor, motorTipo, motorPotencia, motorEficiente) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.capacidadPasajeros = capacidadPasajeros;
+    this.precio = precio;
+    this.esComercial = esComercial;
+    this.maximoValor = maximoValor;
+    this.motor = {
+        tipo: motorTipo,
+        potencia: motorPotencia,
+        esEficiente: motorEficiente
+    };
+}
 
-        // Apartado 5: Funciones de cálculo
-        function calcularDepreciacion(precioInicial, años) {
-            let depreciation = precioInicial * (0.15 * años);
-            console.log(`La depreciación después de ${años} años es: ${depreciation}€`);
-            return depreciation;
-        }
+// Ejercicio 5: Funciones para cálculos
+function calcularPrecioPorPasajero() {
+    const precioPorPasajero = avion.precio / avion.capacidadPasajeros;
+    console.log(`El precio por pasajero es: ${precioPorPasajero}`);
+}
 
-        function calcularCostoTotal(precioBase, impuestos) {
-            let total = precioBase * (1 + impuestos/100);
-            alert(`El costo total con ${impuestos}% de impuestos es: ${total}€`);
-            return total;
-        }
+function mostrarPrecioPorPasajero() {
+    const precioPorPasajero = avion.precio / avion.capacidadPasajeros;
+    alert(`El precio por pasajero es: ${precioPorPasajero}`);
+}
 
-        // Apartado 6: Función que describe el objeto
-        function describirFerrari(coche) {
-            return `Este es un ${coche.nombre} modelo ${coche.modelo} del año ${coche.anyo}. 
-                   ${coche.vendido ? 'Ya está vendido' : 'Está disponible para la venta'}.
-                   Cuenta con ${coche.caracteristicas.puertas} puertas y 
-                   ${coche.caracteristicas.marchas} marchas. 
-                   Los asientos son tipo ${coche.caracteristicas.asientos}.`;
-        }
+// Ejercicio 6: Funciones para describir el objeto
+function describirAvion() {
+    return `El avión ${avion.marca} modelo ${avion.modelo} tiene una capacidad de ${avion.capacidadPasajeros} pasajeros y cuesta ${avion.precio} euros.`;
+}
 
-        // Apartado 7: Función para mostrar tipos de variables
-        function mostrarTipos(objeto) {
-            for (let prop in objeto) {
-                if (objeto.hasOwnProperty(prop)) {
-                    console.log(`${prop}: ${typeof objeto[prop]}`);
-                    if (typeof objeto[prop] === 'object' && objeto[prop] !== null) {
-                        mostrarTipos(objeto[prop]);
-                    }
-                }
-            }
-        }
+// Ejercicio 7: Función para mostrar tipos de variables
+function mostrarTipos() {
+    console.log(`Tipo de marca: ${typeof avion.marca}`);
+    console.log(`Tipo de modelo: ${typeof avion.modelo}`);
+    console.log(`Tipo de capacidadPasajeros: ${typeof avion.capacidadPasajeros}`);
+    console.log(`Tipo de precio: ${typeof avion.precio}`);
+    console.log(`Tipo de esComercial: ${typeof avion.esComercial}`);
+    console.log(`Tipo de maximoValor: ${typeof avion.maximoValor}`);
+    console.log(`Tipo de motor: ${typeof avion.motor}`);
+}
 
-        // Apartado 8: Función para verificar instancia
-        function verificarInstancia(objeto) {
-            console.log(objeto instanceof Ferrari);
-        }
+// Ejercicio 8: Uso de instanceof
+function verificarTipo() {
+    console.log(avion instanceof Object);
+}
 
-        // Pruebas de funcionamiento
-        let miFerrari = new Ferrari("Ferrari", "F8", 2024, 350000, "123456", false);
-        console.log(describirFerrari(miFerrari));
-        mostrarTipos(miFerrari);
-        verificarInstancia(miFerrari);
-        
-        // Pruebas de cálculos
-        calcularDepreciacion(350000, 5);
-        calcularCostoTotal(350000, 21);
+// Ejemplo de uso
+asignarValores(); // Llama a la función para asignar valores
+calcularPrecioPorPasajero(); // Muestra el precio por pasajero en consola
+mostrarPrecioPorPasajero(); // Muestra el precio por pasajero en una ventana emergente
+console.log(describirAvion()); // Muestra la descripción del avión
+mostrarTipos(); // Muestra los tipos de las variables
+verificarTipo(); // Verifica si avion es un objeto
