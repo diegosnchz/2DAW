@@ -1,0 +1,20 @@
+.gradient-bg {
+  background: radial-gradient(circle, #ffffff 0%, #000000 100%);
+  transition: background 0.3s ease;
+}
+.carousel-item {
+  display: none;
+}
+.carousel-item.active {
+  display: block;
+}
+.skill-icon {
+  transition: transform 0.3s ease;
+}
+.skill-icon:hover {
+  transform: scale(1.1);
+}
+
+#prevBtn, #nextBtn {
+  margin: 0 15px; /* Espacio entre flechas y las cartas */
+}

@@ -1,27 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diego Sánchez Peinado</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego - Front-end Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
 </head>
+<body class="min-h-screen text-white bg-black">
+  <!-- aquí para el fondo gradiente va el gradient-bg -->
+    <header class="sticky top-0 bg-black bg-opacity-80 z-10">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-20">
+                <a href="#" class="text-xl font-bold">Diego</a>
+                <a href="#" class="hover:text-gray-300 transition-colors">Home</a>
+                <a href="#gallery" class="hover:text-gray-300 transition-colors">Gallery</a>
+            </div>
+            <div class="flex items-center space-x-20">
+                <span class="hidden md:inline">Let's connect</span>
+                <a href="mailto:diegovscodee@gmail.com" class="hover:text-gray-300 transition-colors">diegovscodee@gmail.com</a>
+            </div>
+        </nav>
+    </header>
 
-<!-- ESTO VA A SER LA PAGINA INTRODUCTORIA y luego ya hacer la principal -->
-<body>
-  <section>
-    <div class="container border-1 border-red flex justify-center items-center h-[965px] max-w-full">
-      <div class="intro flex justify-center items-center flex-col">
-        <div class="text">
-          <p class="text-3xl">Bienvenido/a a mi página web</p> 
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-6xl font-bold text-center mb-12 opacity-0 transform -translate-y-10 transition-all duration-500 ease-out">Front-end Developer</h1>
+        <section id="mySelf" class="flex flex-row">
+          <div class="mainSelf flex w-full gap-5">
+            <div class="img w-1/2 flex justify-center items-center">
+              <img src="images/cj-self.jpg" alt="" class="max-h-full max-w-full rounded-lg">
+            </div>
+            <div class="textSelf w-1/2 flex justify-center items-center flex-col ml-12">
+              <p class="text-3xl mb-[100px]">Me presento.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, minus debitis? Voluptate enim ipsam obcaecati illum blanditiis tempora provident reiciendis! Perferendis odio sit consequuntur? Odio natus repellat et voluptatum quasi.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery" class="mb-16 mt-20">
+            <h2 class="text-3xl font-bold mb-6">Gallery</h2>
+            <div class="relative">
+              <div class="carousel flex overflow-hidden">
+                <div class="carousel-item active w-full md:w-1/2 px-2">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Project 1</h3>
+                        <p class="text-gray-300">Description of Project 1</p>
+                    </div>
+                </div>
+                <div class="carousel-item w-full md:w-1/2 px-2">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Project 2</h3>
+                        <p class="text-gray-300">Description of Project 2</p>
+                    </div>
+                </div>
+                <div class="carousel-item w-full md:w-1/2 px-2">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Project 3</h3>
+                        <p class="text-gray-300">Description of Project 3</p>
+                    </div>
+                </div>
+                <div class="carousel-item w-full md:w-1/2 px-2">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Project 4</h3>
+                        <p class="text-gray-300">Description of Project 4</p>
+                    </div>
+                </div>
+            </div>
+                <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full" id="prevBtn">&lt;</button>
+                <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full" id="nextBtn">&gt;</button>
+            </div>
+        </section>
+
+        <section id="skills" class="mb-16 mt-20">
+            <h2 class="text-3xl font-bold mb-6">Skills</h2>
+            <p class="mb-6">
+                As a front-end developer, I specialize in creating responsive and interactive web applications.
+                My expertise includes modern JavaScript frameworks and CSS technologies.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="skill-icon flex flex-col items-center justify-center bg-white bg-opacity-10 p-4 rounded-lg">
+                    <i class="fab fa-react text-4xl mb-2"></i>
+                    <span>React</span>
+                </div>
+                <div class="skill-icon flex flex-col items-center justify-center bg-white bg-opacity-10 p-4 rounded-lg">
+                    <i class="fab fa-js text-4xl mb-2"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-icon flex flex-col items-center justify-center bg-white bg-opacity-10 p-4 rounded-lg">
+                    <i class="fab fa-html5 text-4xl mb-2"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="skill-icon flex flex-col items-center justify-center bg-white bg-opacity-10 p-4 rounded-lg">
+                    <i class="fab fa-css3-alt text-4xl mb-2"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="skill-icon flex flex-col items-center justify-center bg-white bg-opacity-10 p-4 rounded-lg">
+                    <i class="fab fa-git-alt text-4xl mb-2"></i>
+                    <span>Git</span>
+                </div>
+                <div class="skill-icon flex flex-col items-center justify-center bg-white bg-opacity-10 p-4 rounded-lg">
+                    <i class="fab fa-tailwind text-4xl mb-2"></i>
+                    <span>Tailwind CSS</span>
+                </div>
+                <div class="skill-icon flex flex-col items-center justify-center bg-white bg-opacity-10 p-4 rounded-lg">
+                    <i class="fab fa-node-js text-4xl mb-2"></i>
+                    <span>Node.js</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black bg-opacity-80 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 Diego. All rights reserved.</p>
         </div>
-        <div class="button">
-          <input type="button" value="Entra!" class="border-2 border-black mt-[70px] rounded-md w-[150px]">
-        </div>
-      </div>
-    </div>
-  </section>
- 
+    </footer>
+
 </body>
 </html>
