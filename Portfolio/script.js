@@ -11,7 +11,6 @@ document.addEventListener('mousemove', (e) => {
   document.body.style.background = `radial-gradient(circle at ${x}% ${y}%, #ffffff 0%, #000000 100%)`;
 });
 
-// Carousel functionality
 const carousel = document.querySelector('.carousel');
 const items = carousel.querySelectorAll('.carousel-item');
 const prevBtn = document.getElementById('prevBtn');
@@ -20,7 +19,11 @@ let currentIndex = 0;
 
 function showItem(index) {
   items.forEach((item, i) => {
-    item.classList.toggle('active', i === index || (i === (index + 1) % items.length && window.innerWidth >= 768));
+    if (window.innerWidth >= 768) {
+      item.classList.toggle('active', i === index || i === (index + 1) % items.length);
+    } else {
+      item.classList.toggle('active', i === index);
+    }
   });
 }
 
@@ -34,10 +37,14 @@ nextBtn.addEventListener('click', () => {
   showItem(currentIndex);
 });
 
-// Initialize carousel
+// Inicializar el carrusel
 showItem(currentIndex);
 
-// Update carousel on window resize
+// Actualizar el carrusel al redimensionar la ventana
 window.addEventListener('resize', () => {
   showItem(currentIndex);
 });
+
+
+
+

@@ -18,3 +18,129 @@
 #prevBtn, #nextBtn {
   margin: 0 15px; /* Espacio entre flechas y las cartas */
 }
+
+#prevBtn {
+  margin-left: -50px; /* Mueve la flecha izquierda hacia la izquierda */
+}
+
+#nextBtn {
+  margin-right: -50px; /* Mueve la flecha derecha hacia la derecha */
+}
+
+/* ANIMACION ESCRIBIR */
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* EFECTO TYPEWRITE */
+.typewrite > .wrap {
+  border-right: 0.08em solid #fff;
+}
+.typewriter h1 {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* MEDIA QUERY PARA MOVILES */
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 640px) {
+  /* Ajusta el tamaño del título principal */
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  /* Ajusta el contenedor principal */
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Ajusta la disposición de la sección "mySelf" */
+  #mySelf .mainSelf {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img img {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+  }
+
+  .textSelf {
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .typewriter {
+    font-size: 1.5rem;
+  }
+
+  /* Ajusta el tamaño del texto en el carrusel y la galería */
+  #gallery h2,
+  #skills h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Galería de carrusel en columnas individuales */
+  .carousel-item {
+    width: 100%;
+  }
+
+  /* Ajuste de las habilidades en una columna en móvil */
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-icon {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+
+  /* Ajusta los botones del carrusel */
+  #prevBtn, #nextBtn {
+    top: 90%;
+    transform: translateY(0);
+    margin: 0;
+  }
+}
+
+

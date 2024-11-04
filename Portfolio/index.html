@@ -7,11 +7,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
+<!-- añadir este efecto al nav: https://codepen.io/jh3y/pen/WNVyRvW -->
 </head>
 <body class="min-h-screen text-white bg-black">
   <!-- aquí para el fondo gradiente va el gradient-bg -->
-    <header class="sticky top-0 bg-black bg-opacity-80 z-10">
+ <header class="sticky top-0 bg-black bg-opacity-80 z-10">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-20">
                 <a href="#" class="text-xl font-bold">Diego</a>
@@ -23,18 +23,24 @@
                 <a href="mailto:diegovscodee@gmail.com" class="hover:text-gray-300 transition-colors">diegovscodee@gmail.com</a>
             </div>
         </nav>
-    </header>
+    </header> 
+
+
+      
 
     <main class="container mx-auto px-4 py-8">
         <h1 class="text-6xl font-bold text-center mb-12 opacity-0 transform -translate-y-10 transition-all duration-500 ease-out">Front-end Developer</h1>
         <section id="mySelf" class="flex flex-row">
           <div class="mainSelf flex w-full gap-5">
             <div class="img w-1/2 flex justify-center items-center">
-              <img src="images/cj-self.jpg" alt="" class="max-h-full max-w-full rounded-lg">
+              <img src="images/cj-self.jpg" alt="" class="h-[650px] w-[650px] rounded-lg">
             </div>
             <div class="textSelf w-1/2 flex justify-center items-center flex-col ml-12">
-              <p class="text-3xl mb-[100px]">Me presento.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, minus debitis? Voluptate enim ipsam obcaecati illum blanditiis tempora provident reiciendis! Perferendis odio sit consequuntur? Odio natus repellat et voluptatum quasi.</p>
+                <p class="text-6xl mb-[100px] typewrite" data-type='[ "This is me, Diego", "I love developing", "Hope you like it :D"]' data-period="2000"></p>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, minus debitis? Voluptate enim ipsam obcaecati illum blanditiis tempora provident reiciendis! Perferendis odio sit consequuntur? Odio natus repellat et voluptatum quasi.
+            blanditiis tempora provident reiciendis! Perferendis odio sit consequuntur? Odio natus repellat et voluptatum quasi. blanditiis tempora provident reiciendis! Perferendis odio sit consequuntur? Odio natus repellat et voluptatum quasi.
+              </p>
             </div>
           </div>
         </section>
@@ -83,10 +89,6 @@
             </p>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <div class="skill-icon flex flex-col items-center justify-center bg-white bg-opacity-10 p-4 rounded-lg">
-                    <i class="fab fa-react text-4xl mb-2"></i>
-                    <span>React</span>
-                </div>
-                <div class="skill-icon flex flex-col items-center justify-center bg-white bg-opacity-10 p-4 rounded-lg">
                     <i class="fab fa-js text-4xl mb-2"></i>
                     <span>JavaScript</span>
                 </div>
@@ -120,5 +122,59 @@
         </div>
     </footer>
 
+    <script>
+        var TxtType = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 200 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('typewrite');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-type');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtType(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+};
+    </script>
+    <link rel="stylesheet" href="script.js">
 </body>
 </html>
