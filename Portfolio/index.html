@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diego - Front-end Developer</title>
+    <title>Diego - FullStack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 <!-- añadir este efecto al nav: https://codepen.io/jh3y/pen/WNVyRvW -->
 </head>
-<body class="min-h-screen text-white bg-black">
+<body class="min-h-screen text-white bg-black interactive-bg">
   <!-- aquí para el fondo gradiente va el gradient-bg -->
  <header class="sticky top-0 bg-black bg-opacity-80 z-10">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-20">
-                <a href="#" class="text-xl font-bold">Diego</a>
+                <a href="#" class="text-xl font-bold">DiegoDev</a>
                 <a href="#" class="hover:text-gray-300 transition-colors">Home</a>
                 <a href="#gallery" class="hover:text-gray-300 transition-colors">Gallery</a>
             </div>
             <div class="flex items-center space-x-20">
                 <span class="hidden md:inline">Let's connect</span>
                 <a href="mailto:diegovscodee@gmail.com" class="hover:text-gray-300 transition-colors">diegovscodee@gmail.com</a>
-            </div>
+            </div>  
         </nav>
     </header> 
 
@@ -36,7 +36,7 @@
               <img src="images/cj-self.jpg" alt="" class="h-[650px] w-[650px] rounded-lg">
             </div>
             <div class="textSelf w-1/2 flex justify-center items-center flex-col ml-12">
-                <p class="text-6xl mb-[100px] typewrite" data-type='[ "This is me, Diego", "I love developing", "Hope you like it :D"]' data-period="2000"></p>
+                <p class="text-6xl mb-[100px] typewrite" data-type='[ "This is me", "I love developing", "Hope you like it :D"]' data-period="2000"></p>
 
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, minus debitis? Voluptate enim ipsam obcaecati illum blanditiis tempora provident reiciendis! Perferendis odio sit consequuntur? Odio natus repellat et voluptatum quasi.
             blanditiis tempora provident reiciendis! Perferendis odio sit consequuntur? Odio natus repellat et voluptatum quasi. blanditiis tempora provident reiciendis! Perferendis odio sit consequuntur? Odio natus repellat et voluptatum quasi.
@@ -116,11 +116,13 @@
         </section>
     </main>
 
-    <footer class="bg-black bg-opacity-80 py-6">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2023 Diego. All rights reserved.</p>
-        </div>
+    <footer class="bg-black bg-opacity-80 py-6 text-base">
+      <div class="container mx-auto px-4 text-center">
+          <p>&copy; 2024 DiegoDev. All rights reserved.</p>
+          <p class="p-2">Made with ❤️ by <a href="mailto:diegovscodee@gmail.com">Diego Sánchez</a></p>
+      </div>
     </footer>
+    
 
     <script>
         var TxtType = function(el, toRotate, period) {
