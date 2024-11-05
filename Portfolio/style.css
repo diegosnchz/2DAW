@@ -2,12 +2,12 @@
   background: radial-gradient(circle, #ffffff 0%, #000000 100%);
   transition: background 0.3s ease;
 }
-.carousel-item {
+/* .carousel-item {
   display: none;
 }
 .carousel-item.active {
   display: block;
-}
+} */
 .skill-icon {
   transition: transform 0.3s ease;
 }

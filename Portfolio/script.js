@@ -46,12 +46,5 @@ window.addEventListener('resize', () => {
 });
 
 
-//background
-// Fondo que reacciona al movimiento del cursor
-document.addEventListener('mousemove', (e) => {
-  const x = (e.clientX / window.innerWidth) * 100;
-  const y = (e.clientY / window.innerHeight) * 100;
-  document.body.style.background = `radial-gradient(circle at ${x}% ${y}%, #ffffff 0%, #333333 100%)`;
-});
 
 
