@@ -13,7 +13,8 @@
 <body class="min-h-screen text-white bg-black interactive-bg">
   <!-- aquí para el fondo gradiente va el gradient-bg -->
  <header class="sticky top-0 bg-black bg-opacity-80 z-10">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center list-none">
+  <!-- Para hacer !important en tailwind es simplemente poner el ! delante de lo que quieres que sea important -->
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center !list-none !important">
             <div class="flex items-center space-x-20 list-none">
                 <a href="#" class="text-xl font-bold">DiegoDev</a>
                 <a href="#" class="hover:text-gray-300 transition-colors">Home</a>
@@ -48,80 +49,92 @@
 
 
         <!-- CARRUSEL CON BOOSTRAP -->
-        <div id="carouselExample" class="carousel slide relative mt-[150px]">
-          <div class="carousel-inner">
-              <!-- Primer slide con dos elementos -->
-              <div class="carousel-item active">
-                  <div class="flex justify-center">
-                      <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
-                          <img src="images/img-countryside1.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
-                          <div class="p-4">
-                              <p class="font-bold text-xl mb-2">Proyecto 1</p>
-                              <p class="mb-2">Descripción del proyecto 1.</p>
-                              <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
-                                  <p>Más información</p>
-                              </button>
-                          </div>
-                      </div>
-                      <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
-                          <img src="images/img-countryside2.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
-                          <div class="p-4">
-                              <p class="font-bold text-xl mb-2">Proyecto 2</p>
-                              <p class="mb-2">Descripción del proyecto 2.</p>
-                              <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
-                                  <p>Más información</p>
-                              </button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-        
-              <!-- Segundo slide con dos elementos -->
-              <div class="carousel-item">
-                  <div class="flex justify-center">
-                      <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
-                          <img src="images/img-countryside3.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
-                          <div class="p-4">
-                              <p class="font-bold text-xl mb-2">Proyecto 3</p>
-                              <p class="mb-2">Descripción del proyecto 3.</p>
-                              <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
-                                  <p>Más información</p>
-                              </button>
-                          </div>
-                      </div>
-                      
-                      <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
-                          <img src="images/img-countryside4.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
-                          <div class="p-4">
-                              <p class="font-bold text-xl mb-2">Proyecto 4</p>
-                              <p class="mb-2">Descripción del proyecto 4.</p>
-                              <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
-                                  <p>Más información</p>
-                              </button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+                               <!-- El id es para poder asociarlo en el nav y que te lleve ahi -->
+         <div class="mainCarrusel flex flex-col" id="gallery">
+          <div class="textoCarrusel flex justify-center items-center h-[100px] mt-8" >
+            <p class="text-3xl font-bold" >Gallery</p>
           </div>
-        
-          <!-- Flechas de navegación -->
-          <button class="absolute top-1/2 -translate-y-1/2 left-4 z-10" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="absolute top-1/2 -translate-y-1/2 right-4 z-10" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+          <div class="carrusel">
+            <div id="carouselExample" class="carousel slide relative mt-[40px] font-bold">
+              <div class="carousel-inner">
+                  <!-- Primer slide con dos elementos -->
+                  <div class="carousel-item active">
+                      <div class="flex justify-center">
+                          <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
+                              <img src="images/img-countryside1.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
+                              <div class="p-4">
+                                  <p class="font-bold text-xl mb-2">Proyecto 1</p>
+                                  <p class="mb-2">Descripción del proyecto 1.</p>
+                                  <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
+                                      <p>Más información</p>
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
+                              <img src="images/img-countryside2.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
+                              <div class="p-4">
+                                  <p class="font-bold text-xl mb-2">Proyecto 2</p>
+                                  <p class="mb-2">Descripción del proyecto 2.</p>
+                                  <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
+                                      <p>Más información</p>
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+            
+                  <!-- Segundo slide con dos elementos -->
+                  <div class="carousel-item">
+                      <div class="flex justify-center">
+                          <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
+                              <img src="images/img-countryside3.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
+                              <div class="p-4">
+                                  <p class="font-bold text-xl mb-2">Proyecto 3</p>
+                                  <p class="mb-2">Descripción del proyecto 3.</p>
+                                  <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
+                                      <p>Más información</p>
+                                  </button>
+                              </div>
+                          </div>
+                          
+                          <div class="max-w-sm bg-white rounded-lg shadow-md m-4">
+                              <img src="images/img-countryside4.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
+                              <div class="p-4">
+                                  <p class="font-bold text-xl mb-2">Proyecto 4</p>
+                                  <p class="mb-2">Descripción del proyecto 4.</p>
+                                  <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-none">
+                                      <p>Más información</p>
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            
+              <!-- Flechas de navegación -->
+              <button class="absolute top-1/2 -translate-y-1/2 left-4 z-10" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="absolute top-1/2 -translate-y-1/2 right-4 z-10" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+         </div>
+
 
         <!-- SECCIÓN DE LAS SKILLS + PEQUEÑO TEXTO -->
         <section id="skills" class="mb-16 mt-20">
+          <div class="textSkills flex justify-center items-center flex-col">
             <h2 class="text-3xl font-bold mb-6">Skills</h2>
-            <p class="mb-6">
+            <p class="mb-6 text-xl">
                 As a front-end developer, I specialize in creating responsive and interactive web applications.
                 My expertise includes modern JavaScript frameworks and CSS technologies.
             </p>
+          </div>
+           
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <div class="skill-icon flex flex-col items-center justify-center bg-white bg-opacity-10 p-4 rounded-lg">
                     <i class="fab fa-js text-4xl mb-2"></i>
@@ -157,12 +170,12 @@
           <p>&copy; 2024 DiegoDev. All rights reserved.</p>
           <p class="p-2">Made with ❤️ by <a href="mailto:diegovscodee@gmail.com">Diego Sánchez</a></p>
           <div class="RRSS flex justify-center items-center flex-row max-h-full max-w-full">
-            <ul>
-              <li><a href="#"><i class="fa-brands fa-instagram instagram"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-whatsapp whatsapp"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
-          </ul>
-          </div>
+            <ul class="flex space-x-4">
+                <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram instagram text-3xl"></i></a></li> 
+                <li><a href="https://www.whatsapp.com/?lang=es_LA"><i class="fa-brands fa-whatsapp whatsapp text-3xl"></i></a></li> 
+                <li><a href="https://x.com/?lang=es"><i class="fa-brands fa-twitter twitter text-3xl"></i></a></li> 
+            </ul>
+        </div>
       </div>
     </footer>
     
