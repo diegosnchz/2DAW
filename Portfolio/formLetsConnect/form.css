@@ -99,7 +99,7 @@ input:focus ~ .highlight {
   animation:inputHighlighter 0.3s ease;
 }
 
-/* animaciones*/
+/* animaciones texto se va arriba al escribir*/
 @-webkit-keyframes inputHighlighter {
 	from { background:#5264AE; }
   to 	{ width:0; background:transparent; }
@@ -147,7 +147,7 @@ body {
     }
 }
 
-/* boton del submit */
+/* boton del SUBMIT */
 wrap {
   height: 200%;
   display: flex;
