@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #1a1a1a; /* Fondo gris oscuro */
+    background: #1a1a1a; 
     overflow: hidden;
 }
 
@@ -23,16 +23,16 @@ ul li a {
     position: relative;
     display: block;
     color: transparent;
-    -webkit-text-stroke: 1px #ffffff; /* Color del texto principal blanco */
-    font-size: 5em; /* Tamaño de fuente más pequeño para un aspecto más elegante */
-    font-weight: 700; /* Peso de fuente más ligero */
+    -webkit-text-stroke: 1px #ffffff; 
+    font-size: 5em; 
+    font-weight: 700; 
     text-decoration: none;
     line-height: 1.2em;
 }
 
 ul li a:hover {
-    color: #e0e0e0; /* Color gris claro al pasar el mouse */
-    -webkit-text-stroke: 1px #1a1a1a; /* Fondo gris oscuro */
+    color: #e0e0e0; 
+    -webkit-text-stroke: 1px #1a1a1a; 
     transition: 0.5s;
 }
 
@@ -46,7 +46,7 @@ ul li a:after {
 }
 
 ul li a:hover:before {
-    color: #b0b0b0; /* Gris medio */
+    color: #b0b0b0; 
     z-index: 1;
     -webkit-text-stroke: 1px #1a1a1a; /* Fondo gris oscuro */
     transform: translate(10px,-10px);
