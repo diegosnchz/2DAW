@@ -82,16 +82,6 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
   width:50%;
 }
 
-/* el highlight */
-.highlight {
-  position:absolute;
-  height:60%; 
-  width:100px; 
-  top:25%; 
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
-}
 
 input:focus ~ .highlight {
   -webkit-animation:inputHighlighter 0.3s ease;
@@ -113,8 +103,22 @@ input:focus ~ .highlight {
   to 	{ width:0; background:transparent; }
 }
 
+h2{
+  color:white;
+}
+
 .textSecond{
-  margin-top: 15px;
+  /* margin-top: 15px; */
+  color:grey;
+  margin-top: -15px;
+}
+
+.textTitulo{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 15px;
 }
 
 html, body {
@@ -174,8 +178,10 @@ wrap {
   }
 
 .button:hover {
-  background-color: #2EE59D;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  /* color del botón en sí */
+  background-color: #494d4b;
+  /* la sombra de abajo */
+  box-shadow: 0px 15px 20px rgba(253, 253, 253, 0.4);
   color: #fff;
   transform: translateY(-7px);
 }

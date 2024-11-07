@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="botonTranslate.css">
+</head>
+<body>
+  <form action="">
+    <input type="radio" name="rdo" id="esp" checked />
+    <input type="radio" name="rdo" id="ing"/>
+    <div class="switch">
+      <label for="esp">ESP</label>
+      <label for="ing">ING</label>
+      <span></span>
+    </div>
+  </form>
+<!-- esto es para cargar un html u otro -->
+  <script>
+    document.getElementById('esp').addEventListener('change', function() {
+      if (this.checked) {
+        window.location.href = 'indexEsp.html';
+      }
+    });
+
+    document.getElementById('ing').addEventListener('change', function() {
+      if (this.checked) {
+        window.location.href = 'index.html';
+      }
+    });
+  </script>
+</body>
+</html>
