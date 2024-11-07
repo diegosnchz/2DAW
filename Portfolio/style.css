@@ -150,7 +150,8 @@
 /* background  */
 /* Fondo interactivo monocromático */
 .interactive-bg {
-  background: radial-gradient(circle at center, #222222 0%, #000000 100%);
+  background: radial-gradient
+  (circle at center, #222222 0%, #000000 100%);
   transition: background 0.2s ease;
 }
 
