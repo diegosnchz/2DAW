@@ -17,7 +17,7 @@
   <!-- Para hacer !important en tailwind es simplemente poner el  ! delante de lo que quieres que sea important -->
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center !list-none !important">
             <div class="flex items-center space-x-20 list-none">
-                <a href="#" class="text-xl font-bold">DiegoDev</a>
+                <a href="#" class="text-xl font-bold" id="brand">DiegoDev</a>
                 <a href="#" class="hover:text-gray-300 transition-colors">Home</a>
                 <a href="#gallery" class="hover:text-gray-300 transition-colors">Gallery</a>
             </div>
@@ -76,8 +76,8 @@
                           <div class="max-w-sm bg-white bg-opacity-10 rounded-lg shadow-md m-4">
                               <img src="images/img-countryside1.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
                               <div class="p-4 flex justify-center items-center flex-col">
-                                  <p class="font-bold text-xl mb-2">Proyecto 1</p>
-                                  <p class="mb-2">Descripción del proyecto 1.</p>
+                                  <p class="font-bold text-xl mb-2 tituloProyecto1">Proyecto 1</p>
+                                  <p class="mb-2 descripcionProyecto1">Descripción del proyecto 1.</p>
                                   <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-lg">
                                       <p>Más información</p>
                                   </button>
@@ -86,8 +86,8 @@
                           <div class="max-w-sm bg-white bg-opacity-10 rounded-lg shadow-md m-4">
                               <img src="images/img-countryside2.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
                               <div class="p-4 flex justify-center items-center flex-col">
-                                  <p class="font-bold text-xl mb-2">Proyecto 2</p>
-                                  <p class="mb-2">Descripción del proyecto 2.</p>
+                                  <p class="font-bold text-xl mb-2 tituloProyecto2">Proyecto 2</p>
+                                  <p class="mb-2 descripcionProyecto2">Descripción del proyecto 2.</p>
                                   <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-lg">
                                       <p>Más información</p>
                                   </button>
@@ -102,8 +102,8 @@
                           <div class="max-w-sm bg-white bg-opacity-10 rounded-lg shadow-md m-4">
                               <img src="images/img-countryside3.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
                               <div class="p-4 flex justify-center items-center flex-col">
-                                  <p class="font-bold text-xl mb-2">Proyecto 3</p>
-                                  <p class="mb-2">Descripción del proyecto 3.</p>
+                                  <p class="font-bold text-xl mb-2 tituloProyecto3">Proyecto 3</p>
+                                  <p class="mb-2 descripcionProyecto3">Descripción del proyecto 3.</p>
                                   <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-lg">
                                       <p>Más información</p>
                                   </button>
@@ -113,8 +113,8 @@
                           <div class="max-w-sm bg-white bg-opacity-10 rounded-lg shadow-md m-4">
                               <img src="images/img-countryside4.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
                               <div class="p-4 flex justify-center items-center flex-col">
-                                  <p class="font-bold text-xl mb-2">Proyecto 4</p>
-                                  <p class="mb-2">Descripción del proyecto 4.</p>
+                                  <p class="font-bold text-xl mb-2 tituloProyecto4">Proyecto 4</p>
+                                  <p class="mb-2 descripcionProyecto4">Descripción del proyecto 4.</p>
                                   <button type="button" class="btn btn-primary bg-white text-black border border-black border-solid border-[1px] rounded-lg">
                                       <p>Más información</p>
                                   </button>
@@ -192,107 +192,13 @@
       </div>
     </footer>
     
-    <!-- Efecto typewrite. ESTÁ AL LADO DE IMAGEN Y ENCIMA DE TEXTO DESCRIPTIVO -->
-    <script>
-        var TxtType = function(el, toRotate, period) {
-  this.toRotate = toRotate;
-  this.el = el;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
-  this.txt = '';
-  this.tick();
-  this.isDeleting = false;
-};
-
-TxtType.prototype.tick = function() {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
-
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
-
-  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-  var that = this;
-  var delta = 200 - Math.random() * 100;
-
-  if (this.isDeleting) { delta /= 2; }
-
-  if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-  }
-
-  setTimeout(function() {
-    that.tick();
-  }, delta);
-};
-
-window.onload = function() {
-  var elements = document.getElementsByClassName('typewrite');
-  for (var i=0; i<elements.length; i++) {
-    var toRotate = elements[i].getAttribute('data-type');
-    var period = elements[i].getAttribute('data-period');
-    if (toRotate) {
-      new TxtType(elements[i], JSON.parse(toRotate), period);
-    }
-  }
-};
-    </script>
-
-<script>
-  // Función para cargar las traducciones desde el archivo JSON
-  async function loadTranslations(lang) {
-    try {
-      const response = await fetch('translations.json');
-      const translations = await response.json();
-      applyTranslations(translations[lang]);
-    } catch (error) {
-      console.error("Error loading translations:", error);
-    }
-  }
-  
-  // Función para aplicar las traducciones en la página
-  function applyTranslations(translations) {
-    document.querySelector('h1').textContent = translations.title;
-    document.querySelector('a[href="#"]').textContent = translations.home;
-    document.querySelector('a[href="#gallery"]').textContent = translations.gallery;
-    document.querySelector('#skills h2').textContent = translations.skills;
-    document.querySelector('#skills p').textContent = translations.description;
-  }
-  
-  // Event listeners para cambiar el idioma cuando se selecciona un botón
-  document.getElementById('esp').addEventListener('change', function () {
-    if (this.checked) {
-      loadTranslations('es');
-    }
-  });
-  
-  document.getElementById('ing').addEventListener('change', function () {
-    if (this.checked) {
-      loadTranslations('en');
-    }
-  });
-  
-  // Cargar el idioma predeterminado (inglés) al cargar la página
-  window.onload = function() {
-    loadTranslations('en');
-  };
-  </script>
-  
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/5hb7wq5X9z5F+5z5/5F+5z5F+5z5F+5z5F+5z5F" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-Z7vO3x3Bq8R6U3j7+q3C8q3C+q3C8q3C+q3C8q3C+q3C8q3C+q3C8q3C+q3C8q3C" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="script.js">
+        <script src="traduction.js"></script>
+        <link rel="stylesheet" href="typewrite.js">
 </body>
 </html>
