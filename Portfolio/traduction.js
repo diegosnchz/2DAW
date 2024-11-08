@@ -10,10 +10,11 @@ async function loadTranslations(lang) {
 }
 
 // Función para aplicar las traducciones en la página
-function applyTranslations(translations) {
+function applyTranslations(translations) 
+{
   //creo variables que hagan referencia al document y luego lo pongo en vez de directamente -> REFACTORIZAR EL CODIGO
   document.querySelector('h1').textContent = translations.title;
-  document.querySelector('a[href="#"]').textContent = translations.home;
+  document.querySelector('#home').textContent = translations.home;
   document.querySelector('a[href="#gallery"]').textContent = translations.gallery;
   document.querySelector('#skills h2').textContent = translations.skills;
   document.querySelector('#skills p').textContent = translations.description;
