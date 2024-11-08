@@ -1,0 +1,16 @@
+{
+  "en": {
+    "title": "Front-end Developer",
+    "home": "Home",
+    "gallery": "Gallery",
+    "skills": "Skills",
+    "description": "As a front-end developer, I specialize in creating responsive and interactive web applications."
+  },
+  "es": {
+    "title": "Desarrollador Front-end",
+    "home": "Inicio",
+    "gallery": "Galería",
+    "skills": "Habilidades",
+    "description": "Como desarrollador front-end, me especializo en crear aplicaciones web interactivas y responsivas."
+  }
+}

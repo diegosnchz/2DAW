@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="translations.json">
 <!-- añadir este efecto al nav: https://codepen.io/jh3y/pen/WNVyRvW -->
 </head>
 <body class="min-h-screen text-white bg-black interactive-bg">
@@ -22,11 +23,11 @@
             </div>
             <div class="LanguageButton">
               <form action="">
-                <input type="radio" name="rdo" id="esp" checked class="hidden" />
-                <input type="radio" name="rdo" id="ing" class="hidden"/>
+                <input type="radio" name="rdo" id="ing" checked class="hidden" />
+                <input type="radio" name="rdo" id="esp" class="hidden"/>
                 <div class="switch">
-                  <label for="esp" class="px-2 py-1 text-sm">ESP</label>
                   <label for="ing" class="px-2 py-1 text-sm">ING</label>
+                  <label for="esp" class="px-2 py-1 text-sm">ESP</label>
                   <span></span>
                 </div>
               </form>
@@ -247,37 +248,45 @@ window.onload = function() {
     </script>
 
 <script>
-//   document.getElementById('esp').addEventListener('change', function () {
-//   if (this.checked) {
-//     toggleLanguage('esp');
-//   }
-// });
-
-// document.getElementById('ing').addEventListener('change', function () {
-//   if (this.checked) {
-//     toggleLanguage('ing');
-//   }
-// });
-
- // Obtener el botón de idioma y las acciones de los radios
- document.getElementById('esp').addEventListener('change', function () {
+  // Función para cargar las traducciones desde el archivo JSON
+  async function loadTranslations(lang) {
+    try {
+      const response = await fetch('translations.json');
+      const translations = await response.json();
+      applyTranslations(translations[lang]);
+    } catch (error) {
+      console.error("Error loading translations:", error);
+    }
+  }
+  
+  // Función para aplicar las traducciones en la página
+  function applyTranslations(translations) {
+    document.querySelector('h1').textContent = translations.title;
+    document.querySelector('a[href="#"]').textContent = translations.home;
+    document.querySelector('a[href="#gallery"]').textContent = translations.gallery;
+    document.querySelector('#skills h2').textContent = translations.skills;
+    document.querySelector('#skills p').textContent = translations.description;
+  }
+  
+  // Event listeners para cambiar el idioma cuando se selecciona un botón
+  document.getElementById('esp').addEventListener('change', function () {
     if (this.checked) {
-      loadPage('indexEsp.html');
+      loadTranslations('es');
     }
   });
-
+  
   document.getElementById('ing').addEventListener('change', function () {
     if (this.checked) {
-      loadPage('index.html');
+      loadTranslations('en');
     }
   });
-
-  function loadPage(page) {
-    // Redirige a la página seleccionada
-    window.location.href = page;
-  }
-
-</script>
+  
+  // Cargar el idioma predeterminado (inglés) al cargar la página
+  window.onload = function() {
+    loadTranslations('en');
+  };
+  </script>
+  
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
