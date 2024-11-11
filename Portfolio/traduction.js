@@ -16,7 +16,7 @@ function applyTranslations(translations)
   document.querySelector('h1').textContent = translations.title;
   document.querySelector('#home').textContent = translations.home;
   document.querySelector('a[href="#gallery"]').textContent = translations.gallery;
-  document.querySelector('.letsconnect').textContent = translations.letsconnect;
+  document.querySelector('#letsconnect').textContent = translations.letsconnect;
   document.querySelector('#skills h2').textContent = translations.skills;
   document.querySelector('#skills p').textContent = translations.description;
 
