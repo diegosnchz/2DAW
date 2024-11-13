@@ -34,7 +34,7 @@ function applyTranslations(translations)
   document.querySelector('.descripcionProyecto4').textContent = translations.proyecto.description[3];
 
   document.querySelector('#brand').textContent = "DiegoDev"; // asi hago que el script no cambie el titulo
-  document.querySelector('a[href="#gallery"]').textContent = translations.gallery;
+  document.querySelector('#gallery').textContent = translations.gallery;
 
   document.querySelector('.buttonProyecto').textContent = translations.proyecto.button;
 }
