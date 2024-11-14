@@ -31,7 +31,7 @@ NOTAS DE QUE FALTA
   <!-- aquí para el fondo gradiente va el gradient-bg -->
  <header class="sticky top-0 bg-black bg-opacity-80 z-10">
   <!-- Para hacer !important en tailwind es simplemente poner el  ! delante de lo que quieres que sea important -->
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center !list-none !important">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center !list-none">
             <div class="flex items-center space-x-20 list-none">
                 <a href="#" class="text-xl font-bold" id="brand">DiegoDev</a>
                 <a href="#" class="hover:text-gray-300 transition-colors" id="home">Home</a>
@@ -57,9 +57,10 @@ NOTAS DE QUE FALTA
     </header> 
 
 
-      
+    
 
     <main class="container mx-auto px-4 py-8">
+      <canvas id="canvas" style="background: #111;"></canvas>
         <h1 class="text-6xl font-bold text-center mb-12 opacity-0 transform -translate-y-10 transition-all duration-500 ease-out">Front-end Developer</h1>
         <section id="mySelf" class="flex flex-row">
           <div class="mainSelf flex w-full gap-5">
@@ -74,7 +75,6 @@ NOTAS DE QUE FALTA
             </div>
           </div>
         </section>
-
         <!-- PONER LA MISMA ANCHURA EN TODAS LAS CARTAS DEL CARRUSEL, MIRAR EL COLOR A VER SI GUSTA -->
         <!-- CARRUSEL CON BOOSTRAP -->
                                <!-- El id es para poder asociarlo en el nav y que te lleve ahi -->
@@ -235,7 +235,42 @@ NOTAS DE QUE FALTA
     </footer>
 
       
+        <script>
+          var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var W = window.innerWidth;
+        var H = window.innerHeight;
 
+        canvas.width = W;
+        canvas.height = H;
+
+        var fontSize = 16;
+        var columns = Math.floor(W / fontSize);
+        var drops = [];
+        for(var i=0; i<columns; i++){
+            drops.push(0);
+        }
+        var str = "JavaScript Hacking Effect";
+        function draw(){
+            context.fillStyle = "rgba(0,0,0,0.05)";
+            context.fillRect(0, 0, W, H);
+            context.fontSize = "700 " + fontSize + "px";
+            //color de las letras
+            context.fillStyle = "#ffffff";
+            for(var i=0; i<columns; i++){
+                var index = Math.floor(Math.random()*str.length);
+                var x = i * fontSize;
+                var y = drops[i] * fontSize;
+                context.fillText(str[index], x, y);
+                if(y >= canvas.height && Math.random() > 0.99){
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        draw();
+        setInterval(draw, 35);
+        </script>
         <!-- EFECTO TYPEWRITE -->
         <script src="typewrite.js"></script>
         <script src="traduction.js"></script>

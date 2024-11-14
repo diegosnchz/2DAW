@@ -2,10 +2,7 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.gradient-bg {
-  background: radial-gradient(circle, #ffffff 0%, #000000 100%);
-  transition: background 0.3s ease;
-}
+
 /* .carousel-item {
   display: none;
 }
@@ -111,15 +108,25 @@
 
 /* background  */
 /* Fondo interactivo monocromático */
-.interactive-bg {
+/* .interactive-bg {
   background: radial-gradient
   (circle at center, #222222 0%, #000000 100%);
   transition: background 0.2s ease;
 }
 
 body {
-  /* Definir el fondo inicial para evitar flash de color */
   background: radial-gradient(circle, #333333 0%, #000000 100%);
+}
+
+.gradient-bg {
+  background: radial-gradient(circle, #ffffff 0%, #000000 100%);
+  transition: background 0.3s ease;
+} */
+
+#canvas{
+  position:absolute;
+  z-index: -1;
+  height: 100%;
 }
 
 footer {
