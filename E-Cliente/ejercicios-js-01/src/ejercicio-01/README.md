@@ -20,6 +20,37 @@
    - Divide `num1` entre `num2` y guarda el resultado en una variable llamada `division`.
 
 ```javascript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Ejercicio 1: Variables y Tipos de Datos
 
 // 1. Declara una variable llamada `nombre` y asígnale tu nombre.
