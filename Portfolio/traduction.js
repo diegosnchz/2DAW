@@ -12,7 +12,7 @@ async function loadTranslations(lang) {
 // Función para aplicar las traducciones en la página
 function applyTranslations(translations) 
 {
-  //creo variables que hagan referencia al document y luego lo pongo en vez de directamente -> REFACTORIZAR EL CODIGO
+  // Referencias a elementos del documento
   document.querySelector('h1').textContent = translations.title;
   document.querySelector('#home').textContent = translations.home;
   document.querySelector('a[href="#gallery"]').textContent = translations.gallery;
@@ -33,10 +33,18 @@ function applyTranslations(translations)
   document.querySelector('.tituloProyecto4').textContent = translations.proyecto.title[3];
   document.querySelector('.descripcionProyecto4').textContent = translations.proyecto.description[3];
 
-  document.querySelector('#brand').textContent = "DiegoDev"; // asi hago que el script no cambie el titulo
+  document.querySelector('#brand').textContent = "DiegoDev"; // así hago que el script no cambie el título
   document.querySelector('#gallery').textContent = translations.gallery;
 
-  document.querySelector('.buttonProyecto').textContent = translations.proyecto.button;
+  // Seleccionar todos los botones y aplicar el texto correspondiente
+  const buttons = document.querySelectorAll('.buttonProyecto');
+  buttons.forEach((button, index) => {
+    button.textContent = translations.proyecto.button;
+  });
+
+  //Footer
+  document.querySelector('.firstFooter').textContent = translations.footer.first;
+  document.querySelector('.secondFooter').textContent = translations.footer.second;
 }
 
 // Event listeners para cambiar el idioma

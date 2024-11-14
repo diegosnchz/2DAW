@@ -10,7 +10,12 @@
       "title": ["Proyecto 1", "Proyecto 2", "Proyecto 3", "Proyecto 4"],
       "description": ["Descripción del proyecto 1", "Descripción del proyecto 2", "Descripción del proyecto 3", "Descripción del proyecto 4"],
       "button": "Más información"
+    },
+    "footer" : {
+      "first": "© 2024 DiegoDev. Todos los derechos reservados.",
+      "second": "Hecho con ❤️ por Diego Sánchez"
     }
+
   },
   "en": {
     "title": "Front-end Developer",
@@ -23,6 +28,10 @@
       "title": ["Project 1", "Project 2", "Project 3", "Project 4"],
       "description": ["Description of project 1", "Description of project 2", "Description of project 3", "Description of project 4"],
       "button": "More info"
+    },
+    "footer" : {
+      "first": "© 2024 DiegoDev. All rights reserved.",
+      "second": "Made with ❤️ by Diego Sánchez"
     }
   }
 }
