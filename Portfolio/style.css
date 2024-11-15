@@ -248,28 +248,28 @@ label[for="ing"] {
 }
 
 /* fondo canvas */
-/* Para que el lienzo ocupe el tamaño del body */
+
 #background-canvas {
-  position: fixed; /* Se asegura de que esté fijo en la pantalla */
+  position: fixed; 
   top: 0;
   left: 0;
-  width: 100%; /* Ocupa todo el ancho del body */
-  height: 100%; /* Ocupa todo el alto del body */
-  z-index: -1; /* Lo coloca detrás del contenido */
-  pointer-events: none; /* Evita que interfiera con los eventos del mouse */
+  width: 100%; 
+  height: 100%; 
+  z-index: -1; 
+  pointer-events: none; 
 }
 
-/* Asegurarte de que el contenido tenga un fondo transparente (si es necesario) */
+
 body {
-  position: relative; /* Necesario para que los elementos con z-index se ubiquen correctamente */
+  position: relative; 
 }
 
 .content {
-  position: relative; /* Permite que se muestre por encima del lienzo */
-  z-index: 1; /* Asegura que el contenido esté delante */
+  position: relative; 
+  z-index: 1; 
 }
 
 footer {
   position: relative;
-  z-index: 10; /* También debe estar delante del lienzo */
+  z-index: 10;
 }
