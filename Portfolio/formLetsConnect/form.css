@@ -24,7 +24,7 @@ h2 small {
 .footer 	{ text-align:center; }
 .footer a  { color:#53B2C8; }
 
-.group 			  { 
+.group { 
   position:relative; 
   margin-bottom:45px; 
 }
@@ -145,7 +145,7 @@ wrap {
 .button {
   width: 140px;
   height: 45px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
@@ -158,6 +158,7 @@ wrap {
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+  margin-top: 80px;
   }
 
 .button:hover {
