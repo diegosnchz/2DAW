@@ -26,8 +26,8 @@ NOTAS DE QUE FALTA
   6. Conseguir que se traduzca el typewrite effect
     *************************************************************************************
 -->
-
-<body class="min-h-screen text-white bg-black interactive-bg">
+<!-- esto es lo que tenia puesto en el body: bg-black interactive-bg -->
+<body class="min-h-screen text-white ">
   <!-- aquí para el fondo gradiente va el gradient-bg -->
  <header class="sticky top-0 bg-black bg-opacity-80 z-10">
   <!-- Para hacer !important en tailwind es simplemente poner el  ! delante de lo que quieres que sea important -->
@@ -59,8 +59,9 @@ NOTAS DE QUE FALTA
 
     
 
-    <main class="container mx-auto px-4 py-8">
-      <canvas id="canvas" style="background: #111;"></canvas>
+    <main class="container mx-auto px-4 py-8 relative" style="z-index: 2;">
+      <canvas id="background-canvas"></canvas>
+      <div class="content">
         <h1 class="text-6xl font-bold text-center mb-12 opacity-0 transform -translate-y-10 transition-all duration-500 ease-out">Front-end Developer</h1>
         <section id="mySelf" class="flex flex-row">
           <div class="mainSelf flex w-full gap-5">
@@ -218,9 +219,11 @@ NOTAS DE QUE FALTA
             </div>
         </section>
     </main>
+      </div>
+        
 
     <!-- meter estos botones en el footer -> https://codepen.io/OfigenusMaximus/pen/yLKOpqb -->
-    <footer class="bg-black bg-opacity-80 py-6 text-base">
+    <footer class="bg-black bg-opacity-80 py-6 text-base relative">
       <div class="container mx-auto px-4 text-center flex flex-col">
           <p class="firstFooter">&copy; 2024 DiegoDev. All rights reserved.</p>
           <p class="p-2 secondFooter">Made with ❤️ by <a href="mailto:diegovscodee@gmail.com">Diego Sánchez</a></p>
@@ -236,7 +239,7 @@ NOTAS DE QUE FALTA
 
       
         <script>
-          var canvas = document.getElementById('canvas');
+          var canvas = document.getElementById('background-canvas');
         var context = canvas.getContext('2d');
         var W = window.innerWidth;
         var H = window.innerHeight;
