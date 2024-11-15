@@ -111,6 +111,7 @@ h2{
   /* margin-top: 15px; */
   color: white;
   margin-top: -15px;
+  font-size: large;
 }
 
 .textTitulo{
@@ -119,6 +120,8 @@ h2{
   align-items: center;
   flex-direction: column;
   margin-bottom: 15px;
+  margin-bottom: 50px;
+  font-size: xx-large;
 }
 
 html, body {
@@ -171,7 +174,7 @@ body {
   margin: 0;
   height: 100vh;
   font-weight: 100;
-  background: radial-gradient(#a23982,#1f1013);
+  background: radial-gradient(#2e86c1,#1f1013);
   -webkit-overflow-Y: hidden;
   -moz-overflow-Y: hidden;
   -o-overflow-Y: hidden;
@@ -180,6 +183,7 @@ body {
   -moz-animation: fadeIn 1 1s ease-out;
   -o-animation: fadeIn 1 1s ease-out;
   animation: fadeIn 1 1s ease-out;
+  font-family: 'Nunito', sans-serif;
 }
 
 button{

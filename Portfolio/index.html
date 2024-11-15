@@ -11,7 +11,10 @@
     <link rel="icon" href="/Portfolio/images/ds-logo.ico" type="image/x-icon">
 <!-- añadir este efecto al nav: https://codepen.io/jh3y/pen/WNVyRvW -->
 </head>
-
+<!-- esto es para la fuente -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+  </style>
 <!-- ************************************************************************************* 
 NOTAS DE QUE FALTA
   1. Animación typewrite -- Creo que lo he instalado pero tengo que verlo en PC clase, en caso de todo instalado -> configurar lo de pag web oficial tailwindcss ---- ARREGLADO
@@ -22,7 +25,7 @@ NOTAS DE QUE FALTA
   3. Poner bien el ancho de las cartas del carrusel --ARREGLADO
     3.1 Traducir botón mas información carrusel que se aplique a TODOS -- ARREGLADO
   4. Poner un buen fondo para la HOME page y para el formulario.. (poner el mismo a poder ser)
-  5. Traducir footer
+  5. Traducir footer -- HECHO
   6. Conseguir que se traduzca el typewrite effect
     *************************************************************************************
 -->
@@ -62,7 +65,7 @@ NOTAS DE QUE FALTA
     <main class="container mx-auto px-4 py-8 relative" style="z-index: 2;">
       <canvas id="background-canvas"></canvas>
       <div class="content">
-        <h1 class="text-6xl font-bold text-center mb-12 opacity-0 transform -translate-y-10 transition-all duration-500 ease-out">Front-end Developer</h1>
+        <h1 class="text-6xl font-bold text-center mb-12 opacity-100 transform -translate-y-10 transition-all duration-500 ease-out mt-10">Front-end Developer</h1>
         <section id="mySelf" class="flex flex-row">
           <div class="mainSelf flex w-full gap-5">
             <div class="img w-1/2 flex justify-center items-center">
@@ -89,7 +92,7 @@ NOTAS DE QUE FALTA
                   <!-- Primer slide con dos elementos -->
                   <div class="carousel-item active">
                     <div class="flex justify-center">
-                        <div class="w-[500px] bg-white bg-opacity-10 rounded-lg shadow-md m-4">
+                      <div class="w-[500px] bg-white bg-opacity-10 rounded-lg shadow-md m-4">
                             <img src="images/img-countryside1.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
                             <div class="p-4 flex justify-center items-center flex-col">
                                 <p class="font-bold text-xl mb-2 tituloProyecto1">Proyecto 1</p>
@@ -235,7 +238,7 @@ NOTAS DE QUE FALTA
             context.fillRect(0, 0, W, H);
             context.fontSize = "700 " + fontSize + "px";
             //color de las letras
-            context.fillStyle = "#808080";
+            context.fillStyle = "#0093ff";
             for(var i=0; i<columns; i++){
                 var index = Math.floor(Math.random()*str.length);
                 var x = i * fontSize;
