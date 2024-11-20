@@ -32,7 +32,6 @@
 /* MEDIA QUERY PARA MOVILES */
 /* Media query para pantallas pequeñas (móviles) */
 @media (max-width: 640px) {
-  /* Ajusta el tamaño del título principal */
   h1 {
     font-size: 2rem;
     text-align: center;
