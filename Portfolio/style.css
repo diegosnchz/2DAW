@@ -106,23 +106,6 @@
   }
 }
 
-/* background  */
-/* Fondo interactivo monocromático */
-/* .interactive-bg {
-  background: radial-gradient
-  (circle at center, #222222 0%, #000000 100%);
-  transition: background 0.2s ease;
-}
-
-body {
-  background: radial-gradient(circle, #333333 0%, #000000 100%);
-}
-
-.gradient-bg {
-  background: radial-gradient(circle, #ffffff 0%, #000000 100%);
-  transition: background 0.3s ease;
-} */
-
 #canvas{
   position:absolute;
   z-index: -1;
