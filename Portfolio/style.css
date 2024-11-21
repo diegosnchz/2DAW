@@ -31,7 +31,14 @@
 
 /* MEDIA QUERY PARA MOVILES */
 /* Media query para pantallas pequeñas (móviles) */
+/* MEDIA QUERY PARA MOVILES */
+/* Media query para pantallas pequeñas (móviles) */
 @media (max-width: 640px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
   h1 {
     font-size: 2rem;
     text-align: center;
@@ -62,17 +69,15 @@
   }
 
   /* EFECTO TYPEWRITE */
-
   .typewrite::after {
     content: "|";
     animation: blink 1s infinite;
-}
+  }
 
-@keyframes blink {
+  @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
-}
-
+  }
 
   /* Ajusta el tamaño del texto en el carrusel y la galería */
   #gallery h2,
@@ -81,8 +86,31 @@
   }
   
   /* Galería de carrusel en columnas individuales */
+  .carousel-container {
+    display: flex;
+    overflow-x: auto;
+  }
+
   .carousel-item {
+    min-width: 100%;
+  }
+
+  /* Centrar el correo electrónico y evitar desplazamiento horizontal */
+  .email-container {
     width: 100%;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  /* Permitir que el nav se desplace horizontalmente e incluir el botón */
+  nav {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  nav > * {
+    flex-shrink: 0;
   }
 
   /* Ajuste de las habilidades en una columna en móvil */
@@ -103,8 +131,8 @@
     transform: translateY(0);
     margin: 0;
   }
-}
 
+} /* Fin del @media */
 #canvas{
   position:absolute;
   z-index: -1;
