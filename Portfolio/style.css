@@ -431,3 +431,9 @@ nav > * {
   margin: 0;
   transform: none;
 }
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
