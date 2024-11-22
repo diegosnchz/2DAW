@@ -36,6 +36,15 @@
     overflow-x: hidden;
   }
 
+  header {
+    background-color: black; /* Fondo negro para el header en móvil */
+  }
+
+  .navContainer {
+    background-color: transparent; /* Eliminar fondo negro del navContainer */
+    padding: 0.5rem 1rem;
+  }
+
 nav {
   overflow-x: auto; /* Permite scroll horizontal */
   white-space: nowrap;
@@ -43,6 +52,7 @@ nav {
   padding: 0 1rem;
 
 }
+
 
 nav .flex.items-center.space-x-20 {
   width: auto;
@@ -74,10 +84,6 @@ nav .LanguageButton form {
   }
 
   /* Ajusta el contenedor principal */
-  .navContainer {
-    padding: 0 1rem;
-    margin-top:-50px;
-  }
 
   /* ajustar el texto lorem */
   .lorem-text {
@@ -528,7 +534,7 @@ ul, ol {
   /* Ocultar el menú de navegación por defecto */
   nav {
     position: absolute;
-    top: 70px; /* Ajusta según la altura del header */
+    top: 60px; /* Ajusta según la altura del header */
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
@@ -537,24 +543,18 @@ ul, ol {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
+    display: none; /* Asegurar que esté oculto por defecto en móviles */
   }
 
   /* Mostrar el menú de navegación cuando está activo */
   nav.active {
-    max-height: 500px; /* Ajusta según el contenido */
+    display: flex;
+    max-height: 500px; /* Ajustar según el contenido */
   }
 
-  /* Animación del botón de alternancia cuando está activo */
-  .nav-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .nav-toggle.active .bar:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-
-  .nav-toggle.active .bar:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+  /* Ajustar el margen superior de main cuando el nav está activo */
+  nav.active ~ main {
+    margin-top: 200px; /* Ajustar según la altura del nav desplegado */
   }
 
   /* Ajustes de los enlaces del menú */
@@ -582,7 +582,7 @@ ul, ol {
 
 /* Estilos para ocultar el menú de navegación por defecto */
 nav {
-  display: none;
+  /* display: none; */ /* Comentar o eliminar esta línea */
 }
 
 /* Estilos para mostrar el menú de navegación cuando está activo */
@@ -635,4 +635,27 @@ header + main {
 
 nav.active + main {
   margin-top: 200px; /* Ajusta según la altura del nav desplegado */
+}
+
+/* Asegurar que el header no tenga margen y esté conectado al top */
+header {
+  margin: 0;
+  padding: 0;
+}
+
+/* Mostrar el nav como flex en pantallas grandes (escritorio) */
+@media (min-width: 641px) {
+  nav {
+    display: flex !important;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+
+/* Ajustar el margen superior de main para evitar solapamiento con el header fijo */
+main {
+  margin-top: 80px; /* Ajustar según la altura del header */
+  transition: margin-top 0.3s ease;
 }
