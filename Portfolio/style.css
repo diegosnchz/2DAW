@@ -39,10 +39,27 @@
 nav {
   overflow-x: auto; /* Permite scroll horizontal */
   white-space: nowrap;
+  justify-content: flex-start; /* Change from space-between to flex-start */
+  padding: 0 1rem;
+}
+
+nav .flex.items-center.space-x-20 {
+  width: auto;
+  flex-shrink: 0;
 }
 
 .LanguageButton {
-  position: static; /* Asegura que el botón esté en el flujo normal */
+  position: static; /* Ensure the button is in the normal flow */
+  display: flex; /* Alinea el botón dentro del nav */
+  align-items: center; /* Centra verticalmente el botón */
+  margin: 0 20px;
+  flex-shrink: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* Distribuye el contenido del nav */
+  align-items: center; /* Centra verticalmente los elementos del nav */
 }
 
 nav .LanguageButton form {
@@ -192,6 +209,48 @@ nav .LanguageButton form {
     height: auto;
     max-width: none;
     margin: 0 auto;
+  }
+
+  nav {
+    flex-direction: row; /* Asegura que los elementos estén en una fila */
+    overflow-x: auto; /* Permite scroll horizontal */
+  }
+
+  /* Reordenar los elementos en el nav */
+  #home {
+    order: 1;
+  }
+
+  .LanguageButton {
+    order: 2; /* Sitúa el botón de traducción entre Home y Gallery */
+    margin-left: 10px; /* Ajusta el margen si es necesario */
+  }
+
+  a[href="#gallery"] {
+    order: 3;
+  }
+
+  /* Asegurar que el botón no tenga posición fija */
+  .LanguageButton {
+    position: static; /* Ya está establecido, reafirmar si es necesario */
+  }
+
+  nav .flex.items-center.space-x-20 {
+    display: flex;
+    gap: 2rem;
+    padding-right: 1rem;
+    width: auto;
+  }
+
+  .LanguageButton {
+    position: relative;
+    flex-shrink: 0;
+    width: auto;
+    margin: 0;
+  }
+
+  nav > * {
+    flex-shrink: 0;
   }
 
 } /* Fin del @media */
@@ -352,6 +411,9 @@ nav {
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem;
+  gap: 2rem;
 }
 
 nav > * {
@@ -362,6 +424,10 @@ nav > * {
   position: static; /* Asegura que el botón esté en el flujo normal */
 }
 
-nav .LanguageButton form {
-  display: inline-block;
+.switch {
+  position: relative;
+  top: auto;
+  left: auto;
+  margin: 0;
+  transform: none;
 }
