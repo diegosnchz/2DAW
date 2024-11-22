@@ -86,7 +86,7 @@ NOTAS DE QUE FALTA
         <!-- PONER LA MISMA ANCHURA EN TODAS LAS CARTAS DEL CARRUSEL, MIRAR EL COLOR A VER SI GUSTA -->
         <!-- CARRUSEL CON BOOSTRAP -->
                                <!-- El id es para poder asociarlo en el nav y que te lleve ahi -->
-         <div class="mainCarrusel flex flex-col" >
+         <div class="mainCarrusel flex flex-col carrusel" >
           <div class="textoCarrusel flex justify-center items-center h-[100px] mt-8" >
             <p class="text-3xl font-bold" id="gallery">Gallery</p>
           </div>
@@ -145,9 +145,6 @@ NOTAS DE QUE FALTA
                         </div>
                     </div>
                 </div>
-            
-                  <!-- Segundo slide con dos elementos -->
-                  
               </div>
             
               <!-- Flechas de navegación -->
@@ -163,6 +160,75 @@ NOTAS DE QUE FALTA
           </div>
          </div>
 
+
+    <!-- New Bootstrap Carousel (visible on mobile) -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade md:hidden ">
+      <div class="carousel-inner">
+        <!-- Proyecto 1 -->
+        <div class="carousel-item active">
+          <div class="w-full bg-neutral-700 bg-opacity-30 rounded-lg shadow-md m-4">
+            <img src="images/img-countryside1.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
+            <div class="p-4 flex justify-center items-center flex-col">
+              <p class="font-bold text-xl mb-2 tituloProyecto1">Proyecto 1</p>
+              <p class="mb-2 descripcionProyecto1">Descripción del proyecto 1.</p>
+              <button type="button" class="btn btn-primary bg-white text-black border border-black rounded-lg">
+                <a href="" class="buttonProyecto">Más información</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Proyecto 2 -->
+        <div class="carousel-item">
+          <div class="w-full bg-neutral-700 bg-opacity-30 rounded-lg shadow-md m-4">
+            <img src="images/img-countryside2.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
+            <div class="p-4 flex justify-center items-center flex-col">
+              <p class="font-bold text-xl mb-2 tituloProyecto2">Proyecto 2</p>
+              <p class="mb-2 descripcionProyecto2">Descripción del proyecto 2.</p>
+              <button type="button" class="btn btn-primary bg-white text-black border border-black rounded-lg">
+                <a href="" class="buttonProyecto">Más información</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Proyecto 3 -->
+        <div class="carousel-item">
+          <div class="w-full bg-neutral-700 bg-opacity-30 rounded-lg shadow-md m-4">
+            <img src="images/img-countryside3.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
+            <div class="p-4 flex justify-center items-center flex-col">
+              <p class="font-bold text-xl mb-2 tituloProyecto3">Proyecto 3</p>
+              <p class="mb-2 descripcionProyecto3">Descripción del proyecto 3.</p>
+              <button type="button" class="btn btn-primary bg-white text-black border border-black rounded-lg">
+                <a href="" class="buttonProyecto">Más información</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Proyecto 4 -->
+        <div class="carousel-item">
+          <div class="w-full bg-neutral-700 bg-opacity-30 rounded-lg shadow-md m-4">
+            <img src="images/img-countryside4.jpg" class="d-block w-full h-[200px] object-cover rounded-t-lg" alt="...">
+            <div class="p-4 flex justify-center items-center flex-col">
+              <p class="font-bold text-xl mb-2 tituloProyecto4">Proyecto 4</p>
+              <p class="mb-2 descripcionProyecto4">Descripción del proyecto 4.</p>
+              <button type="button" class="btn btn-primary bg-white text-black border border-black rounded-lg">
+                <a href="" class="buttonProyecto">Más información</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+</div>
 
         <!-- SECCIÓN DE LAS SKILLS + PEQUEÑO TEXTO -->
         <section id="skills" class="mb-16 mt-20">

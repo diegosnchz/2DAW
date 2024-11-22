@@ -79,6 +79,8 @@
     50% { opacity: 0; }
   }
 
+        /* CARRUSEL */
+
   /* Ajusta el tamaño del texto en el carrusel y la galería */
   #gallery h2,
   #skills h2 {
@@ -101,6 +103,20 @@
     text-align: center;
     overflow: hidden;
   }
+
+  /* Hide the new carousel on screens larger than 768px */
+@media (min-width: 768px) {
+  #carouselExampleFade {
+    display: none;
+  }
+}
+
+/* Hide the existing carousel on screens smaller than 768px */
+@media (max-width: 767px) {
+  .carrusel {
+    display: none;
+  }
+}
 
   /* Permitir que el nav se desplace horizontalmente e incluir el botón */
   nav {
