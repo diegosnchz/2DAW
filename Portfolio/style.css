@@ -46,6 +46,13 @@
     padding: 0.5rem 1rem;
   }
 
+  .navContainer a {
+    color: white !important;
+  }
+  .navContainer a:hover {
+    color: white !important;
+  }
+
 nav {
   overflow-x: auto; /* Permite scroll horizontal */
   white-space: nowrap;
