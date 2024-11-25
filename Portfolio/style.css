@@ -37,6 +37,7 @@
   }
 
   header {
+    position: relative; /* Eliminar sticky en móvil */
     background-color: black; /* Fondo negro para el header en móvil */
   }
 
@@ -269,7 +270,7 @@ nav .LanguageButton form {
   /* Ocultar el menú de navegación por defecto */
   nav {
     position: absolute;
-    top: 70px; /* Ajusta según la altura del header */
+    top: 60px; /* Ajusta según la altura del header */
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
@@ -302,22 +303,24 @@ nav .LanguageButton form {
   nav .flex.items-center.space-x-20 {
     flex-direction: column;
     space-x: 0;
+    gap: 1rem; /* Ajustar el espacio entre los elementos */
   }
 
   nav .flex.items-center.space-x-20 a {
-    margin: 10px 0;
+    margin: 0; /* Eliminar márgenes adicionales */
     font-size: 1.2rem;
   }
 
   /* Alinear el botón de traducción en el centro */
   .LanguageButton {
-    margin: 20px 0;
+    margin: 10px 0; /* Ajustar el margen superior e inferior */
   }
 
   /* Alinear los enlaces de "Let's connect" y correo */
   .flex.items-center.space-x-20 {
     flex-direction: column;
     align-items: center;
+    gap: 1rem; /* Ajustar el espacio entre los elementos */
   }
 
 } /* Fin del @media */
