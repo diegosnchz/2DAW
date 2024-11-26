@@ -37,7 +37,7 @@
   }
 
   header {
-    position: relative; /* Eliminar sticky en móvil */
+    /* Remove position: relative */
     background-color: black; /* Fondo negro para el header en móvil */
   }
 
@@ -290,7 +290,9 @@ nav .LanguageButton form {
 
   /* Mostrar el menú de navegación cuando está activo */
   nav.active {
-    max-height: 500px; /* Ajusta según el contenido */
+    display: flex;
+    flex-direction: column;
+    /* ...existing styles... */
   }
 
   /* Animación del botón de alternancia cuando está activo */
@@ -669,3 +671,13 @@ main {
   margin-top: 80px; /* Ajustar según la altura del header */
   transition: margin-top 0.3s ease;
 }
+
+/* Make the header sticky across all screen sizes */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Adjust as needed */
+  /* ...existing styles... */
+}
+
+/* ...existing code... */

@@ -10,18 +10,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="icon" href="/Portfolio/images/ds-logo.ico" type="image/x-icon">
 <!-- añadir este efecto al nav: https://codepen.io/jh3y/pen/WNVyRvW -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navToggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('nav');
+
+      navToggle.addEventListener('click', function () {
+        nav.classList.toggle('active');
+        navToggle.classList.toggle('active');
+      });
+    });
+  </script>
 </head>
 <!-- esto es para la fuente -->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
   .navContainer a {
     color: white !important;
+    list-style: none;
   }
   .navContainer a:hover {
     color: white !important;
+    list-style: none;
   }
   .navContainer {
     color: white !important;
+    
   }
 </style>
 <!-- ************************************************************************************* 
@@ -34,7 +48,7 @@ NOTAS DE QUE FALTA
 <!-- esto es lo que tenia puesto en el body: bg-black interactive-bg -->
 <body class="min-h-screen text-white ">
   <!-- aquí para el fondo gradiente va el gradient-bg -->
- <header class="top-0 bg-black bg-opacity-80 z-10">
+ <header class="top-0 bg-black bg-opacity-80 z-10 sticky top-0">
   <!-- Para hacer !important en tailwind es simplemente poner el  ! delante de lo que quieres que sea important -->
   <nav class="navContainer mx-auto px-4 py-4 flex justify-between items-center relative">
     
