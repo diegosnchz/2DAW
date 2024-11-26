@@ -37,12 +37,11 @@
   }
 
   header {
-    /* Remove position: relative */
-    background-color: black; /* Fondo negro para el header en móvil */
+    background-color: transparent; 
   }
 
   .navContainer {
-    background-color: transparent; /* Eliminar fondo negro del navContainer */
+    background-color: transparent;
     padding: 0.5rem 1rem;
   }
 
@@ -54,7 +53,6 @@
   }
 
 nav {
-  overflow-x: auto; /* Permite scroll horizontal */
   white-space: nowrap;
   justify-content: flex-start; /* Change from space-between to flex-start */
   padding: 0 1rem;
@@ -91,13 +89,15 @@ nav .LanguageButton form {
     margin-bottom: 1rem;
   }
 
-  /* Ajusta el contenedor principal */
+  .container{
+    width: 100%;
+  }
 
   /* ajustar el texto lorem */
   .lorem-text {
-    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
-    line-height: 1.6; /* Aumenta el espaciado entre líneas */
-    padding: 0; /* Añade padding para más espacio */
+    font-size: 1.2rem; 
+    line-height: 1.6; 
+    padding: 0; 
     width: 100%;
     max-width: none;
   }
