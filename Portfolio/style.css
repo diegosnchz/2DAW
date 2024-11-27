@@ -84,7 +84,7 @@ nav .LanguageButton form {
   }
 
   .container{
-    width: 100%;
+    width: 100% !important;
   }
 
   .lorem-text {
@@ -92,7 +92,7 @@ nav .LanguageButton form {
     line-height: 1.6; 
     padding: 0; 
     width: 100%;
-    max-width: none;
+    max-width: none !important;
   }
 
   #mySelf .mainSelf {
