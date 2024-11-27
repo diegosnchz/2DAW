@@ -7,8 +7,8 @@
     "skills": "Habilidades",
     "description": "Como desarrollador front-end...",
     "proyecto": {
-      "title": ["Proyecto 1", "Proyecto 2", "Proyecto 3", "Proyecto 4"],
-      "description": ["Descripción del proyecto 1", "Descripción del proyecto 2", "Descripción del proyecto 3", "Descripción del proyecto 4"],
+      "title": ["Proyecto Mercedes-Benz", "Proyecto BMW", "Proyecto 3", "Proyecto 4"],
+      "description": ["Clon de la página de Mercedes con HTML5 && CCS3 con el framework de TAILWIND", "Clon de la página de BMW con HTML5 && CCS3 con el framework de BOOSTRAP", "Descripción del proyecto 3", "Descripción del proyecto 4"],
       "button": "Más información"
     },
     "footer" : {
@@ -25,8 +25,8 @@
     "skills": "Skills",
     "description": "As a front-end developer...",
     "proyecto": {
-      "title": ["Project 1", "Project 2", "Project 3", "Project 4"],
-      "description": ["Description of project 1", "Description of project 2", "Description of project 3", "Description of project 4"],
+      "title": ["Mercedes-Benz proyect", "BMW proyect", "Project 3", "Project 4"],
+      "description": ["Website clon of Mercedes-Benz done with HTML5 && CCS3 with TAILWIND framework", "Website clon of BMW with HTML5 && CCS3 with BOOSTRAP framework", "Description of project 3", "Description of project 4"],
       "button": "More info"
     },
     "footer" : {
