@@ -3,12 +3,7 @@
 }
 
 
-/* .carousel-item {
-  display: none;
-}
-.carousel-item.active {
-  display: block;
-} */
+
 .skill-icon {
   transition: transform 0.3s ease;
 }
@@ -17,19 +12,18 @@
 }
 
 #prevBtn, #nextBtn {
-  margin: 0 15px; /* Espacio entre flechas y las cartas */
+  margin: 0 15px; 
 }
 
 #prevBtn {
-  margin-left: -50px; /* Mueve la flecha izquierda hacia la izquierda */
+  margin-left: -50px; 
 }
 
 #nextBtn {
-  margin-right: -50px; /* Mueve la flecha derecha hacia la derecha */
+  margin-right: -50px; 
 }
 
 /* MEDIA QUERY PARA MOVILES */
-/* Media query para pantallas pequeñas (móviles) */
 @media (max-width: 640px) {
 
   body {
@@ -54,7 +48,7 @@
 
 nav {
   white-space: nowrap;
-  justify-content: flex-start; /* Change from space-between to flex-start */
+  justify-content: flex-start; 
   padding: 0 1rem;
 
 }
@@ -66,17 +60,17 @@ nav .flex.items-center.space-x-20 {
 }
 
 .LanguageButton {
-  position: static; /* Ensure the button is in the normal flow */
-  display: flex; /* Alinea el botón dentro del nav */
-  align-items: center; /* Centra verticalmente el botón */
+  position: static; 
+  display: flex; 
+  align-items: center; 
   margin: 0 20px;
   flex-shrink: 0;
 }
 
 nav {
   display: flex;
-  justify-content: space-between; /* Distribuye el contenido del nav */
-  align-items: center; /* Centra verticalmente los elementos del nav */
+  justify-content: space-between; 
+  align-items: center; 
 }
 
 nav .LanguageButton form {
@@ -93,7 +87,6 @@ nav .LanguageButton form {
     width: 100%;
   }
 
-  /* ajustar el texto lorem */
   .lorem-text {
     font-size: 1.2rem; 
     line-height: 1.6; 
@@ -102,7 +95,6 @@ nav .LanguageButton form {
     max-width: none;
   }
 
-  /* Ajusta la disposición de la sección "mySelf" */
   #mySelf .mainSelf {
     flex-direction: column;
     align-items: center;
@@ -133,13 +125,11 @@ nav .LanguageButton form {
 
         /* CARRUSEL */
 
-  /* Ajusta el tamaño del texto en el carrusel y la galería */
   #gallery h2,
   #skills h2 {
     font-size: 1.5rem;
   }
   
-  /* Galería de carrusel en columnas individuales */
   .carousel-container {
     display: flex;
     overflow-x: auto;
@@ -149,28 +139,24 @@ nav .LanguageButton form {
     min-width: 100%;
   }
 
-  /* Centrar el correo electrónico y evitar desplazamiento horizontal */
   .email-container {
     width: 100%;
     text-align: center;
     overflow: hidden;
   }
 
-  /* Hide the new carousel on screens larger than 768px */
 @media (min-width: 768px) {
   #carouselExampleFade {
     display: none;
   }
 }
 
-/* Hide the existing carousel on screens smaller than 768px */
 @media (max-width: 767px) {
   .carrusel {
     display: none;
   }
 }
 
-  /* Permitir que el nav se desplace horizontalmente e incluir el botón */
   nav {
     display: flex;
     overflow-x: auto;
@@ -181,7 +167,6 @@ nav .LanguageButton form {
     flex-shrink: 0;
   }
 
-  /* Ajuste de las habilidades en una columna en móvil */
   .grid-cols-2,
   .grid-cols-3,
   .grid-cols-4 {
@@ -193,7 +178,6 @@ nav .LanguageButton form {
     padding: 1rem;
   }
 
-  /* Ajusta los botones del carrusel */
   #prevBtn, #nextBtn {
     top: 90%;
     transform: translateY(0);
