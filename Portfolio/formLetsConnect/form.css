@@ -58,10 +58,41 @@ input:focus ~ label, input:valid ~ label 		{
   color:#ffffff;
 }
 
+/* Style for textarea */
+textarea {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+  resize: none;
+}
+
+textarea:focus {
+  outline:none;
+}
+
+/* Label animation for textarea */
+textarea:focus ~ label, textarea:valid ~ label {
+  top:-20px;
+  font-size:14px;
+  color:#ffffff;
+}
+
+/* Bar animation for textarea */
+textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
+  width:50%;
+}
+
+textarea:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+
 /* BOTTOM BARS ================================= */
 .bar 	{ position:relative; display:block; width:300px; }
 .bar:before, .bar:after 	{
-  content:'';
+  content:''; 
   height:2px; 
   width:0;
   bottom:1px; 
@@ -135,11 +166,12 @@ html, body {
 
 
 /* boton del SUBMIT */
-wrap {
-  height: 200%;
+.wrap {
+  /* Removed height property */
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 45px; /* Same as .group margin-bottom */
 }
 
 .button {
@@ -158,8 +190,8 @@ wrap {
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
-  margin-top: 80px;
-  }
+  margin-top: 0;
+}
 
 .button:hover {
   /* color del botón en sí */
@@ -187,33 +219,34 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-button{
-position: absolute;
-border: 2px solid white;
-background: transparent;
-font-family: 'Roboto', sans-serif;
-color: white;
-width: 250px;
-height: 50px;
-font-size: 2em;
-border-radius: 5px;
-opacity: .5;
-top: 60vh;
-bottom: 0px;
-left: 0px;
-right: 0px;
-margin: auto;
-transition: .3s;
+/* Remove or comment out the global 'button' styles */
+button {
+  /* position: absolute; */
+  /* border: 2px solid white; */
+  /* background: transparent; */
+  /* font-family: 'Roboto', sans-serif; */
+  /* color: white; */
+  /* width: 250px; */
+  /* height: 50px; */
+  /* font-size: 2em; */
+  /* border-radius: 5px; */
+  /* opacity: .5; */
+  /* top: 60vh; */
+  /* bottom: 0px; */
+  /* left: 0px; */
+  /* right: 0px; */
+  /* margin: auto; */
+  /* transition: .3s; */
 }
 
-button:hover{
-border: 2px solid #104F55;
-background-color: rgba(365,365,365,0.5);
-cursor: pointer;
-color: #104F55;
-opacity: .8;
-transition: .3s;
-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+button:hover {
+  /* border: 2px solid #104F55; */
+  /* background-color: rgba(365,365,365,0.5); */
+  /* cursor: pointer; */
+  /* color: #104F55; */
+  /* opacity: .8; */
+  /* transition: .3s; */
+  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
 }
 
 .light {
