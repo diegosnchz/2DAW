@@ -226,9 +226,6 @@ body {
   animation: fadeIn 1 1s ease-out;
   font-family: 'Nunito', sans-serif;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 

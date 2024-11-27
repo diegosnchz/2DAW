@@ -665,3 +665,7 @@ header {
 }
 
 /* ...existing code... */
+#typewrite-text {
+  min-height: 1em; /* Ajusta el valor según el tamaño de la fuente */
+}
+/* ...existing code... */
