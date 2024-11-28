@@ -11,7 +11,8 @@
   padding: 0; /* Remove padding to center content perfectly */
   /* background:#fff; */
   background-size: 400% 400%;
-  backdrop-filter: blur(80px);
+  backdrop-filter: blur(10px); /* Apply blurry effect */
+  background: rgba(255, 255, 255, 0.1); /* Translucent background */
   animation: gradient 15s ease infinite;
   border-color:white;
   border: 1px solid white;
@@ -214,11 +215,8 @@ body {
   margin: 0;
   height: 100vh;
   font-weight: 100;
-  /* background: radial-gradient(#1f618d,#1f1013); */
-  background-image: url(/Portfolio/images/samurai-prueba.jpg);
-  /* -webkit-overflow-Y: hidden;
-  -moz-overflow-Y: hidden;
-  -o-overflow-Y: hidden; */
+  /* Remove the background image */
+  /* background-image: url(/Portfolio/images/samurai-prueba.jpg); */
   overflow-y: hidden;
   -webkit-animation: fadeIn 1 1s ease-out;
   -moz-animation: fadeIn 1 1s ease-out;
@@ -228,7 +226,21 @@ body {
   background-repeat: no-repeat;
 }
 
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
 
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* .light {
   position: absolute;
