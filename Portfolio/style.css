@@ -669,3 +669,10 @@ header {
   min-height: 1em; /* Ajusta el valor según el tamaño de la fuente */
 }
 /* ...existing code... */
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ...existing code... */
