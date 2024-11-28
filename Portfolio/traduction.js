@@ -70,15 +70,16 @@ document.getElementById('ing').addEventListener('change', function () {
 document.addEventListener('DOMContentLoaded', function() {
   loadTranslations('en'); // Ensure default language is loaded
   // ...existing event listeners...
-  document.getElementById('esp').addEventListener('change', function () {
-    if (this.checked) {
-        loadTranslations('es');
-    }
-  });
-
-  document.getElementById('ing').addEventListener('change', function () {
-    if (this.checked) {
-        loadTranslations('en');
-    }
-  });
+  // Remove the following duplicated listeners:
+  // document.getElementById('esp').addEventListener('change', function () {
+  //     if (this.checked) {
+  //         loadTranslations('es');
+  //     }
+  // });
+  // 
+  // document.getElementById('ing').addEventListener('change', function () {
+  //     if (this.checked) {
+  //         loadTranslations('en');
+  //     }
+  // });
 });

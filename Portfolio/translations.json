@@ -8,14 +8,18 @@
     "description": "Como desarrollador front-end...",
     "proyecto": {
       "title": ["Proyecto Mercedes-Benz", "Proyecto BMW", "Proyecto 3", "Proyecto 4"],
-      "description": ["Clon de la página de Mercedes con HTML5 && CCS3 con el framework de TAILWIND", "Clon de la página de BMW con HTML5 && CCS3 con el framework de BOOSTRAP", "Descripción del proyecto 3", "Descripción del proyecto 4"],
+      "description": [
+        "Clon de la página de Mercedes con HTML5 && CSS3 con el framework de TAILWIND",
+        "Clon de la página de BMW con HTML5 && CSS3 con el framework de BOOSTRAP",
+        "Descripción del proyecto 3",
+        "Descripción del proyecto 4"
+      ],
       "button": "Más información"
     },
-    "footer" : {
+    "footer": {
       "first": "© 2024 DiegoDev. Todos los derechos reservados.",
       "second": "Hecho con ❤️ por Diego Sánchez"
     }
-
   },
   "en": {
     "title": "Software Developer",
@@ -25,11 +29,16 @@
     "skills": "Skills",
     "description": "As a front-end developer...",
     "proyecto": {
-      "title": ["Mercedes-Benz proyect", "BMW proyect", "Project 3", "Project 4"],
-      "description": ["Website clon of Mercedes-Benz done with HTML5 && CCS3 with TAILWIND framework", "Website clon of BMW with HTML5 && CCS3 with BOOSTRAP framework", "Description of project 3", "Description of project 4"],
+      "title": ["Mercedes-Benz Project", "BMW Project", "Project 3", "Project 4"],
+      "description": [
+        "Website clone of Mercedes-Benz done with HTML5 & CSS3 using the TAILWIND framework",
+        "Website clone of BMW with HTML5 & CSS3 using the BOOSTRAP framework",
+        "Description of project 3",
+        "Description of project 4"
+      ],
       "button": "More info"
     },
-    "footer" : {
+    "footer": {
       "first": "© 2024 DiegoDev. All rights reserved.",
       "second": "Made with ❤️ by Diego Sánchez"
     }
