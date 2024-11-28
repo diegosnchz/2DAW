@@ -56,6 +56,11 @@ const typewriteTexts = {
     startTypewrite(texts); // Start the new typing effect
   }
   
+  // Function to handle language change from traduction.js
+  function onLanguageChange(language) {
+    updateTypewriteText(language);
+  }
+  
   // Event listeners for language change
   const langButtons = document.querySelectorAll('input[name="rdo"]');
   langButtons.forEach(btn => {
@@ -65,5 +70,7 @@ const typewriteTexts = {
     });
   });
   
-  // Initialize with default language
-  updateTypewriteText('ing'); // Change to 'esp' if Spanish is default
+  // Initialize typewriter effect after DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    updateTypewriteText('ing'); // Change to 'esp' if Spanish is default
+  });

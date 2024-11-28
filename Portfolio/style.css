@@ -2,8 +2,6 @@
   font-family: 'Nunito', sans-serif;
 }
 
-
-
 .skill-icon {
   transition: transform 0.3s ease;
 }
@@ -23,7 +21,10 @@
   margin-right: -50px; 
 }
 
-/* MEDIA QUERY PARA MOVILES */
+a {
+    text-decoration: none !important;
+}
+
 @media (max-width: 640px) {
 
   body {
@@ -50,9 +51,7 @@ nav {
   white-space: nowrap;
   justify-content: flex-start; 
   padding: 0 1rem;
-
 }
-
 
 nav .flex.items-center.space-x-20 {
   width: auto;
@@ -112,7 +111,6 @@ nav .LanguageButton form {
     text-align: center;
   }
 
-  /* EFECTO TYPEWRITE */
   .typewrite::after {
     content: "|";
     animation: blink 1s infinite;
@@ -122,8 +120,6 @@ nav .LanguageButton form {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
   }
-
-        /* CARRUSEL */
 
   #gallery h2,
   #skills h2 {
@@ -184,10 +180,9 @@ nav .LanguageButton form {
     margin: 0;
   }
 
-  /* Reestructura la sección "mySelf" */
   #mySelf .mainSelf {
     flex-direction: column;
-    align-items: center; /* Estira los elementos para ocupar todo el ancho */
+    align-items: center;
   }
 
   .textSelf {
@@ -199,7 +194,7 @@ nav .LanguageButton form {
   .lorem-text {
     font-size: 1rem;
     line-height: 1.6;
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: 100%;
     max-width: none;
     margin: 0 auto;
   }
@@ -212,27 +207,25 @@ nav .LanguageButton form {
   }
 
   nav {
-    flex-direction: row; /* Asegura que los elementos estén en una fila */
-    overflow-x: auto; /* Permite scroll horizontal */
+    flex-direction: row;
+    overflow-x: auto;
   }
 
-  /* Reordenar los elementos en el nav */
   #home {
     order: 1;
   }
 
   .LanguageButton {
-    order: 2; /* Sitúa el botón de traducción entre Home y Gallery */
-    margin-left: 10px; /* Ajusta el margen si es necesario */
+    order: 2;
+    margin-left: 10px;
   }
 
   a[href="#gallery"] {
     order: 3;
   }
 
-  /* Asegurar que el botón no tenga posición fija */
   .LanguageButton {
-    position: static; /* Ya está establecido, reafirmar si es necesario */
+    position: static;
   }
 
   nav .flex.items-center.space-x-20 {
@@ -253,15 +246,13 @@ nav .LanguageButton form {
     flex-shrink: 0;
   }
 
-  /* Mostrar el botón de alternancia */
   .nav-toggle {
     display: flex;
   }
 
-  /* Ocultar el menú de navegación por defecto */
   nav {
     position: absolute;
-    top: 60px; /* Ajusta según la altura del header */
+    top: 60px;
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
@@ -272,14 +263,11 @@ nav .LanguageButton form {
     transition: max-height 0.3s ease-in-out;
   }
 
-  /* Mostrar el menú de navegación cuando está activo */
   nav.active {
     display: flex;
     flex-direction: column;
-    /* ...existing styles... */
   }
 
-  /* Animación del botón de alternancia cuando está activo */
   .nav-toggle.active .bar:nth-child(2) {
     opacity: 0;
   }
@@ -292,31 +280,40 @@ nav .LanguageButton form {
     transform: translateY(-9px) rotate(-45deg);
   }
 
-  /* Ajustes de los enlaces del menú */
   nav .flex.items-center.space-x-20 {
     flex-direction: column;
-    space-x: 0;
-    gap: 1rem; /* Ajustar el espacio entre los elementos */
+    gap: 1rem;
   }
 
   nav .flex.items-center.space-x-20 a {
-    margin: 0; /* Eliminar márgenes adicionales */
+    margin: 0;
     font-size: 1.2rem;
   }
 
-  /* Alinear el botón de traducción en el centro */
   .LanguageButton {
-    margin: 10px 0; /* Ajustar el margen superior e inferior */
+    margin: 10px 0;
   }
 
-  /* Alinear los enlaces de "Let's connect" y correo */
   .flex.items-center.space-x-20 {
     flex-direction: column;
     align-items: center;
-    gap: 1rem; /* Ajustar el espacio entre los elementos */
+    gap: 1rem;
   }
 
-} /* Fin del @media */
+  .textSelf, .lorem-text {
+    width: 100%;
+    max-width: none;
+  }
+
+  .carousel-button-class {
+    text-decoration: none;
+  }
+
+  #prevBtn, #nextBtn {
+    text-decoration: none;
+  }
+}
+
 #canvas{
   position:absolute;
   z-index: -1;
@@ -324,25 +321,23 @@ nav .LanguageButton form {
 }
 
 footer {
-  background: rgba(0, 0, 0, 0.85); /* Fondo semi-transparente */
-  color: #cccccc; /* Color de texto gris claro para un buen contraste */
-  padding: 1.5rem 0; /* Espaciado para separar el contenido */
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Sombra suave para separación */
-  text-align: center; /* Centrar texto */
-  font-size: 0.9rem; /* Ajuste de tamaño de fuente */
+  background: rgba(0, 0, 0, 0.85);
+  color: #cccccc;
+  padding: 1.5rem 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 0.9rem;
   z-index: 24;
 }
 
 footer a {
-  color: #ffffff; /* Color del enlace para que destaque */
-  transition: color 0.3s ease; /* Transición suave para hover */
+  color: #ffffff;
+  transition: color 0.3s ease;
 }
 
 footer a:hover {
-  color: #888888; /* Cambio de color en hover */
+  color: #888888;
 }
-
-/* botón cambiar idioma */ 
 
 @import "nib";
 
@@ -350,8 +345,6 @@ footer a:hover {
   --white: #ffffff;
   --gray: #808080;
 }
-
-
 
 .switch {
   position: absolute;
@@ -441,8 +434,6 @@ label[for="ing"] {
   color: white;
 }
 
-/* fondo canvas */
-
 #background-canvas {
   position: fixed; 
   top: 0;
@@ -452,7 +443,6 @@ label[for="ing"] {
   z-index: -1; 
   pointer-events: none; 
 }
-
 
 body {
   position: relative; 
@@ -469,7 +459,6 @@ footer {
   z-index: 10;
 }
 
-/* Permitir que el nav se desplace horizontalmente e incluir el botón */
 nav {
   display: flex;
   overflow-x: auto;
@@ -484,7 +473,7 @@ nav > * {
 }
 
 .LanguageButton {
-  position: static; /* Asegura que el botón esté en el flujo normal */
+  position: static;
 }
 
 .switch {
@@ -501,9 +490,8 @@ ul, ol {
   margin: 0;
 }
 
-/* Estilos para el botón de alternancia */
 .nav-toggle {
-  display: none; /* Oculto por defecto */
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
@@ -519,18 +507,15 @@ ul, ol {
   transition: all 0.3s ease;
 }
 
-/* Estilos para el menú de navegación en dispositivos móviles */
 @media (max-width: 640px) {
   
-  /* Mostrar el botón de alternancia */
   .nav-toggle {
     display: flex;
   }
 
-  /* Ocultar el menú de navegación por defecto */
   nav {
     position: absolute;
-    top: 60px; /* Ajusta según la altura del header */
+    top: 60px;
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
@@ -539,24 +524,21 @@ ul, ol {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
-    display: none; /* Asegurar que esté oculto por defecto en móviles */
+    display: none;
   }
 
-  /* Mostrar el menú de navegación cuando está activo */
   nav.active {
     display: flex;
-    max-height: 500px; /* Ajustar según el contenido */
+    max-height: 500px;
   }
 
-  /* Ajustar el margen superior de main cuando el nav está activo */
   nav.active ~ main {
-    margin-top: 200px; /* Ajustar según la altura del nav desplegado */
+    margin-top: 200px;
   }
 
-  /* Ajustes de los enlaces del menú */
   nav .flex.items-center.space-x-20 {
     flex-direction: column;
-    space-x: 0;
+    gap: 1rem;
   }
 
   nav .flex.items-center.space-x-20 a {
@@ -564,24 +546,25 @@ ul, ol {
     font-size: 1.2rem;
   }
 
-  /* Alinear el botón de traducción en el centro */
   .LanguageButton {
     margin: 20px 0;
   }
 
-  /* Alinear los enlaces de "Let's connect" y correo */
   .flex.items-center.space-x-20 {
     flex-direction: column;
     align-items: center;
   }
+
+  .textSelf, .lorem-text {
+    width: 100%;
+    max-width: none;
+  }
+
+  #prevBtn, #nextBtn {
+    text-decoration: none;
+  }
 }
 
-/* Estilos para ocultar el menú de navegación por defecto */
-nav {
-  /* display: none; */ /* Comentar o eliminar esta línea */
-}
-
-/* Estilos para mostrar el menú de navegación cuando está activo */
 nav.active {
   display: flex;
   flex-direction: column;
@@ -590,7 +573,6 @@ nav.active {
   padding: 1rem 0;
 }
 
-/* Estilos para el botón de alternancia */
 .nav-toggle {
   display: flex;
   flex-direction: column;
@@ -611,7 +593,6 @@ nav.active {
   transition: all 0.3s ease;
 }
 
-/* Estilo para cuando el botón está activo */
 .nav-toggle.active .bar:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -624,22 +605,19 @@ nav.active {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Asegurar que el contenido principal se empuje hacia abajo cuando el nav está activo */
 header + main {
   transition: margin-top 0.3s ease;
 }
 
 nav.active + main {
-  margin-top: 200px; /* Ajusta según la altura del nav desplegado */
+  margin-top: 200px;
 }
 
-/* Asegurar que el header no tenga margen y esté conectado al top */
 header {
   margin: 0;
   padding: 0;
 }
 
-/* Mostrar el nav como flex en pantallas grandes (escritorio) */
 @media (min-width: 641px) {
   nav {
     display: flex !important;
@@ -650,29 +628,22 @@ header {
   }
 }
 
-/* Ajustar el margen superior de main para evitar solapamiento con el header fijo */
 main {
-  margin-top: 80px; /* Ajustar según la altura del header */
+  margin-top: 80px;
   transition: margin-top 0.3s ease;
 }
 
-/* Make the header sticky across all screen sizes */
 header {
   position: sticky;
   top: 0;
-  z-index: 1000; /* Adjust as needed */
-  /* ...existing styles... */
+  z-index: 1000;
 }
 
-/* ...existing code... */
 #typewrite-text {
-  min-height: 1em; /* Ajusta el valor según el tamaño de la fuente */
+  min-height: 1em;
 }
-/* ...existing code... */
 
 .responsive-img {
     max-width: 100%;
     height: auto;
 }
-
-/* ...existing code... */

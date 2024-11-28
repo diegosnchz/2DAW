@@ -9,42 +9,53 @@ async function loadTranslations(lang) {
   }
 }
 
-// Función para aplicar las traducciones en la página
-function applyTranslations(translations) 
-{
-  // Referencias a elementos del documento
-  document.querySelector('h1').textContent = translations.title;
-  document.querySelector('#home').textContent = translations.home;
-  document.querySelector('a[href="#gallery"]').textContent = translations.gallery;
-  document.querySelector('#letsconnect').textContent = translations.letsconnect;
-  document.querySelector('#skills h2').textContent = translations.skills;
-  document.querySelector('#skills p').textContent = translations.description;
+// Function to apply translations to the page
+function applyTranslations(translations) {
+  // Update elements with data-translate attribute
+  const elements = document.querySelectorAll('[data-translate]');
+  elements.forEach(element => {
+    const key = element.getAttribute('data-translate');
+    if (translations[key]) {
+      // Update only the text node to preserve styles and child elements
+      if (element.firstChild && element.firstChild.nodeType === Node.TEXT_NODE) {
+        element.firstChild.nodeValue = translations[key];
+      } else {
+        element.insertBefore(document.createTextNode(translations[key]), element.firstChild);
+      }
+    }
+  });
 
-  // CARRUSEL - GALERÍA
-  document.querySelector('.tituloProyecto1').textContent = translations.proyecto.title[0];
-  document.querySelector('.descripcionProyecto1').textContent = translations.proyecto.description[0];
+  // Update project titles and descriptions
+  translations.proyecto.title.forEach((title, index) => {
+    const titleElement = document.querySelector(`.tituloProyecto${index + 1}`);
+    if (titleElement) {
+      titleElement.textContent = title;
+    }
+  });
 
-  document.querySelector('.tituloProyecto2').textContent = translations.proyecto.title[1];
-  document.querySelector('.descripcionProyecto2').textContent = translations.proyecto.description[1];
+  translations.proyecto.description.forEach((description, index) => {
+    const descElement = document.querySelector(`.descripcionProyecto${index + 1}`);
+    if (descElement) {
+      descElement.textContent = description;
+    }
+  });
 
-  document.querySelector('.tituloProyecto3').textContent = translations.proyecto.title[2];
-  document.querySelector('.descripcionProyecto3').textContent = translations.proyecto.description[2];
-
-  document.querySelector('.tituloProyecto4').textContent = translations.proyecto.title[3];
-  document.querySelector('.descripcionProyecto4').textContent = translations.proyecto.description[3];
-
-  document.querySelector('#brand').textContent = "DiegoDev"; // así hago que el script no cambie el título
-  document.querySelector('#gallery').textContent = translations.gallery;
-
-  // Seleccionar todos los botones y aplicar el texto correspondiente
+  // Update project buttons
   const buttons = document.querySelectorAll('.buttonProyecto');
-  buttons.forEach((button, index) => {
+  buttons.forEach(button => {
     button.textContent = translations.proyecto.button;
   });
 
-  //Footer
-  document.querySelector('.firstFooter').textContent = translations.footer.first;
-  document.querySelector('.secondFooter').textContent = translations.footer.second;
+  // Update footer texts
+  const firstFooter = document.querySelector('.firstFooter');
+  if (firstFooter) {
+    firstFooter.textContent = translations.footer.first;
+  }
+
+  const secondFooter = document.querySelector('.secondFooter');
+  if (secondFooter) {
+    secondFooter.textContent = translations.footer.second;
+  }
 }
 
 // Event listeners para cambiar el idioma
@@ -60,7 +71,7 @@ document.getElementById('ing').addEventListener('change', function () {
   }
 });
 
-// Cargar el idioma por defecto al cargar la página
-window.onload = function() {
+// Load default language after DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
   loadTranslations('en');
-};
+});
