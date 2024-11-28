@@ -16,12 +16,7 @@ function applyTranslations(translations) {
   elements.forEach(element => {
     const key = element.getAttribute('data-translate');
     if (translations[key]) {
-      // Update only the text node to preserve styles and child elements
-      if (element.firstChild && element.firstChild.nodeType === Node.TEXT_NODE) {
-        element.firstChild.nodeValue = translations[key];
-      } else {
-        element.insertBefore(document.createTextNode(translations[key]), element.firstChild);
-      }
+      element.textContent = translations[key];
     }
   });
 
