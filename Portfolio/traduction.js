@@ -68,5 +68,17 @@ document.getElementById('ing').addEventListener('change', function () {
 
 // Load default language after DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-  loadTranslations('en');
+  loadTranslations('en'); // Ensure default language is loaded
+  // ...existing event listeners...
+  document.getElementById('esp').addEventListener('change', function () {
+    if (this.checked) {
+        loadTranslations('es');
+    }
+  });
+
+  document.getElementById('ing').addEventListener('change', function () {
+    if (this.checked) {
+        loadTranslations('en');
+    }
+  });
 });

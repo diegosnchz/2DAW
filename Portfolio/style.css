@@ -474,6 +474,8 @@ nav > * {
 
 .LanguageButton {
   position: static;
+  display: flex;
+  align-items: center;
 }
 
 .switch {
