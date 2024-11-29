@@ -43,6 +43,7 @@ input 				{
   width:300px;
   border:none;
   border-bottom:1px solid #757575;
+  border-radius: 5px;
 }
 input:focus 		{ outline:none; }
 
@@ -75,6 +76,7 @@ textarea {
   border:none;
   border-bottom:1px solid #757575;
   resize: none;
+  border-radius: 5px;
 }
 
 textarea:focus {
