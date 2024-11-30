@@ -39,28 +39,20 @@
     
   }
 </style>
-<!-- ************************************************************************************* 
-NOTAS DE QUE FALTA
-  1. Se ve vacío en general
-  2. Arreglar el nav -> Hacer que DiegoDev Home y Gallery esté en la izquieda, luego el botón de traducción en el centro y luego en la derecha quiero el Let's connect y el correo
-  3. Hacer que el div de gallery y de skills sea iguales de alto (cada uno por separado) que el div que tiene la foto con el typewrite y el lorem-text.. Remidemsionar todo.. (desde las cartas del carrusel hasta cada carta de las skills)
-    *************************************************************************************
--->
 <!-- esto es lo que tenia puesto en el body: bg-black interactive-bg -->
 <body class="min-h-screen text-white ">
   <!-- aquí para el fondo gradiente va el gradient-bg -->
  <header class="top-0 bg-black bg-opacity-80 z-10 sticky top-0">
-  <!-- Para hacer !important en tailwind es simplemente poner el  ! delante de lo que quieres que sea important -->
   <nav class="navContainer mx-auto px-4 py-4 flex justify-between items-center relative">
     
-    <!-- Botón de Alternancia -->
+
     <button class="nav-toggle">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
     </button>
     
-    <!-- Navigation Links -->
+
     <div class="flex items-center space-x-20">
       <a href="#" class="text-3xl font-bold" id="brand">DiegoDev</a>
       <a href="#" class="hover:text-gray-300 transition-colors" id="home" data-translate="home">Home</a>
@@ -101,8 +93,7 @@ NOTAS DE QUE FALTA
               <img src="images/bojac.jpg" alt="" class="h-[600px] w-[650px] rounded-lg responsive-img">
             </div>
             <div class="textSelf w-1/2 flex justify-center items-center flex-col ml-12">
-              <!-- <p class="text-6xl mb-[100px] typewrite" data-text='["This is me", "I love developing", "Hope you like it :D"]'></p> -->
-               <!-- Typewrite Element -->
+
             <p class="text-6xl mb-[100px] typewrite" id="typewrite-text"></p>
               <p class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, minus debitis? Voluptate enim ipsam obcaecati illum blanditiis tempora provident reiciendis! Perferendis odio sit consequuntur? Odio natus repellat et voluptatum quasi.
             blanditiis tempora provident reiciendis! Perferendis odio sit consequuntur? Odio natus repellat et voluptatum quasi. blanditiis tempora provident reiciendis! Perferendis odio sit consequuntur? Odio natus repellat et voluptatum quasi.
@@ -110,7 +101,6 @@ NOTAS DE QUE FALTA
             </div>
           </div>
         </section>
-        <!-- PONER LA MISMA ANCHURA EN TODAS LAS CARTAS DEL CARRUSEL, MIRAR EL COLOR A VER SI GUSTA -->
         <!-- CARRUSEL CON BOOSTRAP -->
                                <!-- El id es para poder asociarlo en el nav y que te lleve ahi -->
          <div class="mainCarrusel flex flex-col carrusel" >
@@ -146,7 +136,7 @@ NOTAS DE QUE FALTA
                       </div>
                   </div>
                   
-                  <!-- Segundo slide con dos elementos -->
+
                   <div class="carousel-item">
                       <div class="flex justify-center">
                         <div class="w-[500px] bg-neutral-700 bg-opacity-30 rounded-lg shadow-md m-4">
@@ -174,7 +164,7 @@ NOTAS DE QUE FALTA
                   </div>
                 </div>
               
-                <!-- Flechas de navegación -->
+
                 <button class="absolute top-1/2 -translate-y-1/2 left-4 z-10" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
@@ -188,10 +178,10 @@ NOTAS DE QUE FALTA
            </div>
       </section>
 
-    <!-- New Bootstrap Carousel (visible on mobile) -->
+
     <div id="carouselExampleFade" class="carousel slide carousel-fade md:hidden ">
       <div class="carousel-inner">
-        <!-- Proyecto 1 -->
+
         <div class="carousel-item active">
           <div class="w-full bg-neutral-700 bg-opacity-30 rounded-lg shadow-md m-4">
             <img src="/Diseno_interfaces_web/HECHAS/tailwind/images/sectionFour.avif" class="d-block w-full h-[300px] object-cover rounded-t-lg" alt="...">
@@ -204,7 +194,7 @@ NOTAS DE QUE FALTA
             </div>
           </div>
         </div>
-        <!-- Proyecto 2 -->
+
         <div class="carousel-item">
           <div class="w-full bg-neutral-700 bg-opacity-30 rounded-lg shadow-md m-4">
             <img src="/Portfolio/images/bmw.jpg" class="d-block w-full h-[300px] object-cover rounded-t-lg alt="...">
@@ -217,7 +207,7 @@ NOTAS DE QUE FALTA
             </div>
           </div>
         </div>
-        <!-- Proyecto 3 -->
+
         <div class="carousel-item">
           <div class="w-full bg-neutral-700 bg-opacity-30 rounded-lg shadow-md m-4">
             <img src="images/img-countryside3.jpg" class="d-block w-full h-[300px] object-cover rounded-t-lg" alt="...">
@@ -230,7 +220,7 @@ NOTAS DE QUE FALTA
             </div>
           </div>
         </div>
-        <!-- Proyecto 4 -->
+
         <div class="carousel-item">
           <div class="w-full bg-neutral-700 bg-opacity-30 rounded-lg shadow-md m-4">
             <img src="images/img-countryside4.jpg" class="d-block w-full h-[300px] object-cover rounded-t-lg" alt="...">
@@ -244,7 +234,7 @@ NOTAS DE QUE FALTA
           </div>
         </div>
       </div>
-      <!-- Carousel controls -->
+
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Anterior</span>
@@ -306,7 +296,7 @@ NOTAS DE QUE FALTA
       </div>
         
 
-    <!-- meter estos botones en el footer -> https://codepen.io/OfigenusMaximus/pen/yLKOpqb -->
+
     <footer class="bg-black bg-opacity-80 py-6 text-base relative">
       <div class="container mx-auto px-4 text-center flex flex-col">
           <p class="firstFooter" data-translate="footer.first">&copy; 2024 DiegoDev. All rights reserved.</p>

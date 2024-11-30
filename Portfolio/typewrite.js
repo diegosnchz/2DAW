@@ -4,8 +4,8 @@ const typewriteTexts = {
     esp: ["Este soy yo", "Me encanta desarrollar", "Espero que te guste :D"]
   };
   
-  let typewriteTimeout; // Holds the timeout reference
-  let typingInProgress = false; // Indicates if typing is in progress
+  let typewriteTimeout; 
+  let typingInProgress = false; 
   
   function startTypewrite(textArray) {
     const element = document.getElementById('typewrite-text');
@@ -15,7 +15,7 @@ const typewriteTexts = {
     let isDeleting = false;
   
     function type() {
-      if (!typingInProgress) return; // Stop typing if not in progress
+      if (!typingInProgress) return; 
   
       if (textIndex < textArray.length) {
         if (!isDeleting && charIndex <= textArray[textIndex].length) {
@@ -40,28 +40,28 @@ const typewriteTexts = {
       }
     }
   
-    typingInProgress = true; // Start typing
+    typingInProgress = true; 
     type();
   }
   
-  // Function to stop the current typewriter effect
+
   function stopTypewrite() {
-    typingInProgress = false; // Stop typing
-    clearTimeout(typewriteTimeout); // Clear the timeout
+    typingInProgress = false; 
+    clearTimeout(typewriteTimeout); 
   }
   
   function updateTypewriteText(language) {
-    stopTypewrite(); // Stop any ongoing typing effect
+    stopTypewrite(); 
     const texts = typewriteTexts[language];
-    startTypewrite(texts); // Start the new typing effect
+    startTypewrite(texts); 
   }
   
-  // Function to handle language change from traduction.js
+
   function onLanguageChange(language) {
     updateTypewriteText(language);
   }
   
-  // Event listeners for language change
+
   const langButtons = document.querySelectorAll('input[name="rdo"]');
   langButtons.forEach(btn => {
     btn.addEventListener('change', (event) => {
@@ -70,7 +70,7 @@ const typewriteTexts = {
     });
   });
   
-  // Initialize typewriter effect after DOM is fully loaded
+
   document.addEventListener('DOMContentLoaded', function() {
-    updateTypewriteText('ing'); // Change to 'esp' if Spanish is default
+    updateTypewriteText('ing');
   });

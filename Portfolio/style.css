@@ -650,12 +650,12 @@ header {
     height: auto;
 }
 
-/* Ensure smooth scrolling behavior */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Optional: Highlight active navigation link */
+
 nav a.active {
     color: #1f618d !important;
 }

@@ -9,9 +9,9 @@ async function loadTranslations(lang) {
   }
 }
 
-// Function to apply translations to the page
+
 function applyTranslations(translations) {
-  // Update elements with data-translate attribute
+
   const elements = document.querySelectorAll('[data-translate]');
   elements.forEach(element => {
     const key = element.getAttribute('data-translate');
@@ -20,10 +20,10 @@ function applyTranslations(translations) {
     }
   });
 
-  // Update page title
+
   document.title = translations.title;
 
-  // Update project titles and descriptions
+
   translations.proyecto.title.forEach((title, index) => {
     const titleElement = document.querySelector(`.tituloProyecto${index + 1}`);
     if (titleElement) {
@@ -38,13 +38,13 @@ function applyTranslations(translations) {
     }
   });
 
-  // Update project buttons
+
   const buttons = document.querySelectorAll('.buttonProyecto');
   buttons.forEach(button => {
     button.textContent = translations.proyecto.button;
   });
 
-  // Update footer texts
+
   const firstFooter = document.querySelector('.firstFooter');
   if (firstFooter) {
     firstFooter.textContent = translations.footer.first;
@@ -69,20 +69,7 @@ document.getElementById('ing').addEventListener('change', function () {
   }
 });
 
-// Load default language after DOM is fully loaded
+
 document.addEventListener('DOMContentLoaded', function() {
-  loadTranslations('en'); // Ensure default language is loaded
-  // ...existing event listeners...
-  // Remove the following duplicated listeners:
-  // document.getElementById('esp').addEventListener('change', function () {
-  //     if (this.checked) {
-  //         loadTranslations('es');
-  //     }
-  // });
-  // 
-  // document.getElementById('ing').addEventListener('change', function () {
-  //     if (this.checked) {
-  //         loadTranslations('en');
-  //     }
-  // });
+  loadTranslations('en');
 });
