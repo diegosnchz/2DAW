@@ -20,6 +20,9 @@ function applyTranslations(translations) {
     }
   });
 
+  // Update page title
+  document.title = translations.title;
+
   // Update project titles and descriptions
   translations.proyecto.title.forEach((title, index) => {
     const titleElement = document.querySelector(`.tituloProyecto${index + 1}`);
