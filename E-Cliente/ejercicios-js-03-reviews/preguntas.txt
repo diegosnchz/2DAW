@@ -1,0 +1,33 @@
+- PREGUNTAS CONCEPTUALES -
+1. ¿Qué es el evento DOMContentLoaded y por qué se utiliza en este proyecto?
+
+Evento que se dispara cuando el HTML se ha cargado y analizado, pero sin esperar recursos como imágenes. Se usa para que el JavaScript manipule el DOM una vez que está listo.
+
+2. ¿Cómo funciona la navegación entre reseñas en este proyecto?
+
+Se usa una variable (currentItem) como índice en el array reviews. Los botones "siguiente" y "anterior" modifican currentItem, y se muestra la reseña correspondiente.
+
+3. ¿Qué hace la función showPerson y cómo se relaciona con el array reviews?
+
+Muestra una reseña específica del array reviews basándose en un índice.
+
+4. ¿Qué sucede si el valor de currentItem es mayor que la longitud del array reviews?
+
+Se produce un error ya que implementa un "bucle" para volver al principio o al final del array.
+
+5. ¿Cómo se genera una reseña aleatoria y qué función se utiliza para ello?
+
+Se usa Math.random() para generar un índice aleatorio dentro del rango del array reviews
+
+6. ¿Qué pasaría si el array reviews estuviera vacío?
+
+Se produce un error al intentar acceder a un elemento. Se debe verificar si el array está vacío.
+
+- MODIFICACIONES SOBRE EL CÓDIGO -
+7. ¿Cómo podrías modificar el código para que la navegación entre reseñas sea automática cada 5 segundos?
+
+Se usa setInterval() para ejecutar una función que cambia la reseña cada 5 segundos.
+
+8. ¿Cómo podrías agregar un botón para detener y reanudar la navegación automática?
+
+Se usa un botón y clearInterval() para detener el intervalo, y se vuelve a iniciar con setInterval() al presionar el botón de nuevo.
