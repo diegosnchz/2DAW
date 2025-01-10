@@ -38,6 +38,7 @@ const info = document.getElementById('info');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const randomBtn = document.querySelector('.random-btn');
+const toggleBtn = document.querySelector('.toggle-btn');
 
 // set starting item
 let currentItem = 0;
@@ -60,13 +61,16 @@ function showPerson(person) {
   info.textContent = item.text;
 }
 // show next person
-nextBtn.addEventListener('click', function () {
+function showNextPerson() {
   currentItem++;
   if (currentItem > reviews.length - 1) {
     currentItem = 0;
   }
   showPerson(currentItem);
-});
+}
+
+nextBtn.addEventListener('click', showNextPerson);
+
 // show prev person
 prevBtn.addEventListener('click', function () {
   currentItem--;
@@ -81,4 +85,18 @@ randomBtn.addEventListener('click', function () {
 
   currentItem = Math.floor(Math.random() * reviews.length);
   showPerson(currentItem);
+});
+
+let autoSlide = setInterval(showNextPerson, 5000);
+let isPaused = false;
+
+toggleBtn.addEventListener('click', function () {
+  if (isPaused) {
+    autoSlide = setInterval(showNextPerson, 5000);
+    toggleBtn.textContent = 'pause';
+  } else {
+    clearInterval(autoSlide);
+    toggleBtn.textContent = 'resume';
+  }
+  isPaused = !isPaused;
 });
