@@ -90,13 +90,13 @@ randomBtn.addEventListener('click', function () {
 let autoSlide = setInterval(showNextPerson, 5000);
 let isPaused = false;
 
-toggleBtn.addEventListener('click', function () {
+pausarBtn.addEventListener('click', function () {
   if (isPaused) {
     autoSlide = setInterval(showNextPerson, 5000);
-    toggleBtn.textContent = 'pause';
+    pausarBtn.textContent = 'pause';
   } else {
     clearInterval(autoSlide);
-    toggleBtn.textContent = 'resume';
+    pausarBtn.textContent = 'resume';
   }
   isPaused = !isPaused;
 });
