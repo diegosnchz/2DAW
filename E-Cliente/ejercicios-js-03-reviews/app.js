@@ -87,17 +87,17 @@ randomBtn.addEventListener('click', function () {
   showPerson(currentItem);
 });
 
-//botón pausar
+// botón pausar
 let autoSlide = setInterval(showNextPerson, 5000);
 let isPaused = false;
 
-pausarBtn.addEventListener('click', function () {
+toggleBtn.addEventListener('click', function () {
   if (isPaused) {
     autoSlide = setInterval(showNextPerson, 5000);
-    pausarBtn.textContent = 'pause';
+    toggleBtn.textContent = 'pause';
   } else {
     clearInterval(autoSlide);
-    pausarBtn.textContent = 'resume';
+    toggleBtn.textContent = 'resume';
   }
   isPaused = !isPaused;
 });
