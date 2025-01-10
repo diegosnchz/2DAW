@@ -87,6 +87,7 @@ randomBtn.addEventListener('click', function () {
   showPerson(currentItem);
 });
 
+//botón pausar
 let autoSlide = setInterval(showNextPerson, 5000);
 let isPaused = false;
 
